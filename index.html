@@ -17,8 +17,11 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 .left{width:380px;border-right:1px solid var(--border);display:flex;flex-direction:column;padding:40px 36px;flex-shrink:0;position:relative;overflow:hidden}
 
 /* Logo */
-.logo{margin-bottom:48px}
-.logo img{height:28px}
+.logo{margin-bottom:48px;display:flex;align-items:center;gap:8px}
+.logo img{height:24px}
+.logo .wordmark{display:flex;align-items:baseline;gap:3px}
+.logo .cleo{font-family:Georgia,serif;font-style:italic;font-size:20px;color:var(--brand)}
+.logo .labs{font-size:6.5px;font-weight:700;letter-spacing:2.5px;color:var(--brand);text-transform:uppercase}
 
 /* Stepper */
 .stepper{flex:1;list-style:none;position:relative}
@@ -52,10 +55,10 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 .left-bottom a:hover{color:var(--ink)}
 
 /* ── Right panel ── */
-.right{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:24px 32px;overflow-y:auto;position:relative}
+.right{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 48px;overflow-y:auto;position:relative}
 
 /* Content block */
-.block{width:100%;text-align:center;display:none;animation:fadeUp .35s ease}
+.block{max-width:560px;width:100%;text-align:center;display:none;animation:fadeUp .35s ease}
 .block.active{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
@@ -100,7 +103,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 
 <!-- ── LEFT ── -->
 <div class="left">
-  <div class="logo"><img src="images/cleo-icon.svg" alt="Cleo Labs"></div>
+  <div class="logo"><img src="images/cleo-icon.svg" alt="Cleo"><div class="wordmark"><span class="cleo">cleo</span><span class="labs">LABS</span></div></div>
 
   <ul class="stepper" id="stepper">
     <li class="active" data-s="0"><div class="ic">📊</div><div class="tx"><strong>Le tableau de bord</strong><span>Vos KPIs et signaux quotidiens</span></div></li>

@@ -394,55 +394,191 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
   <div class="section-head">
     <div class="section-icon">🔍</div>
     <h2>Lire une fiche signal complète</h2>
-    <div class="tag">9 étapes</div>
+    <div class="tag">Exemple réel</div>
   </div>
 
-  <p style="color:var(--t2);font-size:13px;margin-bottom:16px">Le cœur de Cleo Insight. Chaque signal contient : résumé personnalisé, impact, produits, obligations légales, plan d'action et source. Voici comment tout lire.</p>
+  <p style="color:var(--t2);font-size:13px;margin-bottom:16px">Le cœur de Cleo Insight. Voici un vrai signal tel qu'il apparaît dans la plateforme, section par section, avec l'explication de ce que chaque élément signifie.</p>
 
-  <div class="screenshot"><img src="images/signal-open-crop.jpg" alt="Fiche signal"></div>
+  <div class="callout callout-red" style="margin-bottom:20px">
+    <div class="callout-icon">🔴</div>
+    <div><strong>Exemple réel — Signal détecté par Cleo :</strong><br>ANALYSE · Lignes directrices CNIL sur les cookies et traceurs 🇫🇷 · <strong>Critical</strong> · 72% de pertinence<br><em>"CNIL : 750 000 € d'amende pour ineffectivité du refus et retrait de consentement cookies"</em></div>
+  </div>
 
+  <!-- EN-TÊTE -->
   <div class="card open" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">1</div><h3>Ouvrir un signal</h3><div class="arrow">›</div></div>
-    <div class="card-body">Sur le tableau de bord, cliquez sur n'importe quelle carte signal. Chaque carte affiche : badge type (Sanction/Recommandation/Analyse), loi, drapeau pays, nombre de produits impactés, niveau de risque.</div>
-  </div>
-  <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">2</div><h3>① L'en-tête</h3><div class="arrow">›</div></div>
+    <div class="card-head"><div class="step">1</div><h3>L'en-tête — De quoi s'agit-il ?</h3><div class="arrow">›</div></div>
     <div class="card-body">
+      <p>En haut de la fiche, 5 informations que vous lisez en 2 secondes :</p>
       <div class="feat-grid">
-        <div class="feat"><div class="feat-label">Type</div><div class="feat-val">🔴 SANCTION / 🟠 RECOMMANDATION / ⚪ ANALYSE</div></div>
-        <div class="feat"><div class="feat-label">Loi</div><div class="feat-val">CPSA, REACH, GPSR, ESPR…</div></div>
-        <div class="feat"><div class="feat-label">Pertinence</div><div class="feat-val">Score % pour votre entreprise</div></div>
-        <div class="feat"><div class="feat-label">Risque</div><div class="feat-val">Critical / High / Medium / Low</div></div>
+        <div class="feat"><div class="feat-label">Type</div><div class="feat-val">🔴 ANALYSE</div></div>
+        <div class="feat"><div class="feat-label">Loi</div><div class="feat-val">Lignes directrices CNIL cookies</div></div>
+        <div class="feat"><div class="feat-label">Pertinence</div><div class="feat-val">72% — très pertinent pour vous</div></div>
+        <div class="feat"><div class="feat-label">Risque</div><div class="feat-val">🔴 Critical</div></div>
       </div>
+      <div class="callout callout-blue"><div class="callout-icon">💡</div><div><strong>Le score de pertinence (72%)</strong> indique à quel point ce signal concerne votre entreprise spécifiquement. Plus c'est élevé, plus c'est prioritaire. Ici 72% = directement applicable à votre activité.</div></div>
     </div>
   </div>
+
+  <!-- RÉSUMÉ -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">3</div><h3>② Résumé pour votre rôle</h3><div class="arrow">›</div></div>
-    <div class="card-body">Texte rédigé <strong>spécifiquement pour votre fonction</strong>. Un Head of Product Safety voit un angle sécurité produit. Un DPO voit un angle données personnelles. Un juriste supply chain voit un angle logistique.<div class="callout callout-blue"><div class="callout-icon">💡</div><div>Ce résumé dépend de votre <strong>Département + Rôle</strong> configurés dans Profil. Changez-les → le résumé change.</div></div></div>
+    <div class="card-head"><div class="step">2</div><h3>Résumé pour votre rôle — Ce qui s'est passé</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">Ce texte est rédigé <strong>spécifiquement pour votre fonction</strong>. Ici, pour un Head of Legal Compliance :</p>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;font-size:12.5px;color:var(--t1);line-height:1.7;margin:10px 0">
+        <strong>Ce que cela signifie pour Prisma Media :</strong> La CNIL a infligé 750 000 € d'amende à Condé Nast (vanityfair.fr), un concurrent direct, pour quatre manquements : (1) dépôt de cookies avant consentement, (2) présentation trompeuse de finalités TCF comme « toujours actives », (3) persistance des cookies après « tout refuser », (4) maintien de la lecture après retrait du consentement.<br><br>
+        <strong>Ce que le Head of Legal Compliance doit savoir :</strong> Cette décision constitue un précédent sectoriel directement applicable à Prisma Media. NOYB mène des campagnes systématiques de plaintes — Prisma Media est une cible probable. Les quatre points de non-conformité doivent être vérifiés sur l'ensemble des sites du groupe sans délai.
+      </div>
+      <div class="callout callout-blue"><div class="callout-icon">💡</div><div><strong>Ce résumé s'adapte à votre rôle.</strong> Un DPO verrait un résumé orienté protection des données et registre de traitements. Un directeur technique verrait un angle implémentation CMP. Cleo adapte automatiquement selon votre Département + Rôle dans le Profil.</div></div>
+    </div>
   </div>
+
+  <!-- IMPACT -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">4</div><h3>③ Impact pour votre rôle</h3><div class="arrow">›</div></div>
-    <div class="card-body">Fait le lien direct entre l'événement et <strong>votre entreprise</strong>. Pas "voici ce qui change" — mais "voici pourquoi ça vous concerne, vous, et ce que ça implique pour votre activité". C'est l'analyse que vous auriez faite en 2h — en 3 secondes.</div>
+    <div class="card-head"><div class="step">3</div><h3>Impact pour votre rôle — Pourquoi ça vous concerne</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">Cette section fait le lien entre l'événement et <strong>votre entreprise spécifiquement</strong>. Ce n'est pas un résumé de la loi — c'est une analyse d'impact personnalisée :</p>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;font-size:12.5px;color:var(--t1);line-height:1.7;margin:10px 0">
+        Prisma Media exploite un réseau de sites web à forte audience (femmeactuelle.fr, capital.fr, programme-tv.net…) et une régie publicitaire (Prisma Media Solutions) recourant massivement aux cookies. Le Head of Legal Compliance doit piloter <strong>en urgence</strong> un audit technique des CMP de l'ensemble des propriétés digitales du groupe, évaluer l'exposition au risque de plainte NOYB, et coordonner les mesures correctives. La décision crée un précédent sectoriel directement transposable.
+      </div>
+      <div class="callout callout-orange"><div class="callout-icon">⚠️</div><div><strong>C'est ça la valeur clé de Cleo</strong> — l'IA ne dit pas juste "voici ce qui s'est passé dans la loi". Elle dit "voici pourquoi ça concerne Prisma Media, voici vos sites exposés, voici qui doit agir". C'est l'analyse de 2h que vous auriez faite — en 3 secondes.</div></div>
+    </div>
   </div>
+
+  <!-- PRODUITS IMPACTÉS -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">5</div><h3>④ Produits impactés</h3><div class="arrow">›</div></div>
-    <div class="card-body">À droite : la liste exacte de <strong>vos produits</strong> concernés — pas une liste générique, ce sont les gammes de votre catalogue croisées avec la réglementation. Plus besoin de deviner.</div>
+    <div class="card-head"><div class="step">4</div><h3>Produits impactés — Qui est concerné</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">À droite de la fiche, la liste exacte de <strong>vos produits</strong> concernés par ce signal :</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0">
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Prisma Media Digital</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Prisma Media Solutions</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Femme Actuelle</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Capital</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Télé-Loisirs</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Geo</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Cuisine Actuelle</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Ça m'intéresse</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Gala</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Voici</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">National Geographic 🇫🇷</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Harper's Bazaar 🇫🇷</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Flow 🇫🇷</span>
+        <span style="background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500">Prima</span>
+      </div>
+      <div class="callout callout-blue"><div class="callout-icon">💡</div><div><strong>Ce ne sont pas des produits génériques</strong> — ce sont VOS marques et propriétés digitales, telles que vous les avez ajoutées dans votre catalogue Produits. Cleo les a croisées avec le signal et identifié automatiquement les 14 sites concernés.</div></div>
+    </div>
   </div>
+
+  <!-- OBLIGATIONS -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">6</div><h3>⑤ Obligations légales</h3><div class="arrow">›</div></div>
-    <div class="card-body">Chaque obligation cite sa <strong>base juridique exacte</strong> — article, paragraphe, référence au Journal Officiel. Checkboxes pour suivre l'avancement. Responsable assigné par obligation.</div>
+    <div class="card-head"><div class="step">5</div><h3>Obligations légales — Ce que la loi exige</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">Cleo extrait les obligations juridiques précises du signal. Ici, <strong>5 obligations</strong> identifiées, chacune avec sa base légale exacte :</p>
+      <table class="tbl">
+        <tr><th style="width:50%">Obligation</th><th>Base juridique</th><th>Responsable</th></tr>
+        <tr><td>Aucun cookie non exempté ne doit être déposé <strong>avant le recueil du consentement</strong></td><td>Art. 82 § 1 et § 2 LIL</td><td>Head of Legal + DPO + Digital</td></tr>
+        <tr><td>Interdiction de présenter des finalités TCF comme <strong>« toujours actives »</strong></td><td>Art. 82 § 1 LIL</td><td>Head of Legal + DPO</td></tr>
+        <tr><td>Le bouton « tout refuser » doit <strong>empêcher techniquement tout dépôt</strong></td><td>Art. 82 § 2 LIL</td><td>Head of Legal + DPO + Digital</td></tr>
+        <tr><td>Le retrait du consentement doit entraîner la <strong>cessation immédiate</strong> de lecture des cookies</td><td>Art. 82 § 2 LIL</td><td>Head of Legal + DPO + Digital</td></tr>
+        <tr><td>La catégorisation dans la CMP doit <strong>refléter la nature juridique réelle</strong></td><td>Art. 82 § 3 LIL + Lignes directrices CNIL</td><td>Head of Legal + DPO</td></tr>
+      </table>
+      <div class="callout callout-blue"><div class="callout-icon">💡</div><div><strong>Chaque obligation a une checkbox</strong> dans Cleo pour suivre votre avancement. Vous cochez au fur et à mesure que chaque point est traité. Le responsable assigné dépend des rôles de votre équipe.</div></div>
+    </div>
   </div>
+
+  <!-- PLAN D'ACTION -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">7</div><h3>⑥ Plan d'action</h3><div class="arrow">›</div></div>
-    <div class="card-body">Actions concrètes avec pour chacune :<br><br>🔴 Indicateur d'urgence<br>📝 Texte détaillé de l'action<br>👤 Responsable assigné<br>⏱️ Délai ("dans 23j", "dans 1 mois")<br>⚖️ Référence juridique cliquable<br>📦 Produits concernés<div class="callout callout-green"><div class="callout-icon">✅</div><div>Copiez-collez ce plan d'action dans un email à votre direction. Tout est structuré : qui fait quoi, quand, sur quelle base juridique.</div></div></div>
+    <div class="card-head"><div class="step">6</div><h3>Plan d'action — Quoi faire concrètement</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">Cleo transforme l'analyse en <strong>actions concrètes avec des délais</strong>. Voici les 6 actions générées pour ce signal :</p>
+      
+      <div style="border-left:3px solid var(--red);padding:10px 14px;margin:8px 0;background:var(--red-bg);border-radius:0 var(--r-sm) var(--r-sm) 0">
+        <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:4px">🔴 URGENT — dans 22 jours</div>
+        <div style="font-size:12.5px;color:var(--t1);line-height:1.6"><strong>Commander un audit technique indépendant des CMP</strong> de l'ensemble des sites web du groupe : absence de dépôt avant consentement, effectivité du « tout refuser », cessation après retrait, catégorisation TCF.</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:6px">👤 Head of Legal Compliance · ⚖️ Art. 82 § 1 et § 2 LIL · 📦 Prisma Media Digital, Femme Actuelle, Capital +6</div>
+      </div>
+
+      <div style="border-left:3px solid var(--red);padding:10px 14px;margin:8px 0;background:var(--red-bg);border-radius:0 var(--r-sm) var(--r-sm) 0">
+        <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:4px">🔴 URGENT — dans 14 jours</div>
+        <div style="font-size:12.5px;color:var(--t1);line-height:1.6"><strong>Préparer une note d'alerte à la Direction Générale</strong> : précédent Condé Nast, risque NOYB, état de conformité, plan de remédiation avec calendrier.</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:6px">👤 Head of Legal Compliance</div>
+      </div>
+
+      <div style="border-left:3px solid var(--orange);padding:10px 14px;margin:8px 0;background:var(--orange-bg);border-radius:0 var(--r-sm) var(--r-sm) 0">
+        <div style="font-size:11px;font-weight:700;color:var(--orange);margin-bottom:4px">🟠 dans 1 mois</div>
+        <div style="font-size:12.5px;color:var(--t1);line-height:1.6"><strong>Inventaire exhaustif de tous les cookies et traceurs</strong> sur chaque site : fournisseur, finalité, durée, first/third party, base juridique.</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:6px">👤 DPO / Prisma Media Digital · ⚖️ Art. 82 § 1 LIL · 📦 Prisma Media Digital, Prisma Media Solutions</div>
+      </div>
+
+      <div style="border-left:3px solid var(--orange);padding:10px 14px;margin:8px 0;background:var(--orange-bg);border-radius:0 var(--r-sm) var(--r-sm) 0">
+        <div style="font-size:11px;font-weight:700;color:var(--orange);margin-bottom:4px">🟠 dans 1 mois</div>
+        <div style="font-size:12.5px;color:var(--t1);line-height:1.6"><strong>Vérifier et corriger la catégorisation TCF</strong> dans les CMP : aucune finalité TCF ne doit être « toujours active » ou « strictement nécessaire ».</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:6px">👤 Head of Legal + DPO · ⚖️ Art. 82 § 3 LIL · 📦 Prisma Media Digital, Prisma Media Solutions</div>
+      </div>
+
+      <div style="border-left:3px solid #6B7280;padding:10px 14px;margin:8px 0;background:var(--card);border-radius:0 var(--r-sm) var(--r-sm) 0">
+        <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:4px">📅 dans 2 mois</div>
+        <div style="font-size:12.5px;color:var(--t1);line-height:1.6"><strong>Revoir les contrats CMP et partenaires ad tech</strong> : clauses d'obligation de résultat sur cessation immédiate en cas de refus/retrait.</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:6px">👤 Head of Legal Compliance · ⚖️ Art. 82 § 2 LIL · 📦 Prisma Media Solutions, Digital</div>
+      </div>
+
+      <div style="border-left:3px solid #6B7280;padding:10px 14px;margin:8px 0;background:var(--card);border-radius:0 var(--r-sm) var(--r-sm) 0">
+        <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:4px">📅 dans 3 mois</div>
+        <div style="font-size:12.5px;color:var(--t1);line-height:1.6"><strong>Mettre en place des tests automatisés trimestriels</strong> simulant le parcours utilisateur (arrivée, refus, retrait) pour vérifier l'effectivité en continu.</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:6px">👤 Prisma Media Digital + DPO · ⚖️ Art. 82 § 2 LIL · 📦 Digital, Femme Actuelle, Capital +6</div>
+      </div>
+
+      <div class="callout callout-green"><div class="callout-icon">✅</div><div><strong>Chaque action est prête à copier-coller</strong> dans un email, un ticket Jira, ou une note à la direction. Qui fait quoi, quand, sur quelle base juridique, pour quels produits — tout est structuré.</div></div>
+    </div>
   </div>
+
+  <!-- CONTEXTE RÉGLEMENTAIRE -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">8</div><h3>⑦ Source + Feedback</h3><div class="arrow">›</div></div>
-    <div class="card-body"><strong>Source</strong> — Lien cliquable vers le document officiel (Journal Officiel, registre fédéral…). Vérifiez par vous-même.<br><br>👍👎 Votre feedback améliore la pertinence des futurs signaux.</div>
+    <div class="card-head"><div class="step">7</div><h3>Contexte réglementaire — L'histoire complète</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">Cleo fournit le contexte complet de la décision pour que vous compreniez les enjeux :</p>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;font-size:12.5px;color:var(--t1);line-height:1.7;margin:10px 0">
+        La CNIL, par décision SAN-2025-010 du 20 novembre 2025, a infligé une amende de 750 000 € à Condé Nast (vanityfair.fr) pour quatre manquements à l'art. 82 de la Loi Informatique et Libertés. La CNIL écarte l'argument de la complexité technique et exige une effectivité réelle des mécanismes de refus et de retrait.
+      </div>
+      <div class="callout callout-blue"><div class="callout-icon">💡</div><div><strong>Le contexte vous donne les armes pour argumenter en interne.</strong> Quand vous présentez l'urgence à votre direction, vous citez : la référence de la décision (SAN-2025-010), le montant (750k€), les 4 manquements précis, et le fait que la CNIL refuse l'excuse de la complexité technique.</div></div>
+    </div>
   </div>
+
+  <!-- EXPOSITION CONCURRENTIELLE -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">9</div><h3>🔖 Sauvegarder</h3><div class="arrow">›</div></div>
-    <div class="card-body">Icône signet en haut à droite. Retrouvez vos signaux sauvegardés dans <strong>Signets</strong> (menu gauche). Pratique pour préparer un dossier direction ou garder une trace.</div>
+    <div class="card-head"><div class="step">8</div><h3>Exposition concurrentielle — Votre position</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <div style="background:var(--orange-bg);border:1px solid #FDE68A;border-radius:var(--r-sm);padding:14px 16px;font-size:12.5px;color:#92400E;line-height:1.7;margin:10px 0">
+        <strong>Asymétrique défavorable :</strong> Prisma Media, en tant que premier groupe de presse magazine en France avec une forte activité publicitaire digitale (Prisma Media Solutions), est une cible prioritaire pour NOYB et la CNIL. La sanction Condé Nast établit un précédent sectoriel qui augmente le risque pour tous les acteurs, mais les éditeurs ayant une audience particulièrement importante et une régie publicitaire intégrée sont plus exposés.
+      </div>
+      <div class="callout callout-blue"><div class="callout-icon">💡</div><div><strong>L'exposition concurrentielle</strong> vous dit où vous êtes par rapport à vos concurrents. Ici "Asymétrique défavorable" = vous êtes plus exposé que la moyenne du secteur. C'est l'argument pour accélérer votre mise en conformité.</div></div>
+    </div>
+  </div>
+
+  <!-- POURQUOI / ESCALADE -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head"><div class="step">9</div><h3>Pourquoi agir + Escalade — Justifier l'urgence</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p style="margin-bottom:10px">En bas de la fiche, la section <strong>"Pourquoi"</strong> résume en un paragraphe pourquoi ce signal nécessite une action :</p>
+      <div style="background:var(--red-bg);border:1px solid #FECACA;border-radius:var(--r-sm);padding:14px 16px;font-size:12.5px;color:#991B1B;line-height:1.7;margin:10px 0">
+        NOYB dépose systématiquement des plaintes contre les grands éditeurs. Prisma Media, premier groupe de presse magazine en France avec des dizaines de millions de visiteurs mensuels, constitue une cible probable. Le risque financier (amende ≥ 750 000 €), réputationnel et opérationnel justifie une action immédiate.
+      </div>
+      <p style="margin-top:10px;margin-bottom:10px">Et la ligne d'<strong>escalade</strong> — à qui remonter :</p>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 14px;font-size:13px;font-weight:600;color:var(--t1)">
+        🔺 Remonter à : Directeur Général / Directeur Juridique Groupe Vivendi
+      </div>
+      <div class="callout callout-green"><div class="callout-icon">✅</div><div><strong>Tout est là pour agir.</strong> Le résumé pour comprendre, l'impact pour savoir pourquoi ça vous concerne, les produits pour savoir qui est touché, les obligations pour la base juridique, le plan d'action pour savoir quoi faire, le contexte pour argumenter, l'exposition pour vous situer, et l'escalade pour savoir à qui remonter.</div></div>
+    </div>
+  </div>
+
+  <!-- SOURCE + FEEDBACK + SIGNET -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head"><div class="step">10</div><h3>Source, Feedback et Signet</h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <p><strong>🔗 Source</strong> — Lien cliquable vers le document officiel (ici : la décision CNIL). Vérifiez par vous-même en un clic.</p>
+      <p style="margin-top:8px"><strong>👍👎 Feedback</strong> — "Cette source était-elle pertinente ?" Votre feedback améliore la pertinence des futurs signaux. Plus vous votez, plus Cleo s'affine.</p>
+      <p style="margin-top:8px"><strong>🔖 Signet</strong> — Icône en haut à droite de la fiche. Sauvegardez le signal pour le retrouver dans Signets. Pratique pour préparer un dossier ou garder une trace des décisions.</p>
+    </div>
   </div>
 </div>
 

@@ -1,6 +1,5 @@
 # Scripts Loom — Démo Cleo Insight
 > Tu lis le texte à voix haute. Les [ACTION] = ce que tu fais à l'écran.
-> L'écran montre le compte Prisma Media. Le public c'est Decathlon.
 
 ---
 
@@ -8,19 +7,21 @@
 
 [ÉCRAN : Tableau de bord]
 
-Bonjour, bienvenue sur Cleo Insight. Je vais vous montrer comment ajouter vos produits. C'est la première chose à faire parce que c'est votre catalogue produit qui détermine quels signaux réglementaires Cleo va vous remonter.
+Salut, bienvenue sur Cleo Insight. Là on va voir ensemble comment ajouter vos produits. C'est vraiment la première chose à faire quand vous arrivez sur la plateforme, parce que c'est à partir de vos produits que Cleo va savoir quoi surveiller pour vous.
 
-On est sur le tableau de bord. Les quatre chiffres en haut, c'est l'état de votre veille. On va dans Produits, dans le menu à gauche.
+Donc là on est sur le tableau de bord, on voit les chiffres clés de la veille en haut. Moi je vais aller directement dans Produits, ici à gauche.
 
 [ACTION : Clique sur "Produits"]
 
-Voilà le catalogue. Chaque ligne c'est un produit. Deux colonnes clés : le nombre d'impacts — combien de signaux concernent ce produit — et la barre de risque. Les produits les plus exposés remontent en haut.
+OK donc là on a notre catalogue. Chaque ligne c'est un produit, et ce qu'il faut regarder c'est ces deux colonnes : le nombre d'impacts — en gros combien de signaux réglementaires concernent ce produit — et la barre de risque à côté. Plus c'est rouge, plus le produit est exposé. Et ils sont triés automatiquement, les plus exposés en haut.
 
 [ACTION : Clique sur "+ Ajouter un produit"]
 
-On entre le nom du produit. Plus c'est spécifique, plus Cleo sera pertinent. Par exemple, mieux vaut entrer "Veste imperméable" que "Vêtements". Dès la validation, Cleo enrichit automatiquement : il détecte la catégorie, identifie les réglementations applicables, et croise avec vos marchés. Le badge violet "IA" confirme l'enrichissement.
+Là j'ajoute un produit. Je tape le nom, et le truc important c'est d'être spécifique. Genre, "Veste imperméable" ça marchera beaucoup mieux que juste "Vêtements". Plus vous êtes précis, plus les signaux qu'on va vous remonter seront pertinents.
 
-Si vous avez un catalogue complet, le bouton "Importer CSV" à côté permet d'uploader un fichier avec tous vos produits d'un coup.
+Et là regardez, dès que je valide, Cleo fait tout le boulot : il détecte la catégorie, il trouve les réglementations qui s'appliquent, il croise avec vos marchés. Ce petit badge violet "IA" là, ça veut dire que l'enrichissement est fait automatiquement.
+
+Ah et si vous avez un gros catalogue, pas besoin de tout rentrer à la main — il y a le bouton "Importer CSV" juste là. Vous uploadez votre fichier et c'est réglé.
 
 ---
 
@@ -28,21 +29,23 @@ Si vous avez un catalogue complet, le bouton "Importer CSV" à côté permet d'u
 
 [ÉCRAN : Tableau de bord]
 
-Deuxième étape : vos marchés. Cleo a besoin de savoir dans quels pays vous vendez pour surveiller les bonnes réglementations.
+Maintenant les pays. Cleo a besoin de savoir où vous vendez pour surveiller les bonnes réglementations. Donc on va dans Pays.
 
 [ACTION : Clique sur "Pays"]
 
-La carte du monde, colorée par exposition réglementaire. Rouge c'est critique, gris c'est pas encore surveillé.
+Là on a la carte du monde. Les couleurs c'est le niveau d'exposition : rouge c'est critique, gris c'est pas encore surveillé. C'est assez visuel, on voit tout de suite où sont les zones sensibles.
 
 [ACTION : Clique sur "+ Ajouter un pays"]
 
-On sélectionne un pays. Dès que c'est fait, Cleo surveille ses réglementations et les croise avec vos produits.
+J'ajoute un pays, et dès que c'est fait Cleo commence à surveiller les réglementations de ce marché et les croise avec vos produits.
 
-Sous la carte, chaque pays est listé avec ses impacts. L'Union européenne se déplie en pays membres.
+Ce qui est bien c'est que sous la carte, on a la liste détaillée. Et par exemple l'Union européenne, on peut la déplier.
 
 [ACTION : Déplie l'UE]
 
-C'est utile quand les réglementations varient d'un État à l'autre. Les filtres "Europe" plus "Avec impacts" donnent un résumé rapide de votre exposition européenne.
+On voit chaque pays membre séparément, avec ses propres impacts. C'est utile parce que les réglementations peuvent varier d'un État à l'autre.
+
+Et pour les filtres : "Europe" plus "Avec impacts", ça vous donne votre brief conformité européen en un clic. Très pratique avant une réunion.
 
 ---
 
@@ -50,19 +53,19 @@ C'est utile quand les réglementations varient d'un État à l'autre. Les filtre
 
 [ACTION : Clique sur "Réglementations"]
 
-832 réglementations déjà surveillées. Pour chaque loi : le nom, l'autorité qui l'applique, le niveau de risque, les impacts, et la priorité de surveillance.
+Les réglementations. Cleo en surveille déjà 832, donc normalement tout ce dont vous avez besoin est déjà là. On voit pour chaque loi le nom, qui l'applique, le risque, les impacts, et la priorité de surveillance.
 
-La priorité c'est important. Vous pouvez passer les lois les plus sensibles pour vous en "Renforcée" — Cleo les scannera plus souvent.
+La priorité, c'est un truc à connaître. Vous pouvez passer certaines lois en "Renforcée" — ça veut dire que Cleo les scanne plus souvent et remonte les signaux en priorité. Pour les lois vraiment critiques dans votre secteur, c'est ce que je recommande.
 
 [ACTION : Change une priorité en "Renforcée"]
 
-Pour ajouter une loi qui manque : "Ajouter une réglementation", Cleo enrichit tout seul.
+Et si jamais une loi manque, vous pouvez l'ajouter manuellement et Cleo l'enrichit tout seul.
 
-Le filtre le plus important de cette page :
+Là je vais vous montrer le filtre le plus important de cette page.
 
 [ACTION : Clique sur "Adopté" dans les filtres Statut]
 
-"Adopté" — ce sont les lois votées mais pas encore en vigueur. C'est votre fenêtre pour vous préparer. Si vous ne retenez qu'un seul filtre, c'est celui-là.
+"Adopté" — ça filtre les lois qui sont votées mais pas encore en vigueur. C'est vraiment là que c'est stratégique, parce que c'est votre fenêtre pour anticiper. Le jour où la loi entre en vigueur c'est trop tard, c'est maintenant qu'il faut se préparer. Si vous retenez un seul filtre de toute cette démo, c'est celui-là.
 
 ---
 
@@ -70,15 +73,15 @@ Le filtre le plus important de cette page :
 
 [ACTION : Clique sur "Autorités"]
 
-Les autorités, ce sont les organismes qui font appliquer les lois. 457 groupes d'autorités surveillés.
+Les autorités, c'est les organismes qui font appliquer les lois. La DGCCRF, la CNIL, l'ECHA, ce genre d'entités. Cleo en suit 457.
 
-On peut déplier chaque autorité pour voir ses réglementations.
+Ce qui est intéressant ici c'est qu'on peut déplier chaque autorité pour voir quelles réglementations elle gère.
 
 [ACTION : Déplie une autorité]
 
-Le signal d'alerte : quand le compteur d'impacts augmente rapidement. Si une autorité passe de 2 à 8 impacts en un mois, c'est un renforcement des contrôles dans votre secteur. Il faut réagir.
+Et le truc à surveiller, c'est quand le compteur d'impacts monte vite. Si une autorité passe de 2 à 8 impacts en un mois, ça veut dire qu'elle renforce ses contrôles. C'est un signal d'alerte pour votre secteur, faut réagir.
 
-Le bouton "Regroupé" bascule entre vue stratégique et vue détaillée.
+Le bouton "Regroupé" là-haut, ça bascule entre une vue par entité mère — plus stratégique — et une vue détaillée, plus adaptée pour un audit.
 
 ---
 
@@ -86,21 +89,25 @@ Le bouton "Regroupé" bascule entre vue stratégique et vue détaillée.
 
 [ÉCRAN : Tableau de bord]
 
-Votre routine hebdomadaire. Chaque lundi matin, deux minutes.
+Là c'est votre routine hebdo. En vrai ça prend deux minutes le lundi matin.
+
+Premier réflexe : le bouton "Actualiser" en haut à droite.
 
 [ACTION : Clique sur "Actualiser"]
 
-Cleo scanne toutes les sources officielles et met à jour vos signaux, échéances et niveaux de risque.
+Cleo va scanner toutes les sources officielles et mettre à jour vos signaux, vos échéances, vos niveaux de risque. Quelques secondes et c'est fait.
 
-À droite, la section Échéancier montre vos prochaines dates. On va voir la vue complète.
+Ensuite on va regarder l'échéancier. À droite on a un aperçu, mais on va voir la vue complète.
 
 [ACTION : Clique "Voir tout"]
 
-L'échéancier complet. Le point violet "TODAY" c'est aujourd'hui.
+Voilà, là on a toutes les dates réglementaires, mois par mois. Le point violet "TODAY" c'est aujourd'hui, on se repère facilement.
+
+Et maintenant, le combo magique pour vos réunions :
 
 [ACTION : Sélectionne "90 jours" + "Critique"]
 
-"90 jours" plus "Critique" — c'est votre slide trimestrielle. Capture d'écran, dans votre présentation, votre direction comprend en dix secondes.
+"90 jours" plus "Critique". Ça c'est votre slide trimestrielle. Vous faites une capture d'écran, vous la mettez dans votre présentation, et votre direction comprend en dix secondes ce qui arrive. Pas besoin de préparer un deck, c'est déjà tout formaté.
 
 ---
 
@@ -108,36 +115,36 @@ L'échéancier complet. Le point violet "TODAY" c'est aujourd'hui.
 
 [ÉCRAN : Tableau de bord]
 
-Maintenant le cœur de Cleo Insight : la fiche signal. C'est là que toute la valeur se concentre. Je vais vous expliquer chaque section.
+OK maintenant on arrive au cœur de Cleo Insight, c'est la fiche signal. C'est vraiment là que toute la valeur se concentre. Je vais vous expliquer section par section ce que vous allez trouver.
 
 [ACTION : Clique sur un signal]
 
-Première chose : l'en-tête. Vous avez le type du signal — Sanction, Recommandation ou Analyse. La loi concernée. Le drapeau du pays. Le score de pertinence — c'est un pourcentage qui vous dit à quel point ce signal concerne votre entreprise. Et le niveau de risque : Critical, High, Medium ou Low. En deux secondes vous savez si c'est urgent ou pas.
+Alors en haut, l'en-tête. On voit le type du signal — ça peut être une Sanction, une Recommandation ou une Analyse. La loi concernée, le drapeau du pays, et deux choses importantes : le score de pertinence, c'est un pourcentage qui vous dit à quel point ce signal concerne votre entreprise à vous. Et le niveau de risque, de Critical à Low. En gros en deux secondes vous savez si c'est urgent ou si ça peut attendre.
 
 [ACTION : Scrolle vers "Résumé pour votre rôle"]
 
-Ensuite, le résumé pour votre rôle. Ce texte est rédigé spécifiquement pour votre fonction dans l'entreprise. Un responsable conformité produit verra un angle conformité produit. Un DPO verra un angle données. Un juriste supply chain verra un angle logistique. Même signal, résumés différents. Ça dépend du Département et du Rôle que vous avez configurés dans votre Profil.
+Là on a le résumé pour votre rôle. Et ça c'est un truc vraiment puissant. Ce texte il est pas le même pour tout le monde — il est rédigé en fonction de votre fonction dans l'entreprise. Si vous êtes responsable conformité produit, vous avez un angle conformité produit. Si vous êtes DPO, c'est orienté données personnelles. Si vous êtes juriste supply chain, c'est un angle logistique. Même signal, résumés complètement différents. Ça dépend du Département et du Rôle que vous avez mis dans votre Profil.
 
 [ACTION : Scrolle vers "Impact pour votre rôle"]
 
-L'impact pour votre rôle. C'est différent du résumé. Le résumé dit ce qui s'est passé dans le monde. L'impact dit pourquoi ça vous concerne vous, votre entreprise, vos produits. C'est le lien direct entre l'événement réglementaire et votre activité. C'est l'analyse que vous auriez faite en deux heures — Cleo la fait en trois secondes.
+Ensuite, l'impact pour votre rôle. C'est pas la même chose que le résumé. Le résumé explique ce qui s'est passé. L'impact, lui, fait le lien avec vous. Pourquoi ça vous concerne, vous, votre boîte, vos produits. En gros c'est l'analyse que normalement vous mettriez deux heures à faire — lire la source, comprendre les implications, identifier les risques pour votre activité. Là Cleo le fait en trois secondes.
 
 [ACTION : Pointe le panneau droit]
 
-À droite : les produits impactés. Ce ne sont pas des produits génériques. Ce sont vos produits à vous, ceux de votre catalogue, que Cleo a croisés avec le signal. Vous voyez tout de suite quelles gammes sont concernées.
+Sur le côté droit, les produits impactés. Et attention, c'est pas une liste générique. Ce sont vos produits à vous, ceux de votre catalogue, que Cleo a croisés avec le signal. Vous voyez immédiatement quelles gammes sont touchées, sans avoir à deviner.
 
 [ACTION : Scrolle vers "Obligations"]
 
-Les obligations légales. Cleo extrait les obligations juridiques précises du signal. Chaque obligation cite sa base juridique exacte — article, paragraphe, référence. Il y a des checkboxes pour suivre votre avancement et un responsable assigné. C'est votre checklist de mise en conformité.
+Les obligations légales. Là Cleo a extrait les obligations juridiques précises. Chaque obligation cite sa base légale exacte — l'article, le paragraphe, la référence. Il y a des checkboxes pour cocher au fur et à mesure que vous traitez chaque point, et un responsable assigné. C'est vraiment votre checklist de mise en conformité.
 
 [ACTION : Scrolle vers "Plan d'action"]
 
-Le plan d'action. Des actions concrètes, classées par urgence. Pour chaque action vous avez : qui est responsable, le délai, la base juridique, et les produits concernés. C'est prêt à copier-coller dans un email à votre direction ou dans un ticket de suivi.
+Le plan d'action, c'est mon préféré. Là on passe de l'analyse à l'action. Chaque action est concrète : qui est responsable, dans quel délai, sur quelle base juridique, et quels produits sont concernés. C'est structuré, c'est prêt. Vous pouvez littéralement copier-coller ça dans un email à votre direction ou dans un ticket Jira.
 
 [ACTION : Scrolle vers le bas]
 
-Le contexte réglementaire : l'histoire complète de la décision, pour argumenter en interne. L'exposition concurrentielle : où vous vous situez par rapport à votre secteur. Et la ligne d'escalade : à qui remonter dans votre organisation.
+En dessous on a le contexte réglementaire — l'histoire complète, les références, ce dont vous avez besoin pour argumenter en interne. L'exposition concurrentielle — ça vous dit où vous vous situez par rapport à votre secteur, si vous êtes plus ou moins exposé que vos concurrents. Et la ligne d'escalade — à qui remonter dans votre organisation.
 
-Tout en bas : la source officielle — un lien direct vers le document — et un bouton feedback pour améliorer les futurs résultats. L'icône signet en haut permet de sauvegarder le signal.
+Et tout en bas : la source officielle, un lien direct vers le document original pour vérifier par vous-même. Plus un bouton feedback — plus vous votez, plus Cleo s'affine. Et l'icône signet en haut pour sauvegarder le signal.
 
-En trois minutes, vous savez tout. Ce qui s'est passé, pourquoi ça vous concerne, quels produits sont touchés, quoi faire, dans quel délai, et à qui remonter. C'est ça, Cleo Insight.
+En gros, en trois minutes vous avez tout : ce qui s'est passé, pourquoi ça vous concerne, quels produits sont touchés, quoi faire, dans quel délai, et à qui remonter. C'est ça Cleo Insight.

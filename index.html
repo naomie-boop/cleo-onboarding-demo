@@ -166,7 +166,7 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
     <a href="#s5"><span class="num">5</span>Timeline & Actualiser</a>
     <a href="#s6"><span class="num">6</span>Lire une fiche signal</a>
     <a href="#fonctionnalites"><span class="num">→</span>Toutes les fonctionnalités</a>
-    <a href="#scripts"><span class="num">→</span>Scripts Loom</a>
+    <a href="#scripts"><span class="num">→</span>6 vidéos Loom</a>
   </div>
 </div>
 
@@ -622,119 +622,208 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
     <h2>Scripts vidéo Loom</h2>
   </div>
 
-  <p style="color:var(--t2);font-size:13px;margin-bottom:16px">6 scripts prêts à lire à voix haute pendant un enregistrement Loom avec partage d'écran. Les <span style="color:var(--brand);font-weight:600">[ACTION]</span> indiquent quoi faire à l'écran — le reste, c'est exactement ce que vous dites.</p>
+  <p style="color:var(--t2);font-size:13px;margin-bottom:16px">6 vidéos (~23 min total) à lire à voix haute pendant un enregistrement Loom avec partage d'écran. Les <span style="color:var(--brand);font-weight:600">[ACTION]</span> indiquent quoi faire à l'écran — le reste, c'est exactement ce que vous dites.</p>
 
+  <!-- VIDÉO 1 — TABLEAU DE BORD -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">📦</div><h3>Vidéo 1 — Ajouter un produit <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~2min30</span></h3><div class="arrow">›</div></div>
+    <div class="card-head"><div class="step">📊</div><h3>Vidéo 1 — Le tableau de bord <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~4min</span></h3><div class="arrow">›</div></div>
     <div class="card-body">
       <div class="script-box">
         <div class="sb-label">Script voix off</div>
-        <div class="action">[ÉCRAN : Tableau de bord Prisma Media]</div>
-        <p>Bonjour. Je vais vous montrer comment ajouter vos produits dans Cleo Insight. C'est la toute première étape — parce que c'est votre liste de produits qui permet à Cleo de savoir quelles réglementations vous concernent.</p>
-        <p>Ici c'est votre tableau de bord. Les quatre chiffres en haut vous donnent l'état de votre veille réglementaire. Je vais dans Produits, dans le menu à gauche.</p>
-        <div class="action">[ACTION : Cliquez sur "Produits"]</div>
-        <p>Voilà votre catalogue. Deux colonnes importantes : le nombre d'impacts réglementaires et la barre de risque. Les produits les plus exposés remontent en haut.</p>
-        <p>Pour Prisma Media, les premiers produits à ajouter ce sont vos propriétés digitales : Femme Actuelle, Capital, Télé-Loisirs, Geo, Gala, Voici — chaque site web qui dépose des cookies ou traceurs publicitaires. Ajoutez aussi Prisma Media Digital et Prisma Media Solutions en tant qu'entités, elles seront croisées avec les réglementations e-privacy, RGPD, et les lignes directrices CNIL.</p>
-        <div class="action">[ACTION : Cliquez sur "+ Ajouter un produit"]</div>
-        <p>J'entre le nom — par exemple "Femme Actuelle". Plus c'est spécifique, plus Cleo sera pertinent. "Femme Actuelle" c'est mieux que "Sites web du groupe". Dès la validation, Cleo enrichit automatiquement : catégorie, réglementations applicables, croisement avec vos marchés. Le badge violet "IA" confirme l'enrichissement.</p>
-        <p>Pour tout le catalogue : le bouton "Importer CSV". Vous uploadez un fichier avec tous vos titres et propriétés digitales, Cleo enrichit tout automatiquement.</p>
-        <p>Mon conseil : commencez par vos sites à plus forte audience — ceux qui déposent le plus de traceurs publicitaires — et les entités comme Prisma Media Solutions qui gèrent la régie.</p>
+        <div class="action">[ÉCRAN : Tu arrives sur le tableau de bord]</div>
+        <p>Salut, bienvenue sur Cleo Insight. Je vais vous faire un tour complet de la plateforme. On commence par le tableau de bord, c'est votre page d'accueil, c'est là que vous atterrissez chaque matin.</p>
+        <p>En haut, vous avez quatre chiffres clés. On va les regarder un par un.</p>
+        <div class="action">[ACTION : Pointe le premier KPI "NOUVEAUX"]</div>
+        <p>Le premier c'est "Nouveaux". Là ça indique 9 — ça veut dire qu'il y a 9 nouveaux signaux réglementaires depuis votre dernière visite. Des choses qui ont bougé et qui vous concernent. La petite courbe à côté, c'est la tendance — si le nombre de signaux augmente ou diminue sur les dernières semaines.</p>
+        <div class="action">[ACTION : Pointe le deuxième KPI "EXPOSITION"]</div>
+        <p>Ensuite "Exposition" — là c'est marqué "Élevé" en orange. C'est votre niveau de risque global. En gros, Cleo regarde l'ensemble de vos produits, de vos marchés, et vous dit : est-ce que globalement vous êtes tranquille, ou est-ce qu'il y a des sujets chauds ? Orange ça veut dire qu'il y a des trucs à traiter.</p>
+        <div class="action">[ACTION : Pointe le troisième KPI "ÉCHÉANCE"]</div>
+        <p>"Échéance" — 100 jours. C'est votre prochaine date réglementaire importante. En dessous c'est le nom de la loi concernée. C'est un compteur à rebours en permanence : vous voyez tout de suite dans combien de temps arrive la prochaine deadline.</p>
+        <div class="action">[ACTION : Pointe le quatrième KPI "RÉGLEMENTATIONS"]</div>
+        <p>Et "Réglementations" — 832. C'est le nombre total de réglementations que Cleo surveille pour vous. C'est déjà pré-rempli, vous n'avez pas besoin de les ajouter une par une.</p>
+        <div class="action">[ACTION : Pointe la zone des filtres]</div>
+        <p>En dessous des KPIs, vous avez deux rangées de filtres. La première c'est "Impact" — vous pouvez filtrer par niveau de criticité : Tous, Critique, Élevé, Moyen, Faible. Si vous voulez voir que les urgences, vous cliquez Critique.</p>
+        <div class="action">[ACTION : Clique sur "Critique" dans les filtres Impact]</div>
+        <p>Voilà, là on ne voit plus que les signaux critiques. C'est ce que je recommande de checker en priorité.</p>
+        <div class="action">[ACTION : Reclique sur "Tous"]</div>
+        <p>Et le deuxième filtre c'est "Statut" — En vigueur, Adopté, Proposé. "Adopté" c'est mon préféré : ça filtre les lois qui sont votées mais pas encore en vigueur. C'est votre fenêtre d'anticipation.</p>
+        <p>En dessous vous avez des dropdowns pour affiner : par produit, par pays, par loi, par catégorie. Tout est combinable.</p>
+        <div class="action">[ACTION : Scrolle vers les cartes signal]</div>
+        <p>Et là, le fil de signaux. C'est le cœur du tableau de bord. Chaque carte c'est un signal réglementaire. On va les regarder.</p>
+        <div class="action">[ACTION : Pointe la première carte]</div>
+        <p>Chaque carte a la même structure. En haut à gauche, un badge coloré — là c'est "Sanction" en rouge. Ça veut dire qu'il y a eu une amende ou une pénalité. Vous pouvez aussi avoir "Recommandation" en vert — c'est une nouvelle guideline ou une obligation qui arrive — ou "Analyse" en gris — c'est une veille informationnelle.</p>
+        <p>À côté du badge, le nom de la loi — CPSA — et le drapeau du pays. Puis la date.</p>
+        <p>Le titre du signal, c'est un résumé en une phrase de ce qui s'est passé. En bas : combien de vos produits sont impactés, et le niveau de risque — High, Critical, Medium, Low.</p>
+        <div class="action">[ACTION : Pointe le petit signet à droite de la carte]</div>
+        <p>Et ce petit signet là, c'est pour sauvegarder le signal. Si vous voulez le retrouver plus tard, vous le bookmarkez et il va dans "Signets" dans le menu.</p>
+        <div class="action">[ACTION : Pointe la sidebar droite "ÉCHÉANCIER"]</div>
+        <p>Sur le côté droit, vous avez l'échéancier rapide. Vos cinq prochaines dates réglementaires avec le compteur "X jours restants". Ça va du plus proche au plus lointain. Si vous voulez la vue complète, c'est "Voir tout" — on verra ça dans une autre vidéo.</p>
+        <p>Et tout en bas : "13 nouveaux articles, 9 à lire" et un bouton "Tout marquer comme lu" quand vous avez fait votre tour.</p>
+        <div class="action">[ACTION : Pointe le bouton "Actualiser" en haut à droite]</div>
+        <p>Dernier truc important : le bouton "Actualiser" en haut à droite. Quand vous cliquez dessus, Cleo rescanne toutes les sources officielles — journaux officiels, registres, publications d'agences — et met à jour vos signaux. C'est votre premier geste le lundi matin.</p>
+        <p>Voilà pour le tableau de bord. On va maintenant cliquer sur un signal pour voir ce qu'il y a dedans.</p>
       </div>
     </div>
   </div>
 
+  <!-- VIDÉO 2 — FICHE SIGNAL -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">🌍</div><h3>Vidéo 2 — Ajouter un pays <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~2min30</span></h3><div class="arrow">›</div></div>
-    <div class="card-body">
-      <div class="script-box">
-        <div class="sb-label">Script voix off</div>
-        <div class="action">[ÉCRAN : Tableau de bord → Pays]</div>
-        <p>Deuxième étape : vos marchés. Cleo a besoin de savoir dans quels pays vous opérez pour surveiller les bonnes réglementations. Je vais dans Pays.</p>
-        <div class="action">[ACTION : Cliquez sur "Pays"]</div>
-        <p>La carte du monde, colorée par exposition réglementaire. Rouge c'est critique, gris c'est pas encore surveillé.</p>
-        <p>Pour Prisma Media, les marchés prioritaires : la France évidemment — CNIL, Loi Informatique et Libertés, lignes directrices cookies. L'Union européenne pour le RGPD, la directive ePrivacy, le Digital Services Act. Ajoutez aussi le Royaume-Uni si vos éditions y sont accessibles — l'ICO a ses propres règles cookies.</p>
-        <div class="action">[ACTION : Cliquez sur "+ Ajouter un pays"]</div>
-        <p>Je sélectionne un pays — Cleo commence immédiatement à surveiller ses réglementations et les croise avec vos produits. L'UE se déplie en pays membres — utile quand les autorités nationales transposent différemment, comme la CNIL en France vs la DPC en Irlande.</p>
-        <div class="action">[ACTION : Dépliez l'UE]</div>
-        <p>Les filtres : "Europe" + "Avec impacts" pour votre brief conformité européen.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">📜</div><h3>Vidéo 3 — Ajouter une réglementation <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~3min</span></h3><div class="arrow">›</div></div>
-    <div class="card-body">
-      <div class="script-box">
-        <div class="sb-label">Script voix off</div>
-        <div class="action">[ÉCRAN : Tableau de bord → Réglementations]</div>
-        <p>832 réglementations déjà surveillées. Pour chaque loi : le nom, l'autorité, le risque, les impacts, et la priorité de surveillance.</p>
-        <p>Pour Prisma Media, les réglementations à passer en surveillance "Renforcée" : la Loi Informatique et Libertés — article 82 sur les cookies, c'est exactement ce qui a valu 750 000 € d'amende à Condé Nast. Le RGPD. Les Lignes directrices CNIL cookies et traceurs. La directive ePrivacy. Le Digital Services Act. Et le futur règlement ePrivacy quand il sera adopté.</p>
-        <div class="action">[ACTION : Changez la priorité de "Loi Informatique et Libertés" en "Renforcée"]</div>
-        <p>Pour ajouter une loi qui manque : "+ Ajouter une réglementation", Cleo enrichit tout seul.</p>
-        <p>Le filtre le plus important de cette page :</p>
-        <div class="action">[ACTION : Cliquez sur "Adopté" dans les filtres Statut]</div>
-        <p>"Adopté" — les lois votées mais pas encore en vigueur. Le règlement ePrivacy, le AI Act avec ses obligations de transparence — c'est maintenant qu'il faut vous préparer. Si vous ne retenez qu'un seul filtre, c'est celui-là.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">🏛️</div><h3>Vidéo 4 — Ajouter une autorité <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~2min30</span></h3><div class="arrow">›</div></div>
-    <div class="card-body">
-      <div class="script-box">
-        <div class="sb-label">Script voix off</div>
-        <div class="action">[ÉCRAN : Tableau de bord → Autorités]</div>
-        <p>457 groupes d'autorités. Pour Prisma Media, les autorités critiques à surveiller : la CNIL — c'est elle qui a sanctionné Condé Nast et qui mène les contrôles cookies. Le CEPD pour les guidelines européennes. L'ARCOM pour le numérique et les médias en France. La DPC irlandaise si certains de vos partenaires ad tech sont basés en Irlande.</p>
-        <p>Cliquez sur la flèche pour déplier les réglementations de chaque autorité.</p>
-        <div class="action">[ACTION : Dépliez la CNIL]</div>
-        <p>Le signal d'alerte : quand le compteur d'impacts augmente rapidement. Si la CNIL passe de 2 à 8 impacts en un mois, c'est une campagne de contrôles — exactement ce qui se passe avec NOYB et les plaintes cookies systématiques. Tous vos sites méritent une vérification immédiate.</p>
-        <p>Le bouton "Regroupé" bascule entre vue stratégique et vue audit détaillée.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">📅</div><h3>Vidéo 5 — Timeline & Actualiser <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~3min</span></h3><div class="arrow">›</div></div>
+    <div class="card-head"><div class="step">🔍</div><h3>Vidéo 2 — La fiche signal complète <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~5min</span></h3><div class="arrow">›</div></div>
     <div class="card-body">
       <div class="script-box">
         <div class="sb-label">Script voix off</div>
         <div class="action">[ÉCRAN : Tableau de bord]</div>
-        <p>Votre routine hebdomadaire. Premier geste : le bouton "Actualiser". Cleo scanne les décisions CNIL, les guidelines CEPD, les publications de l'ARCOM, le Journal Officiel. Quelques secondes et vous êtes à jour.</p>
-        <div class="action">[ACTION : Cliquez "Actualiser" puis "Voir tout" sur l'échéancier]</div>
-        <p>L'échéancier complet. Le point violet "TODAY" c'est aujourd'hui. Les filtres : "90 jours" + "Critique" — voilà votre slide pour le Comité de conformité. Capture d'écran, dans votre présentation, la direction Vivendi comprend en 10 secondes ce qui arrive.</p>
-        <div class="action">[ACTION : Filtrez "90 jours" + "Critique"]</div>
-        <p>Votre lundi matin : Actualiser, Échéancier, 90 jours + Critique. Deux minutes, et vous savez où vous en êtes.</p>
+        <p>On va ouvrir un signal pour voir tout ce que Cleo vous donne. Je clique sur celui-ci.</p>
+        <div class="action">[ACTION : Clique sur un signal — la fiche s'ouvre]</div>
+        <p>OK, la fiche signal. C'est là que toute la valeur de Cleo se concentre. On va descendre section par section.</p>
+        <div class="action">[ACTION : Pointe l'en-tête]</div>
+        <p>En haut, l'en-tête. Vous retrouvez le badge du type — Sanction, Recommandation ou Analyse. La loi concernée, le drapeau du pays. Et deux chiffres importants : le score de pertinence — c'est un pourcentage, plus c'est haut plus ça vous concerne directement — et le niveau de risque, Critical, High, Medium ou Low. En deux secondes vous savez si c'est urgent.</p>
+        <div class="action">[ACTION : Scrolle vers "Résumé pour votre rôle"]</div>
+        <p>Première section : le résumé pour votre rôle. Et ça c'est un truc vraiment puissant. Ce texte n'est pas le même pour tout le monde. Il est rédigé en fonction de votre poste. Si vous êtes DPO, vous avez un angle protection des données. Si vous êtes responsable qualité produit, c'est un angle conformité produit. Si vous êtes juriste, c'est un angle juridique. Même signal, même événement, mais le résumé est adapté à ce que vous avez besoin de savoir, vous.</p>
+        <p>Ça dépend du Département et du Rôle que vous avez configurés dans votre Profil, dans les paramètres. Si vous changez votre rôle, les résumés changent.</p>
+        <div class="action">[ACTION : Scrolle vers "Impact pour votre rôle"]</div>
+        <p>Ensuite, "Impact pour votre rôle". C'est différent du résumé. Le résumé explique ce qui s'est passé dans le monde. L'impact, lui, fait le lien avec votre entreprise. Il vous dit pourquoi ça vous concerne vous, quels sont les risques pour votre activité, qu'est-ce que ça implique concrètement. En gros, c'est l'analyse que normalement vous mettriez deux heures à faire — lire la source, comprendre les implications, croiser avec votre contexte. Là, c'est fait pour vous.</p>
+        <div class="action">[ACTION : Pointe le panneau droit — "Produits impactés"]</div>
+        <p>À droite, les produits impactés. Et attention, ce ne sont pas des catégories génériques. Ce sont vos produits à vous, ceux que vous avez ajoutés dans votre catalogue. Cleo a croisé le signal avec votre catalogue et vous dit précisément : ces gammes-là sont concernées. Pas besoin de deviner.</p>
+        <div class="action">[ACTION : Scrolle vers "Obligations"]</div>
+        <p>Les obligations. Cleo extrait les obligations juridiques précises du signal. Chaque obligation cite sa base légale — l'article exact, le paragraphe, la référence au texte de loi. Il y a un responsable assigné pour chaque obligation, et une checkbox pour suivre votre avancement. C'est votre checklist de mise en conformité.</p>
+        <div class="action">[ACTION : Scrolle vers "Plan d'action"]</div>
+        <p>Le plan d'action, c'est là que ça devient vraiment actionnable. Chaque action est concrète. Vous avez un indicateur d'urgence — rouge c'est immédiat, orange c'est dans les semaines qui viennent. Le texte de l'action, qui est responsable, dans quel délai — "dans 14 jours", "dans 1 mois" — la référence juridique, et quels produits sont concernés.</p>
+        <p>C'est structuré, c'est prêt. Vous pouvez copier-coller ça dans un email à votre direction ou dans un ticket de suivi. Pas besoin de reformuler.</p>
+        <div class="action">[ACTION : Scrolle vers le bas]</div>
+        <p>En dessous, le contexte réglementaire : l'histoire complète de la décision, avec toutes les références. C'est ce que vous mettez dans votre note à la direction pour argumenter.</p>
+        <p>L'exposition concurrentielle : Cleo vous dit si vous êtes plus ou moins exposé que vos concurrents dans votre secteur. Ça vous aide à calibrer votre réponse.</p>
+        <p>Et la ligne d'escalade : à qui remonter dans votre organisation.</p>
+        <div class="action">[ACTION : Pointe le bas de la page]</div>
+        <p>Tout en bas, la source officielle — un lien direct vers le document original. Vous pouvez vérifier par vous-même en un clic. Et un bouton feedback, pouce haut pouce bas, pour dire si c'était pertinent. Plus vous votez, plus Cleo affine ses résultats pour vous.</p>
+        <p>Voilà. En trois minutes de lecture, vous avez tout : ce qui s'est passé, pourquoi ça vous concerne, quels produits sont touchés, quoi faire, dans quel délai, sur quelle base juridique, et à qui remonter. C'est la fiche signal.</p>
       </div>
     </div>
   </div>
 
+  <!-- VIDÉO 3 — ÉCHÉANCIER -->
   <div class="card" onclick="this.classList.toggle('open')">
-    <div class="card-head"><div class="step">🔍</div><h3>Vidéo 6 — Lire une fiche signal <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~5min</span></h3><div class="arrow">›</div></div>
+    <div class="card-head"><div class="step">📅</div><h3>Vidéo 3 — L'échéancier <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~3min</span></h3><div class="arrow">›</div></div>
     <div class="card-body">
       <div class="script-box">
         <div class="sb-label">Script voix off</div>
-        <p>Je vais vous montrer comment lire une fiche signal complète. On va prendre un vrai exemple : la sanction CNIL de 750 000 euros contre Condé Nast pour les cookies sur vanityfair.fr. C'est exactement le type de signal que Cleo détecte pour vous.</p>
-        <div class="action">[ACTION : Cliquez sur le signal "CNIL : 750 000 € d'amende…" sur le tableau de bord]</div>
-        <p>L'en-tête. En haut : le type — ici "Analyse". La loi concernée — Lignes directrices CNIL cookies et traceurs. Le drapeau France. Le score de pertinence : 72 %, c'est très élevé, ça veut dire que ce signal concerne directement Prisma Media. Et le niveau de risque : Critical, en rouge.</p>
-        <p>En 2 secondes, vous savez : c'est critique, c'est en France, et ça vous concerne à 72 %.</p>
-        <div class="action">[ACTION : Scrollez vers "Résumé pour votre rôle"]</div>
-        <p>Le résumé pour votre rôle. Ce texte est rédigé spécifiquement pour le Head of Legal Compliance. Si vous étiez DPO, vous verriez un résumé orienté registre de traitements et PIA. Si vous étiez directeur technique, un angle implémentation CMP.</p>
-        <p>Ici le résumé vous dit l'essentiel : Condé Nast sanctionné pour 4 manquements — dépôt de cookies avant consentement, présentation trompeuse des finalités TCF, ineffectivité du bouton "tout refuser", et maintien de la lecture après retrait du consentement. Et surtout — NOYB, l'association qui a porté plainte, mène des campagnes systématiques. Prisma Media est une cible probable.</p>
-        <p>Ce résumé, ça aurait pris 2 heures de veille et d'analyse. Là, c'est 3 secondes.</p>
-        <div class="action">[ACTION : Scrollez vers "Impact pour votre rôle"]</div>
-        <p>L'impact pour votre rôle. Ce n'est pas un résumé de la loi. C'est le lien direct entre la sanction Condé Nast et Prisma Media. Cleo vous dit : vous exploitez un réseau de sites à forte audience — femmeactuelle.fr, capital.fr, programme-tv.net — et une régie publicitaire, Prisma Media Solutions, qui dépend massivement des cookies. Vous devez piloter un audit technique des CMP de l'ensemble des propriétés du groupe.</p>
-        <div class="action">[ACTION : Pointez le panneau droit — "Produits impactés"]</div>
-        <p>À droite : vos produits impactés. Pas une liste générique — ce sont vos 14 propriétés : Prisma Media Digital, Prisma Media Solutions, Femme Actuelle, Capital, Télé-Loisirs, Geo, Cuisine Actuelle, Ça m'intéresse, Gala, Voici, National Geographic, Harper's Bazaar, Flow, Prima. Ce sont les produits de votre catalogue que Cleo a croisés avec le signal.</p>
-        <div class="action">[ACTION : Scrollez vers "Obligations"]</div>
-        <p>Les obligations légales. 5 obligations extraites, chacune avec sa base juridique exacte. Article 82 paragraphe 1, paragraphe 2, paragraphe 3 de la Loi Informatique et Libertés. Des checkboxes pour suivre votre avancement. Le responsable assigné pour chaque obligation. C'est votre checklist de conformité.</p>
-        <div class="action">[ACTION : Scrollez vers "Plan d'action"]</div>
-        <p>Le plan d'action. 6 actions concrètes, classées par urgence. La première : commander un audit technique des CMP — dans 22 jours. La deuxième : note d'alerte à la Direction Générale — dans 14 jours. Puis l'inventaire des cookies dans 1 mois, la correction TCF dans 1 mois, les contrats ad tech dans 2 mois, les tests automatisés dans 3 mois.</p>
-        <p>Chaque action a : qui est responsable, le délai, la base juridique, et quels produits sont concernés. C'est prêt à copier-coller dans un email à votre direction ou un ticket dans votre outil de suivi.</p>
-        <div class="action">[ACTION : Scrollez vers le contexte et l'exposition concurrentielle]</div>
-        <p>Le contexte réglementaire : la décision CNIL SAN-2025-010, les 4 manquements, le fait que la CNIL refuse l'argument de la complexité technique.</p>
-        <p>L'exposition concurrentielle : "Asymétrique défavorable". Ça veut dire que Prisma Media est plus exposé que la moyenne du secteur — premier groupe de presse magazine en France, régie pub intégrée, forte audience. NOYB vous a probablement déjà dans le viseur.</p>
-        <p>Et tout en bas : à qui remonter — Directeur Général, Directeur Juridique Groupe Vivendi.</p>
-        <p>En 3 minutes, vous savez tout : ce qui s'est passé, pourquoi ça vous concerne, quels sites sont touchés, quoi faire, dans quel délai, sur quelle base juridique, et à qui remonter. C'est ça Cleo Insight.</p>
+        <div class="action">[ÉCRAN : Tableau de bord]</div>
+        <p>On va voir l'échéancier. C'est votre calendrier réglementaire. Vous pouvez y accéder soit depuis la sidebar à droite du tableau de bord, "Voir tout", soit depuis le menu à gauche.</p>
+        <div class="action">[ACTION : Clique sur "Échéancier" dans le menu]</div>
+        <p>Voilà la timeline. En haut, le nombre total d'échéances à venir. Et là on a une frise chronologique verticale avec toutes vos dates réglementaires.</p>
+        <div class="action">[ACTION : Pointe le marqueur "TODAY"]</div>
+        <p>Le point violet "TODAY" c'est aujourd'hui. Tout ce qui est en dessous c'est ce qui arrive. Les dates sont organisées mois par mois.</p>
+        <div class="action">[ACTION : Pointe une échéance]</div>
+        <p>Chaque échéance a : la date exacte, un compteur "X jours restants" qui est coloré par urgence — rouge c'est critique, orange c'est à surveiller — le titre de l'événement, et la loi associée.</p>
+        <div class="action">[ACTION : Pointe les filtres "HORIZON"]</div>
+        <p>Maintenant les filtres. "Horizon" c'est votre fenêtre de temps : 30 jours, 90 jours, 6 mois, ou Tous. Si vous voulez voir que les urgences immédiates, 30 jours. Pour préparer un trimestre, 90 jours.</p>
+        <div class="action">[ACTION : Clique sur "90 jours"]</div>
+        <p>"Risque" c'est le niveau de criticité des échéances. Vous pouvez combiner les deux.</p>
+        <div class="action">[ACTION : Clique sur "Critique" dans les filtres Risque]</div>
+        <p>90 jours plus Critique. C'est votre combo pour les réunions trimestrielles. Vous faites une capture d'écran de ça, vous la mettez dans un slide, et votre direction comprend en dix secondes ce qui arrive dans le trimestre. Pas besoin de préparer un deck, c'est déjà tout formaté.</p>
+        <div class="action">[ACTION : Pointe les dropdowns en dessous]</div>
+        <p>Et en dessous, vous pouvez affiner par réglementation, par produit, par pays. Et il y a une barre de recherche si vous cherchez une échéance précise.</p>
+        <div class="action">[ACTION : Remet "Tous" dans Horizon et Risque]</div>
+        <p>En résumé l'échéancier, c'est le truc que vous ouvrez le lundi matin. Actualiser, Échéancier, 90 jours Critique, deux minutes. Votre semaine est cadrée.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDÉO 4 — PAYS -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head"><div class="step">🌍</div><h3>Vidéo 4 — Ajouter un pays <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~3min</span></h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <div class="script-box">
+        <div class="sb-label">Script voix off</div>
+        <div class="action">[ÉCRAN : Tableau de bord]</div>
+        <p>On va voir comment gérer vos marchés. Cleo a besoin de savoir dans quels pays vous vendez pour surveiller les bonnes réglementations.</p>
+        <div class="action">[ACTION : Clique sur "Pays" dans le menu]</div>
+        <p>La page Pays. En haut, la carte du monde. Les couleurs c'est le niveau d'exposition : rouge c'est critique, orange c'est élevé, gris c'est pas encore surveillé. En bas de la carte vous avez la légende — nombre de pays surveillés et nombre d'impacts critiques.</p>
+        <div class="action">[ACTION : Clique sur "+ Ajouter un pays"]</div>
+        <p>Pour ajouter un pays, c'est le bouton violet en haut à droite. Vous sélectionnez le pays, Cleo commence immédiatement à surveiller ses réglementations et les croise avec vos produits.</p>
+        <p>Si vous avez beaucoup de marchés, il y a "Importer CSV" juste à côté.</p>
+        <div class="action">[ACTION : Ferme le popup et scrolle vers la liste]</div>
+        <p>En dessous de la carte, la liste détaillée. Pour chaque pays vous avez : le drapeau, le nom, la région, le nombre d'impacts, le nombre de critiques en rouge, et une barre d'exposition.</p>
+        <p>Ce qui est super intéressant, c'est les pays qui se déplient.</p>
+        <div class="action">[ACTION : Clique sur la flèche "›" à côté de l'Union européenne]</div>
+        <p>L'Union européenne se déplie en pays membres. Vous voyez chaque État avec ses propres impacts. C'est important parce que même si c'est une réglementation européenne, chaque pays peut avoir ses spécificités — des transpositions différentes, des autorités différentes, des calendriers différents.</p>
+        <div class="action">[ACTION : Clique sur la flèche "›" à côté des États-Unis]</div>
+        <p>Pareil pour les États-Unis — ça se déplie par État. C'est essentiel parce que la réglementation américaine c'est à la fois fédéral et état par état. La Californie avec la Prop 65 par exemple, elle a ses propres règles beaucoup plus strictes que le niveau fédéral. Si vous vendez en Californie, il faut que ce soit séparé dans votre veille.</p>
+        <div class="action">[ACTION : Pointe les filtres]</div>
+        <p>Les filtres. "Région" — Europe, Amériques, APAC, Afrique-Moyen Orient. "Impacts" — Avec impacts ou Sans impacts, pour voir d'un coup quels marchés ont des sujets actifs. Et "Produit" en dropdown pour filtrer par gamme.</p>
+        <div class="action">[ACTION : Clique "Europe" puis "Avec impacts"]</div>
+        <p>"Europe" plus "Avec impacts" — voilà votre brief conformité européen. C'est exactement ce que vous sortez avant une réunion régionale.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDÉO 5 — RÉGLEMENTATIONS & AUTORITÉS -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head"><div class="step">📜</div><h3>Vidéo 5 — Réglementations & Autorités <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~4min</span></h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <div class="script-box">
+        <div class="sb-label">Script voix off</div>
+        <div class="action">[ÉCRAN : Tableau de bord]</div>
+        <p>On va voir deux pages qui vont ensemble : les réglementations et les autorités.</p>
+        <div class="action">[ACTION : Clique sur "Réglementations" dans le menu]</div>
+        <p>Les réglementations. 832 lois déjà surveillées par Cleo. Pour chaque loi vous avez : le nom, le badge IA qui confirme l'enrichissement automatique, le pays ou la juridiction, l'autorité qui l'applique, le niveau de risque — Critique, Élevé, Modéré, Faible — et le nombre d'impacts.</p>
+        <div class="action">[ACTION : Pointe la colonne "Standard" à droite]</div>
+        <p>Et là, la colonne importante : la priorité de surveillance. Par défaut tout est en "Standard". Mais vous pouvez passer en "Renforcée" pour les lois qui comptent le plus dans votre secteur. Renforcée ça veut dire que Cleo les scanne plus souvent et remonte les signaux en priorité.</p>
+        <div class="action">[ACTION : Clique sur le dropdown "Standard" d'une loi et sélectionne "Renforcée"]</div>
+        <p>Voilà. Pour votre secteur, les lois à passer en Renforcée, c'est celles qui bougent le plus et qui ont le plus d'impact sur vos produits.</p>
+        <div class="action">[ACTION : Pointe les filtres]</div>
+        <p>Les filtres : par risque — Critique, Élevé, Modéré, Faible. Par statut — En vigueur, Adopté, Proposé. Et des dropdowns par région, par statut de conformité, par produit.</p>
+        <p>Le filtre "Adopté", je vous le redis : ce sont les lois votées mais pas encore en vigueur. C'est votre fenêtre d'anticipation.</p>
+        <div class="action">[ACTION : Clique sur "Adopté"]</div>
+        <p>Voilà ce qui arrive et qui n'est pas encore appliqué. C'est là que vous pouvez prendre de l'avance.</p>
+        <div class="action">[ACTION : Pointe le bouton "+ Ajouter une réglementation"]</div>
+        <p>Si une loi manque dans la liste — même si 832 c'est déjà énorme — vous pouvez l'ajouter manuellement ici. Vous tapez le nom et Cleo enrichit automatiquement : autorité, juridiction, statut, tout.</p>
+        <div class="action">[ACTION : Clique sur "Autorités" dans le menu]</div>
+        <p>Maintenant les autorités. Ce sont les organismes qui font appliquer les lois. La CPSC aux États-Unis, la DGCCRF en France, l'ECHA pour les produits chimiques en Europe, la CMA au Royaume-Uni.</p>
+        <p>457 groupes d'autorités. Pour chaque autorité : le nom, le nombre de réglementations qu'elle gère, son pays, le niveau de risque, le nombre d'impacts, et une barre d'activité.</p>
+        <div class="action">[ACTION : Clique sur la flèche "›" à côté d'une autorité]</div>
+        <p>On peut déplier chaque autorité pour voir ses réglementations. Par exemple la CPSC elle gère le CPSA, le CPSIA, les Import Rules, tout ça.</p>
+        <p>Le truc à surveiller c'est la dynamique. Si une autorité a un compteur d'impacts qui monte vite — si elle passe de 2 à 8 impacts en un mois — ça veut dire qu'elle renforce ses contrôles. C'est un signal d'alerte pour vous.</p>
+        <div class="action">[ACTION : Pointe le bouton "Regroupé" en haut à droite]</div>
+        <p>Le bouton "Regroupé" ici, ça bascule entre la vue par entité mère — plus stratégique, pour une vue d'ensemble — et la vue détaillée par sous-entité — plus utile pour un audit.</p>
+        <p>Et comme pour les réglementations, vous pouvez en ajouter avec "+ Ajouter une Autorité".</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDÉO 6 — PARAMÈTRES & SOURCES -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-head"><div class="step">⚙️</div><h3>Vidéo 6 — Les paramètres & les sources <span style="color:var(--t3);font-weight:400;font-size:12px;margin-left:8px">~4min</span></h3><div class="arrow">›</div></div>
+    <div class="card-body">
+      <div class="script-box">
+        <div class="sb-label">Script voix off</div>
+        <div class="action">[ÉCRAN : Tableau de bord]</div>
+        <p>Dernière vidéo, les paramètres. C'est important parce que c'est là que vous configurez ce que Cleo surveille et comment il vous alerte.</p>
+        <div class="action">[ACTION : Clique sur "Paramètres" dans le menu pour le déplier]</div>
+        <p>Paramètres se déplie et on a plusieurs sous-sections. On va commencer par le plus important.</p>
+        <div class="action">[ACTION : Clique sur "Profil"]</div>
+        <p>Le profil, c'est ce qui personnalise tout dans Cleo. Votre département et votre rôle — c'est ce qui détermine l'angle des résumés et des impacts dans les fiches signal. Si vous êtes dans le département juridique avec un rôle de DPO, tous les résumés seront orientés protection des données. Si vous êtes en conformité produit, c'est un angle qualité et sécurité. Donc c'est vraiment la première chose à configurer correctement.</p>
+        <div class="action">[ACTION : Clique sur "Scans"]</div>
+        <p>Les scans. C'est ici que vous gérez vos crédits. Chaque fois que vous cliquez sur "Actualiser" sur le tableau de bord, ça consomme des crédits. Cleo va scanner toutes les sources, analyser les résultats, croiser avec vos produits et marchés. Ici vous voyez combien de crédits il vous reste, votre historique de consommation.</p>
+        <p>En plan Pro c'est 5 000 crédits par mois. Les crédits achetés n'expirent pas. On voit le cadenas à côté — certaines options sont réservées au plan Pro.</p>
+        <div class="action">[ACTION : Clique sur "Sources" dans le menu (en dessous de Paramètres)]</div>
+        <p>Et maintenant les sources. C'est ma partie préférée parce que c'est là que vous contrôlez d'où vient l'information.</p>
+        <div class="action">[ACTION : Pointe le titre et le sous-titre]</div>
+        <p>"Qualité des sources utilisées par le pipeline de veille." En gros, Cleo ne va pas chercher l'info n'importe où. Il a un pipeline de sources officielles — des journaux officiels, des registres fédéraux, des publications d'agences — et chaque source a un score de qualité.</p>
+        <div class="action">[ACTION : Pointe la liste "Sources découvertes"]</div>
+        <p>Là vous voyez la liste des sources découvertes automatiquement. Pour chaque source : le domaine — federalregister.gov, gov.uk, europarl.europa.eu — son score de qualité sur 10, le nombre d'articles qu'elle a fourni, et son statut.</p>
+        <div class="action">[ACTION : Pointe le score d'une source]</div>
+        <p>Le score c'est une note de fiabilité. Plus c'est haut, plus la source est fiable. Un registre fédéral gouvernemental ça sera toujours plus haut qu'un blog d'opinion.</p>
+        <div class="action">[ACTION : Pointe le badge "Autorisé" vert]</div>
+        <p>Le statut "Autorisé" en vert ça veut dire que Cleo utilise cette source. Et c'est là que vous avez le contrôle. Vous pouvez bloquer une source si elle vous semble pas pertinente ou pas fiable. Vous cliquez dessus, vous la passez en "Bloqué", et Cleo ne l'utilisera plus dans ses analyses.</p>
+        <div class="action">[ACTION : Pointe la section "Sources préférées" en haut]</div>
+        <p>Et ici en haut, "Sources préférées". C'est l'inverse : vous pouvez ajouter des sources de confiance.</p>
+        <div class="action">[ACTION : Clique dans le champ de recherche]</div>
+        <p>Vous tapez un domaine — par exemple, un site officiel que vous suivez déjà — et vous cliquez "Ajouter". Cleo va le prioriser dans chaque scan. Ça veut dire que les articles de cette source passeront en premier dans l'analyse.</p>
+        <p>C'est utile si vous avez des sources métier spécifiques que Cleo n'a pas encore identifiées. Vous les ajoutez, elles sont priorisées, et les prochains scans les incluront automatiquement.</p>
+        <div class="action">[ACTION : Pointe le menu à gauche pour montrer les autres sous-sections]</div>
+        <p>Pour finir rapidement les autres paramètres : "Facturation" pour gérer votre plan — Gratuit, Pro ou Enterprise. "Membres" pour inviter votre équipe — en Pro vous pouvez avoir jusqu'à 5 membres, chacun avec son propre profil et ses propres résumés adaptés. "Intégrations" pour connecter Slack si vous voulez recevoir les alertes directement dans un channel. Et "Notifications" pour configurer les types d'alertes : alertes critiques, digest hebdomadaire, rappels d'échéance.</p>
+        <p>Et voilà, c'est tout pour le tour complet de Cleo Insight. En résumé : vous ajoutez vos produits et vos marchés, Cleo surveille 832 réglementations et 457 autorités pour vous, et chaque matin votre tableau de bord vous dit exactement quoi regarder. C'est fait pour vous faire gagner du temps et ne rien rater.</p>
       </div>
     </div>
   </div>

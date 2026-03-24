@@ -56,7 +56,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 .right{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;overflow-y:auto;position:relative}
 
 /* Content block */
-.block{max-width:480px;width:100%;text-align:center;display:none;animation:fadeUp .35s ease}
+.block{max-width:640px;width:100%;text-align:center;display:none;animation:fadeUp .35s ease}
 .block.active{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
@@ -70,7 +70,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 
 /* Video */
 .block .vid{border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);margin-bottom:28px;position:relative;background:#0a0a0a}
-.block .vid video{width:100%;display:block;border-radius:16px}
+.block .vid video{width:100%;display:block;border-radius:16px;max-height:60vh}
 
 /* Tip */
 .block .tip{text-align:left;display:flex;gap:10px;background:var(--brand-light);border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.6;color:var(--brand);margin-bottom:28px}
@@ -203,9 +203,8 @@ const steps=document.querySelectorAll('#stepper li');
 const dots=document.querySelectorAll('#dots .dot');
 
 function goTo(n){
-  // pause video
-  const v=blocks[cur].querySelector('video');
-  if(v)v.pause();
+  // pause all videos
+  blocks.forEach(b=>{const v=b.querySelector('video');if(v)v.pause()});
 
   cur=n;
   blocks.forEach((b,i)=>b.classList.toggle('active',i===n));
@@ -218,7 +217,17 @@ function goTo(n){
     d.classList.toggle('on',i===n);
   });
   document.querySelector('.right').scrollTo({top:0,behavior:'smooth'});
+
+  // autoplay current video
+  const nv=blocks[n].querySelector('video');
+  if(nv){nv.currentTime=0;nv.play().catch(()=>{})}
 }
+
+// Autoplay first video on load
+window.addEventListener('DOMContentLoaded',()=>{
+  const v=blocks[0].querySelector('video');
+  if(v)v.play().catch(()=>{});
+});
 
 document.querySelectorAll('#stepper li').forEach(li=>{
   li.addEventListener('click',()=>goTo(parseInt(li.dataset.s)));

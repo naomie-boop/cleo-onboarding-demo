@@ -6,474 +6,184 @@
 <title>Le B.A.-BA de Cleo Insight</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#37352F;--t2:#787774;--t3:#A4A4A0;--bg:#FFFFFF;--hover:#F7F6F3;--border:#E9E9E7;--blue:#D3E5EF;--blue-t:#1B4A6F;--green:#DBEDDB;--green-t:#1A5A2D;--orange:#FADEC9;--orange-t:#6B3B13;--yellow:#FDE68A;--yellow-t:#723B13;--purple:#E8DEEE;--purple-t:#412D5A;--pink:#F5E0E9;--pink-t:#6B2041;--red:#FFE2DD;--red-t:#6B2020;--gray:#E3E2E0;--gray-t:#37352F;--brand:#1E1B8C;--font:'Inter',system-ui,-apple-system,sans-serif}
+:root{--ink:#37352F;--t2:#787774;--t3:#A4A4A0;--bg:#fff;--hover:#F7F6F3;--border:#E9E9E7;--blue:#D3E5EF;--blue-t:#1B4A6F;--green:#DBEDDB;--green-t:#1A5A2D;--orange:#FADEC9;--orange-t:#6B3B13;--yellow-bg:#FBF3DB;--yellow-t:#723B13;--purple:#E8DEEE;--purple-t:#412D5A;--brand:#1E1B8C;--font:'Inter',system-ui,-apple-system,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.7}
 ::selection{background:#B4D5FE}
 
-/* Page */
-.page{max-width:900px;margin:0 auto;padding:0 96px}
+.page{max-width:900px;margin:0 auto;padding:0 96px 80px}
 
 /* Cover */
-.cover{background:linear-gradient(135deg,#F0EDFF 0%,#E8F0FE 50%,#F0EDFF 100%);height:180px;position:relative}
-.cover-icon{position:absolute;bottom:-40px;left:96px;font-size:72px;line-height:1}
-
-/* Header */
-.header{padding:56px 0 8px}
-.header h1{font-size:40px;font-weight:700;letter-spacing:-.02em;line-height:1.2;color:var(--ink)}
-
-/* Breadcrumb */
-.bread{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--t3);padding:16px 0 0}
-.bread a{color:var(--t3);text-decoration:none}
-.bread a:hover{color:var(--t2)}
-
-/* Block spacing */
-.block{margin:4px 0}
-.spacer{height:16px}
-.spacer-lg{height:32px}
-
-/* Text */
-p{color:var(--ink);padding:3px 2px;margin:0}
-.text-muted{color:var(--t2)}
-.text-sm{font-size:14px}
-h2{font-size:24px;font-weight:600;letter-spacing:-.01em;color:var(--ink);padding:3px 2px;margin-top:32px}
-h3{font-size:20px;font-weight:600;color:var(--ink);padding:3px 2px;margin-top:24px}
-h4{font-size:16px;font-weight:600;color:var(--ink);padding:3px 2px;margin-top:16px}
-
-/* Divider */
-.divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+.cover{background:linear-gradient(135deg,#F0EDFF 0%,#E8F0FE 50%,#F0EDFF 100%);height:160px}
+.icon{font-size:72px;margin-top:-36px;position:relative;z-index:1}
+h1{font-size:40px;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin:12px 0 6px}
+.sub{color:var(--t2);font-size:15px;margin-bottom:32px}
 
 /* Callout */
-.callout{display:flex;gap:12px;border-radius:4px;padding:16px;margin:6px 0;font-size:15px;line-height:1.65}
-.callout i{font-size:20px;flex-shrink:0;font-style:normal;line-height:1.65}
-.callout p{margin:0;flex:1}
-.callout-blue{background:var(--blue);color:var(--blue-t)}
-.callout-green{background:var(--green);color:var(--green-t)}
-.callout-orange{background:var(--orange);color:var(--orange-t)}
-.callout-yellow{background:#FBF3DB;color:var(--yellow-t)}
-.callout-purple{background:var(--purple);color:var(--purple-t)}
-.callout-pink{background:var(--pink);color:var(--pink-t)}
-.callout-gray{background:var(--hover);color:var(--ink)}
+.co{display:flex;gap:12px;border-radius:4px;padding:16px;margin:8px 0;font-size:15px;line-height:1.65}
+.co i{font-size:20px;flex-shrink:0;font-style:normal}
+.co-yellow{background:var(--yellow-bg);color:var(--yellow-t)}
+.co-blue{background:var(--blue);color:var(--blue-t)}
+.co-purple{background:var(--purple);color:var(--purple-t)}
+.co-green{background:var(--green);color:var(--green-t)}
+.co-orange{background:var(--orange);color:var(--orange-t)}
+.co-gray{background:var(--hover);color:var(--ink)}
 
-/* Toggle */
-.toggle{border:none;margin:2px 0;padding:0}
-.toggle summary{padding:6px 2px;font-size:16px;cursor:pointer;list-style:none;display:flex;align-items:flex-start;gap:4px;color:var(--ink);line-height:1.65}
-.toggle summary::-webkit-details-marker{display:none}
-.toggle summary .tri{color:var(--t3);font-size:12px;width:24px;height:26px;display:flex;align-items:center;justify-content:center;transition:transform .12s;flex-shrink:0}
-.toggle[open] summary .tri{transform:rotate(90deg)}
-.toggle summary:hover .tri{background:var(--hover);border-radius:3px}
-.toggle .toggle-inner{padding:0 0 0 28px}
+/* TOC */
+.toc{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:24px 0}
+.toc a{display:flex;align-items:center;gap:8px;padding:10px 12px;font-size:14px;color:var(--ink);text-decoration:none;border-radius:4px;border:1px solid var(--border);transition:background .1s}
+.toc a:hover{background:var(--hover)}
+.toc a .n{width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
-/* Table of contents */
-.toc{margin:8px 0}
-.toc a{display:flex;align-items:center;gap:6px;padding:4px 2px;font-size:14px;color:var(--t2);text-decoration:none;transition:background .1s;border-radius:3px}
-.toc a:hover{background:var(--hover);color:var(--ink)}
-.toc a .num{width:22px;height:22px;border-radius:4px;background:var(--hover);color:var(--t2);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* Divider */
+hr{border:none;border-top:1px solid var(--border);margin:40px 0}
+
+/* Section */
+.s{scroll-margin-top:24px}
+.s h2{font-size:24px;font-weight:600;margin-bottom:4px}
+.s .d{color:var(--t2);font-size:15px;margin-bottom:16px}
 
 /* Video */
-.video-wrap{border-radius:6px;overflow:hidden;margin:8px 0;border:1px solid var(--border);background:#000}
-.video-wrap video{width:100%;display:block}
+.vid{border-radius:6px;overflow:hidden;border:1px solid var(--border);margin:0 0 16px;background:#000}
+.vid video{width:100%;display:block}
 
-/* Columns */
-.columns{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0}
-.col-card{background:var(--hover);border-radius:4px;padding:16px;font-size:14px}
-.col-card .card-icon{font-size:24px;margin-bottom:8px}
-.col-card strong{display:block;color:var(--ink);margin-bottom:4px}
-.col-card p{color:var(--t2);font-size:13px;line-height:1.55;margin:0}
-
-/* Numbered list */
-.num-list{margin:8px 0;padding:0;counter-reset:nl}
-.num-item{display:flex;gap:12px;padding:6px 2px;counter-increment:nl}
-.num-item::before{content:counter(nl) ".";font-weight:600;color:var(--t2);min-width:22px;flex-shrink:0;padding-top:1px}
-.num-item div strong{color:var(--ink)}
-.num-item div p{color:var(--t2);font-size:14px;margin:0}
-
-/* Bullet list */
-.bullet{margin:4px 0;padding-left:28px}
-.bullet li{padding:2px 0;font-size:15px;color:var(--ink)}
-.bullet li::marker{color:var(--t3)}
-
-/* Badge inline */
-.badge{display:inline-block;padding:2px 6px;border-radius:3px;font-size:12px;font-weight:500}
-.badge-red{background:var(--red);color:var(--red-t)}
-.badge-green{background:var(--green);color:var(--green-t)}
-.badge-orange{background:var(--orange);color:var(--orange-t)}
-.badge-gray{background:var(--gray);color:var(--gray-t)}
-
-/* Inline code */
-code{background:#F7F6F3;border:1px solid var(--border);padding:1px 4px;border-radius:3px;font-size:14px;font-family:'SFMono-Regular',Consolas,monospace;color:#EB5757}
-
-/* Table Notion */
-.ntable{width:100%;border-collapse:collapse;margin:8px 0;font-size:14px;border:1px solid var(--border)}
-.ntable th{text-align:left;font-weight:600;background:var(--hover);padding:8px 10px;border:1px solid var(--border);color:var(--ink)}
-.ntable td{padding:8px 10px;border:1px solid var(--border);color:var(--ink)}
+/* Toggle */
+details{border:none;margin:4px 0}
+details summary{padding:6px 0;font-size:15px;cursor:pointer;list-style:none;color:var(--ink)}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:'▸ ';color:var(--t3)}
+details[open] summary::before{content:'▾ '}
+details .inner{padding:4px 0 8px 18px;font-size:14px;color:var(--t2);line-height:1.7}
 
 /* Footer */
-.footer{padding:32px 0;margin-top:48px;border-top:1px solid var(--border);font-size:13px;color:var(--t3);display:flex;justify-content:space-between;align-items:center}
+.footer{padding:24px 0;margin-top:40px;border-top:1px solid var(--border);font-size:13px;color:var(--t3);display:flex;justify-content:space-between}
 .footer a{color:var(--brand);text-decoration:none;font-weight:500}
 
-/* Responsive */
 @media(max-width:720px){
-  .page{padding:0 24px}
-  .cover-icon{left:24px}
-  .header h1{font-size:28px}
-  .columns{grid-template-columns:1fr}
+  .page{padding:0 20px 60px}
+  h1{font-size:28px}
+  .toc{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- COVER -->
 <div class="cover"></div>
 <div class="page">
-<div class="cover-icon" style="position:relative;bottom:auto;left:auto;margin-top:-40px">🚀</div>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>Le B.A.-BA de Cleo Insight</h1>
-</div>
-<p class="text-muted text-sm">6 vidéos · ~23 minutes · Tout pour être opérationnel dès lundi matin.</p>
+<div class="icon">🚀</div>
+<h1>Le B.A.-BA de Cleo Insight</h1>
+<p class="sub">6 vidéos courtes. Regardez dans l'ordre, vous êtes opérationnel en 20 minutes.</p>
 
-<div class="spacer-lg"></div>
-
-<!-- SOMMAIRE -->
-<div class="callout callout-gray">
-  <i>📑</i>
-  <div>
-    <strong>Sommaire</strong>
-    <div class="toc">
-      <a href="#v1"><span class="num">1</span> Le tableau de bord</a>
-      <a href="#v2"><span class="num">2</span> La fiche signal</a>
-      <a href="#v3"><span class="num">3</span> L'échéancier</a>
-      <a href="#v4"><span class="num">4</span> Les pays</a>
-      <a href="#v5"><span class="num">5</span> Réglementations & Autorités</a>
-      <a href="#v6"><span class="num">6</span> Paramètres & Sources</a>
-      <a href="#routine"><span class="num">☀️</span> Routine hebdo</a>
-      <a href="#faq"><span class="num">❓</span> FAQ</a>
-    </div>
-  </div>
-</div>
-
-<div class="spacer-lg"></div>
-
-<!-- AVANT DE COMMENCER -->
-<div class="callout callout-yellow">
+<!-- Avant de commencer -->
+<div class="co co-yellow">
   <i>⚡</i>
-  <div>
-    <strong>Avant de commencer</strong><br>
-    Trois choses à configurer dans <strong>Paramètres</strong> : votre <strong>profil</strong> (département + rôle), vos <strong>produits</strong>, et vos <strong>pays</strong>.<br>
-    Comptez 30 minutes. Après ça, Cleo fait le reste.
-  </div>
+  <div><strong>Avant de commencer :</strong> configurez votre <strong>profil</strong> (département + rôle), ajoutez vos <strong>produits</strong>, et vos <strong>pays</strong>. 30 minutes, Cleo fait le reste.</div>
 </div>
 
-<hr class="divider">
-
-<!-- ══════════════════════════════════════ -->
-<!-- 1. TABLEAU DE BORD                    -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="v1">📊 Le tableau de bord</h2>
-<p class="text-muted">Votre page d'accueil. C'est là que vous atterrissez chaque matin.</p>
-
-<div class="spacer"></div>
-
-<div class="video-wrap">
-  <video controls preload="metadata" poster="images/dashboard-viewport-crop.jpg">
-    <source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video1.mp4" type="video/mp4">
-  </video>
+<!-- Sommaire -->
+<div class="toc">
+  <a href="#v1"><span class="n">1</span> Tableau de bord</a>
+  <a href="#v2"><span class="n">2</span> Fiche signal</a>
+  <a href="#v3"><span class="n">3</span> Échéancier</a>
+  <a href="#v4"><span class="n">4</span> Pays</a>
+  <a href="#v5"><span class="n">5</span> Réglementations</a>
+  <a href="#v6"><span class="n">6</span> Paramètres</a>
 </div>
 
-<div class="spacer"></div>
+<hr>
 
-<h4>Les 4 KPIs en haut</h4>
-<div class="columns">
-  <div class="col-card"><div class="card-icon">🆕</div><strong>NOUVEAUX — 9</strong><p>Nouveaux signaux depuis votre dernière visite. La courbe montre la tendance.</p></div>
-  <div class="col-card"><div class="card-icon">🟠</div><strong>EXPOSITION — Élevé</strong><p>Votre niveau de risque global. Orange = des sujets à traiter.</p></div>
-  <div class="col-card"><div class="card-icon">⏳</div><strong>ÉCHÉANCE — 100j</strong><p>Compteur vers votre prochaine deadline réglementaire.</p></div>
-  <div class="col-card"><div class="card-icon">📜</div><strong>RÉGLEMENTATIONS — 832</strong><p>Total de lois surveillées. Déjà pré-rempli.</p></div>
+<!-- 1 -->
+<div class="s" id="v1">
+  <h2>📊 Le tableau de bord</h2>
+  <p class="d">Votre page d'accueil : les KPIs, les filtres, et le fil de signaux.</p>
+  <div class="vid"><video controls preload="metadata" poster="images/dashboard-viewport-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video1.mp4" type="video/mp4"></video></div>
+  <div class="co co-blue"><i>💡</i><div>Le filtre <strong>"Adopté"</strong> = lois votées mais pas encore en vigueur. Votre fenêtre d'anticipation. Et cliquez <strong>"Actualiser"</strong> chaque lundi matin.</div></div>
 </div>
 
-<div class="spacer"></div>
+<hr>
 
-<h4>Les filtres</h4>
-<div class="columns">
-  <div class="col-card"><div class="card-icon">🎯</div><strong>IMPACT</strong><p>Critique · Élevé · Moyen · Faible. "Critique" = ce que vous checkez en premier.</p></div>
-  <div class="col-card"><div class="card-icon">⚡</div><strong>STATUT</strong><p>En vigueur · Adopté · Proposé. <strong>"Adopté" = le plus important.</strong> Lois votées mais pas encore en vigueur.</p></div>
+<!-- 2 -->
+<div class="s" id="v2">
+  <h2>🔍 La fiche signal</h2>
+  <p class="d">Le cœur de Cleo. En 3 minutes : ce qui s'est passé, pourquoi ça vous concerne, et quoi faire.</p>
+  <div class="vid"><video controls preload="metadata" poster="images/signal-open-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video2.mp4" type="video/mp4"></video></div>
+  <div class="co co-green"><i>✅</i><div>Chaque fiche : résumé adapté à votre rôle → impact sur votre entreprise → produits touchés → obligations → plan d'action → source officielle.</div></div>
 </div>
 
-<div class="spacer"></div>
+<hr>
 
-<h4>Les cartes signal</h4>
-<p class="text-sm">Chaque carte = un signal réglementaire. Structure toujours identique :</p>
-<ul class="bullet">
-  <li><span class="badge badge-red">SANCTION</span> — Amende ou pénalité prononcée</li>
-  <li><span class="badge badge-green">RECOMMANDATION</span> — Nouvelle guideline ou obligation</li>
-  <li><span class="badge badge-gray">ANALYSE</span> — Veille informationnelle</li>
-  <li>+ Loi · Pays · Ancienneté · Produits impactés · Niveau de risque</li>
-</ul>
-
-<div class="spacer"></div>
-
-<div class="callout callout-blue">
-  <i>💡</i>
-  <p>Le bouton <strong>"Actualiser"</strong> en haut à droite rescanne toutes les sources officielles. C'est votre premier geste le lundi matin.</p>
+<!-- 3 -->
+<div class="s" id="v3">
+  <h2>📅 L'échéancier</h2>
+  <p class="d">Toutes vos dates réglementaires sur une timeline. Filtrez par horizon et criticité.</p>
+  <div class="vid"><video controls preload="metadata" poster="images/timeline.png"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video3.mp4" type="video/mp4"></video></div>
+  <div class="co co-purple"><i>🎯</i><div><strong>Le combo :</strong> filtre 90 jours + Critique → capture d'écran → slide direction. Trimestrielle en 10 secondes.</div></div>
 </div>
 
-<hr class="divider">
+<hr>
 
-<!-- ══════════════════════════════════════ -->
-<!-- 2. FICHE SIGNAL                       -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="v2">🔍 La fiche signal</h2>
-<p class="text-muted">Vous cliquez sur un signal. Voilà ce que vous trouvez dedans. C'est le cœur de Cleo.</p>
-
-<div class="spacer"></div>
-
-<div class="video-wrap">
-  <video controls preload="metadata" poster="images/signal-open-crop.jpg">
-    <source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video2.mp4" type="video/mp4">
-  </video>
+<!-- 4 -->
+<div class="s" id="v4">
+  <h2>🌍 Les pays</h2>
+  <p class="d">Vos marchés sur une carte. L'UE et les US se déplient état par état.</p>
+  <div class="vid"><video controls preload="metadata" poster="images/countries-crop.png"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video4.mp4" type="video/mp4"></video></div>
+  <div class="co co-blue"><i>💡</i><div><strong>"Europe" + "Avec impacts"</strong> = votre brief conformité européen en un clic.</div></div>
 </div>
 
-<div class="spacer"></div>
+<hr>
 
-<h4>Les 8 sections, de haut en bas</h4>
-<div class="num-list">
-  <div class="num-item"><div><strong>L'en-tête</strong><p>Type · Loi · Pays · Score de pertinence (%) · Risque. En 2 secondes vous savez si c'est urgent.</p></div></div>
-  <div class="num-item"><div><strong>Résumé pour votre rôle</strong><p>Adapté à votre poste. DPO → angle données. Qualité → angle produit. Même signal, résumés différents.</p></div></div>
-  <div class="num-item"><div><strong>Impact pour votre rôle</strong><p>Pourquoi ça vous concerne <em>vous</em>. Pas un résumé de la loi — le lien avec votre entreprise.</p></div></div>
-  <div class="num-item"><div><strong>Produits impactés</strong><p>Vos produits à vous, croisés automatiquement avec le signal.</p></div></div>
-  <div class="num-item"><div><strong>Obligations légales</strong><p>Base juridique exacte. Checkbox de suivi. Responsable assigné.</p></div></div>
-  <div class="num-item"><div><strong>Plan d'action</strong><p>Qui fait quoi, quand, sur quelle base juridique. Prêt à copier-coller.</p></div></div>
-  <div class="num-item"><div><strong>Contexte · Exposition · Escalade</strong><p>L'histoire, votre position vs concurrents, à qui remonter.</p></div></div>
-  <div class="num-item"><div><strong>Source · Feedback · Signet</strong><p>Lien officiel · 👍👎 pour améliorer · 🔖 pour sauvegarder.</p></div></div>
+<!-- 5 -->
+<div class="s" id="v5">
+  <h2>📜 Réglementations & Autorités</h2>
+  <p class="d">832 lois, 457 autorités. Passez les lois critiques en "Renforcée" pour un scan prioritaire.</p>
+  <div class="vid"><video controls preload="metadata" poster="images/laws-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video5.mp4" type="video/mp4"></video></div>
+  <div class="co co-orange"><i>⚠️</i><div>Surveillez les autorités dont les impacts montent vite — ça signale un renforcement des contrôles.</div></div>
 </div>
 
-<div class="spacer"></div>
+<hr>
 
-<div class="callout callout-green">
-  <i>✅</i>
-  <p>En 3 minutes : ce qui s'est passé, pourquoi ça vous concerne, quels produits, quoi faire, dans quel délai, et à qui remonter.</p>
+<!-- 6 -->
+<div class="s" id="v6">
+  <h2>⚙️ Paramètres & Sources</h2>
+  <p class="d">Votre profil, vos crédits, et le contrôle des sources d'information.</p>
+  <div class="vid"><video controls preload="metadata" poster="images/settings-sources-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video6.mp4" type="video/mp4"></video></div>
+  <div class="co co-orange"><i>⭐</i><div>Ajoutez vos <strong>sources de confiance</strong> en favoris, bloquez les non pertinentes. Plus vous votez (👍👎), plus Cleo s'affine.</div></div>
 </div>
 
-<hr class="divider">
+<hr>
 
-<!-- ══════════════════════════════════════ -->
-<!-- 3. ÉCHÉANCIER                         -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="v3">📅 L'échéancier</h2>
-<p class="text-muted">Votre calendrier réglementaire. Toutes les dates, mois par mois.</p>
-
-<div class="spacer"></div>
-
-<div class="video-wrap">
-  <video controls preload="metadata" poster="images/timeline.png">
-    <source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video3.mp4" type="video/mp4">
-  </video>
-</div>
-
-<div class="spacer"></div>
-
-<div class="columns">
-  <div class="col-card"><div class="card-icon">📍</div><strong>Marqueur TODAY</strong><p>Point violet = aujourd'hui. En dessous = ce qui arrive.</p></div>
-  <div class="col-card"><div class="card-icon">🔴</div><strong>Compteur coloré</strong><p>Rouge = critique. Orange = à surveiller. Nombre de jours restants.</p></div>
-  <div class="col-card"><div class="card-icon">📐</div><strong>Filtre HORIZON</strong><p>30j (urgences) · 90j (trimestre) · 6 mois · Tous.</p></div>
-  <div class="col-card"><div class="card-icon">⚡</div><strong>Filtre RISQUE</strong><p>Critique · Élevé · Moyen · Faible. Combinable avec Horizon.</p></div>
-</div>
-
-<div class="spacer"></div>
-
-<div class="callout callout-purple">
-  <i>🎯</i>
-  <p><strong>Le combo magique :</strong> 90 jours + Critique → capture d'écran → slide direction. Votre trimestrielle en 10 secondes.</p>
-</div>
-
-<hr class="divider">
-
-<!-- ══════════════════════════════════════ -->
-<!-- 4. PAYS                               -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="v4">🌍 Les pays</h2>
-<p class="text-muted">Vos marchés. Cleo surveille les réglementations de chaque pays où vous vendez.</p>
-
-<div class="spacer"></div>
-
-<div class="video-wrap">
-  <video controls preload="metadata" poster="images/countries-crop.png">
-    <source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video4.mp4" type="video/mp4">
-  </video>
-</div>
-
-<div class="spacer"></div>
-
-<div class="columns">
-  <div class="col-card"><div class="card-icon">🗺️</div><strong>La carte</strong><p>Rouge = critique · Orange = élevé · Gris = pas surveillé.</p></div>
-  <div class="col-card"><div class="card-icon">➕</div><strong>Ajouter un pays</strong><p>Bouton "+" → Cleo surveille. "Importer CSV" pour plusieurs d'un coup.</p></div>
-  <div class="col-card"><div class="card-icon">🇪🇺</div><strong>L'UE se déplie</strong><p>Chaque État membre avec ses propres impacts et transpositions.</p></div>
-  <div class="col-card"><div class="card-icon">🇺🇸</div><strong>Les US se déplient</strong><p>État par état. Californie Prop 65 = beaucoup plus strict que le fédéral.</p></div>
-</div>
-
-<div class="spacer"></div>
-
-<div class="callout callout-blue">
-  <i>💡</i>
-  <p><strong>"Europe" + "Avec impacts"</strong> = votre brief conformité européen en un clic.</p>
-</div>
-
-<hr class="divider">
-
-<!-- ══════════════════════════════════════ -->
-<!-- 5. RÉGLEMENTATIONS & AUTORITÉS        -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="v5">📜 Réglementations & Autorités</h2>
-<p class="text-muted">832 lois et 457 autorités surveillées automatiquement.</p>
-
-<div class="spacer"></div>
-
-<div class="video-wrap">
-  <video controls preload="metadata" poster="images/laws-crop.jpg">
-    <source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video5.mp4" type="video/mp4">
-  </video>
-</div>
-
-<div class="spacer"></div>
-
-<h4>Réglementations</h4>
-<div class="columns">
-  <div class="col-card"><div class="card-icon">📋</div><strong>Chaque loi</strong><p>Nom · Juridiction · Autorité · Risque · Impacts.</p></div>
-  <div class="col-card"><div class="card-icon">🔔</div><strong>Priorité Renforcée</strong><p>Scan plus fréquent pour vos lois critiques. Signaux en priorité.</p></div>
-  <div class="col-card"><div class="card-icon">⏰</div><strong>Filtre "Adopté"</strong><p>Lois votées pas en vigueur. <strong>Votre fenêtre d'anticipation.</strong></p></div>
-  <div class="col-card"><div class="card-icon">➕</div><strong>Ajouter</strong><p>Tapez le nom → Cleo enrichit automatiquement.</p></div>
-</div>
-
-<div class="spacer"></div>
-
-<h4>Autorités</h4>
-<div class="columns">
-  <div class="col-card"><div class="card-icon">🏛️</div><strong>457 groupes</strong><p>CPSC, DGCCRF, ECHA, CMA… Dépliez pour voir les lois.</p></div>
-  <div class="col-card"><div class="card-icon">⚠️</div><strong>Signal d'alerte</strong><p>Impacts qui montent vite = renforcement des contrôles en cours.</p></div>
-</div>
-
-<hr class="divider">
-
-<!-- ══════════════════════════════════════ -->
-<!-- 6. PARAMÈTRES & SOURCES               -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="v6">⚙️ Paramètres & Sources</h2>
-<p class="text-muted">Votre rôle, vos crédits, et d'où vient l'information.</p>
-
-<div class="spacer"></div>
-
-<div class="video-wrap">
-  <video controls preload="metadata" poster="images/settings-sources-crop.jpg">
-    <source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video6.mp4" type="video/mp4">
-  </video>
-</div>
-
-<div class="spacer"></div>
-
-<div class="columns">
-  <div class="col-card"><div class="card-icon">👤</div><strong>Profil</strong><p>Département + Rôle = personnalise tous les résumés. <strong>Première chose à faire.</strong></p></div>
-  <div class="col-card"><div class="card-icon">🔄</div><strong>Scans & crédits</strong><p>Chaque "Actualiser" consomme des crédits. Pro : 5 000/mois. N'expirent pas.</p></div>
-</div>
-
-<div class="spacer"></div>
-
-<h4>Les sources</h4>
-<div class="columns">
-  <div class="col-card"><div class="card-icon">⭐</div><strong>Score qualité</strong><p>Note /10 de fiabilité. Registre gouvernemental > blog.</p></div>
-  <div class="col-card"><div class="card-icon">✅</div><strong>Autorisé / Bloqué</strong><p>Vous contrôlez quelles sources Cleo utilise.</p></div>
-  <div class="col-card"><div class="card-icon">📌</div><strong>Sources préférées</strong><p>Ajoutez vos sources de confiance → priorisées dans chaque scan.</p></div>
-  <div class="col-card"><div class="card-icon">👍</div><strong>Feedback</strong><p>Votez dans les fiches (👍👎) → Cleo s'affine.</p></div>
-</div>
-
-<div class="spacer"></div>
-
-<div class="callout callout-orange">
-  <i>⚠️</i>
-  <p><strong>Vous contrôlez d'où vient l'info.</strong> Ajoutez vos sources, bloquez les non pertinentes. Plus vous votez, plus Cleo s'affine.</p>
-</div>
-
-<div class="spacer"></div>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> <strong>Autres paramètres</strong></summary>
-  <div class="toggle-inner">
-    <table class="ntable">
-      <tr><th>Section</th><th>Ce que c'est</th></tr>
-      <tr><td><strong>Facturation</strong></td><td>Gérer votre plan : Gratuit · Pro · Enterprise</td></tr>
-      <tr><td><strong>Membres</strong></td><td>Inviter l'équipe (Pro : 5 membres, chacun son profil)</td></tr>
-      <tr><td><strong>Intégrations</strong></td><td>Connecter Slack pour les alertes</td></tr>
-      <tr><td><strong>Notifications</strong></td><td>Alertes critiques · Digest hebdo · Rappels</td></tr>
-    </table>
-  </div>
-</details>
-
-<hr class="divider">
-
-<!-- ══════════════════════════════════════ -->
-<!-- ROUTINE                               -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="routine">☀️ Votre routine hebdo</h2>
-<p class="text-muted">2 minutes le lundi matin. 3 gestes.</p>
-
-<div class="spacer"></div>
-
-<div class="callout callout-yellow">
-  <i>☕</i>
-  <div>
-    <div class="num-list">
-      <div class="num-item"><div><strong>Actualiser</strong><p>Bouton en haut à droite → Cleo scanne toutes les sources.</p></div></div>
-      <div class="num-item"><div><strong>Signaux critiques</strong><p>Filtre "Critique" sur le tableau de bord → ouvrir les urgents.</p></div></div>
-      <div class="num-item"><div><strong>Échéancier 90j + Critique</strong><p>Capture d'écran → slide direction. Fait.</p></div></div>
+<!-- Routine -->
+<div class="s" id="routine">
+  <h2>☀️ Votre routine — 2 min le lundi</h2>
+  <div class="co co-yellow">
+    <i>☕</i>
+    <div>
+      <strong>1.</strong> Cliquer <strong>Actualiser</strong><br>
+      <strong>2.</strong> Filtrer <strong>Critique</strong> sur le tableau de bord<br>
+      <strong>3.</strong> Échéancier <strong>90j + Critique</strong> → capture d'écran → slide direction
     </div>
   </div>
 </div>
 
-<hr class="divider">
+<hr>
 
-<!-- ══════════════════════════════════════ -->
-<!-- FAQ                                   -->
-<!-- ══════════════════════════════════════ -->
-<h2 id="faq">❓ FAQ</h2>
+<!-- FAQ -->
+<div class="s" id="faq">
+  <h2>❓ FAQ</h2>
+  <details><summary><strong>Combien de temps pour configurer ?</strong></summary><div class="inner">30 minutes. Profil, produits, pays, premier scan.</div></details>
+  <details><summary><strong>Comment Cleo adapte les résumés ?</strong></summary><div class="inner">Via Département + Rôle dans votre Profil. Même signal, résumé différent selon votre poste.</div></details>
+  <details><summary><strong>Que sont les crédits ?</strong></summary><div class="inner">Chaque scan en consomme. Pro : 5 000/mois. N'expirent pas.</div></details>
+  <details><summary><strong>D'où viennent les signaux ?</strong></summary><div class="inner">Registres officiels, journaux publics, publications d'agences. Contrôlable dans Sources.</div></details>
+  <details><summary><strong>Cleo en équipe ?</strong></summary><div class="inner">Pro (5 membres) ou Enterprise (illimité). Chaque membre a son profil et ses résumés.</div></details>
+  <details><summary><strong>Alertes automatiques ?</strong></summary><div class="inner">Alertes critiques, digest hebdo, rappels d'échéance. Slack disponible.</div></details>
+</div>
 
-<div class="spacer"></div>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> Combien de temps pour configurer ?</summary>
-  <div class="toggle-inner"><p>30 minutes. Profil (département + rôle), produits (import CSV si besoin), pays, premier scan.</p></div>
-</details>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> Comment Cleo adapte les résumés à mon rôle ?</summary>
-  <div class="toggle-inner"><p>Département + Rôle dans Paramètres → Profil. Même signal, résumés différents selon votre poste.</p></div>
-</details>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> Que sont les crédits ?</summary>
-  <div class="toggle-inner"><p>Chaque scan en consomme. Pro : 5 000/mois. Les crédits achetés n'expirent pas.</p></div>
-</details>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> D'où viennent les signaux ?</summary>
-  <div class="toggle-inner"><p>Registres fédéraux, journaux officiels, publications d'agences. Score de qualité visible dans Sources. Vous pouvez ajouter ou bloquer.</p></div>
-</details>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> Cleo en équipe ?</summary>
-  <div class="toggle-inner"><p>Pro (5 membres) ou Enterprise (illimité). Chaque membre a son propre profil et ses propres résumés.</p></div>
-</details>
-
-<details class="toggle">
-  <summary><span class="tri">▶</span> Alertes automatiques ?</summary>
-  <div class="toggle-inner"><p>Pro : alertes critiques (email), digest hebdo, rappels d'échéance. Intégration Slack disponible.</p></div>
-</details>
-
-<!-- FOOTER -->
 <div class="footer">
   <span>© 2026 Cleo Labs</span>
   <a href="https://insight.cleolabs.co">Ouvrir Cleo Insight →</a>
 </div>
 
-</div><!-- /page -->
+</div>
 </body>
 </html>

@@ -38,6 +38,12 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 .shot{border-radius:8px;border:1px solid var(--border);overflow:hidden;margin:20px 0;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
 .shot img{width:100%;display:block}
 
+/* Video */
+.vid{border-radius:10px;overflow:hidden;margin:24px 0;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid var(--border)}
+.vid video{width:100%;display:block}
+.vid-label{padding:10px 14px;background:var(--surface);border-top:1px solid var(--border);font-size:12px;font-weight:600;color:var(--t2);display:flex;align-items:center;gap:8px}
+.vid-label span{color:var(--brand)}
+
 /* Annotated list */
 .ann{margin:16px 0;border-left:2px solid var(--brand);padding-left:16px}
 .ann-item{margin-bottom:16px}
@@ -104,7 +110,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--border)}
   <h2>📊 Le tableau de bord</h2>
   <p class="muted">Votre page d'accueil. C'est là que vous atterrissez chaque matin.</p>
 
-  <div class="shot"><img src="images/dashboard-viewport-crop.jpg" alt="Tableau de bord"></div>
+  <div class="vid">
+    <video controls preload="metadata" poster="images/dashboard-viewport-crop.jpg"><source src="videos/video1.mp4" type="video/mp4"></video>
+    <div class="vid-label"><span>▶</span> Vidéo 1 — Le tableau de bord</div>
+  </div>
 
   <h3>Les 4 KPIs en haut</h3>
   <div class="ann">
@@ -173,7 +182,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--border)}
   <h2>🔍 La fiche signal</h2>
   <p class="muted">Vous cliquez sur un signal, et voilà ce que vous trouvez dedans. C'est le cœur de Cleo.</p>
 
-  <div class="shot"><img src="images/signal-open-crop.jpg" alt="Fiche signal"></div>
+  <div class="vid">
+    <video controls preload="metadata" poster="images/signal-open-crop.jpg"><source src="videos/video2.mp4" type="video/mp4"></video>
+    <div class="vid-label"><span>▶</span> Vidéo 2 — Maîtrisez la fiche Signal</div>
+  </div>
 
   <div class="steps">
     <div class="step"><div class="n">①</div><div class="t"><strong>L'en-tête</strong><p>Type · Loi · Pays · Score de pertinence (%) · Niveau de risque. En 2 secondes vous savez si c'est urgent.</p></div></div>
@@ -220,7 +232,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--border)}
   <h2>📅 L'échéancier</h2>
   <p class="muted">Votre calendrier réglementaire. Toutes les dates, mois par mois.</p>
 
-  <div class="shot"><img src="images/timeline.png" alt="Échéancier"></div>
+  <div class="vid">
+    <video controls preload="metadata" poster="images/timeline.png"><source src="videos/video3.mp4" type="video/mp4"></video>
+    <div class="vid-label"><span>▶</span> Vidéo 3 — L'échéancier réglementaire</div>
+  </div>
 
   <div class="ann">
     <div class="ann-item"><strong>Le marqueur TODAY</strong><p>Point violet = aujourd'hui. Tout ce qui est en dessous = ce qui arrive.</p></div>
@@ -254,7 +269,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--border)}
   <h2>🌍 Les pays</h2>
   <p class="muted">Vos marchés. Cleo surveille les réglementations de chaque pays où vous vendez.</p>
 
-  <div class="shot"><img src="images/countries-crop.png" alt="Pays"></div>
+  <div class="vid">
+    <video controls preload="metadata" poster="images/countries-crop.png"><source src="videos/video4.mp4" type="video/mp4"></video>
+    <div class="vid-label"><span>▶</span> Vidéo 4 — Gérer vos marchés</div>
+  </div>
 
   <div class="ann">
     <div class="ann-item"><strong>La carte</strong><p>Rouge = critique · Orange = élevé · Gris = pas encore surveillé.</p></div>
@@ -292,7 +310,10 @@ td{padding:8px 10px;border-bottom:1px solid var(--border)}
   <h2>📜 Réglementations & Autorités</h2>
   <p class="muted">832 lois et 457 autorités surveillées automatiquement.</p>
 
-  <div class="shot"><img src="images/laws-crop.jpg" alt="Réglementations"></div>
+  <div class="vid">
+    <video controls preload="metadata" poster="images/laws-crop.jpg"><source src="videos/video5.mp4" type="video/mp4"></video>
+    <div class="vid-label"><span>▶</span> Vidéo 5 — Suivi des réglementations</div>
+  </div>
 
   <h3>Réglementations</h3>
   <div class="ann">
@@ -337,6 +358,11 @@ td{padding:8px 10px;border-bottom:1px solid var(--border)}
 <div class="section">
   <h2>⚙️ Paramètres & Sources</h2>
   <p class="muted">Là où vous configurez tout : votre rôle, vos crédits, et d'où vient l'information.</p>
+
+  <div class="vid">
+    <video controls preload="metadata" poster="images/settings-sources-crop.jpg"><source src="videos/video6.mp4" type="video/mp4"></video>
+    <div class="vid-label"><span>▶</span> Vidéo 6 — Configurer votre profil</div>
+  </div>
 
   <h3>Profil</h3>
   <p><strong>Département + Rôle</strong> = ce qui personnalise tous les résumés. Juridique + DPO → angle données. Conformité + Qualité → angle produit. <strong>Première chose à configurer.</strong></p>

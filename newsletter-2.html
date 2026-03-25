@@ -6,11 +6,10 @@
 <title>Cleo Product Update #2</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-:root{--brand:#1E1B8C;--ink:#111;--t2:#6b6b6b;--t3:#a3a3a3;--bg:#fff;--surface:#F8F7FF;--border:#E5E5E5;--green:#10B981;--orange:#F59E0B;--blue:#3B82F6;--font:'Inter',system-ui,sans-serif}
+:root{--brand:#1E1B8C;--ink:#111;--t2:#6b6b6b;--t3:#a3a3a3;--bg:#fff;--surface:#F8F7FF;--border:#E5E5E5;--font:'Inter',system-ui,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--font);background:#F3F2F8;color:var(--ink);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.7}
 
-/* Email-style centered container */
 .wrap{max-width:640px;margin:0 auto;background:var(--bg)}
 
 /* Header */
@@ -25,51 +24,44 @@ body{font-family:var(--font);background:#F3F2F8;color:var(--ink);-webkit-font-sm
 .header p{color:rgba(255,255,255,0.75);font-size:14px}
 .header .date{color:rgba(255,255,255,0.5);font-size:12px;margin-top:12px}
 
-/* Body */
 .body{padding:40px}
 
-/* Intro */
 .intro{font-size:15px;color:var(--t2);margin-bottom:36px;line-height:1.7}
 .intro strong{color:var(--ink)}
 
-/* Feature card */
-.feat{margin-bottom:32px;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow .2s}
-.feat:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}
-.feat-head{padding:20px 24px 16px;display:flex;align-items:flex-start;gap:14px}
-.feat-emoji{font-size:32px;flex-shrink:0;line-height:1}
-.feat-head h3{font-size:17px;font-weight:700;letter-spacing:-.01em;margin-bottom:2px}
-.feat-head p{font-size:13px;color:var(--t2);line-height:1.5}
-.feat-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-bottom:6px}
-.tag-new{background:#ECFDF5;color:#059669}
-.tag-improved{background:#EFF6FF;color:#2563EB}
-.tag-perf{background:#FEF3C7;color:#B45309}
-.feat-visual{background:var(--surface);border-top:1px solid var(--border);padding:20px 24px;font-size:13px;color:var(--t2);line-height:1.65}
-.feat-visual img{width:100%;border-radius:8px;margin-top:12px;border:1px solid var(--border)}
-
-/* Bullet list in cards */
-.feat-list{margin:10px 0 0;padding-left:18px;font-size:13px;color:var(--ink)}
-.feat-list li{padding:3px 0}
-.feat-list li::marker{color:var(--brand)}
-
-/* Highlight box */
-.highlight{background:linear-gradient(135deg,var(--surface) 0%,#EEF2FF 100%);border-radius:12px;padding:24px;margin:36px 0;text-align:center}
-.highlight .num{font-size:40px;font-weight:800;color:var(--brand);line-height:1}
-.highlight .label{font-size:13px;color:var(--t2);margin-top:4px}
-
-/* Stats row */
+/* Stats */
 .stats{display:flex;gap:12px;margin:32px 0}
 .stat{flex:1;text-align:center;background:var(--surface);border-radius:10px;padding:16px 12px}
 .stat .n{font-size:28px;font-weight:800;color:var(--brand)}
 .stat .l{font-size:11px;color:var(--t2);margin-top:2px}
 
+/* Section label */
+.section-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+
+/* Feature card */
+.feat{margin-bottom:24px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.feat-head{padding:20px 24px 16px;display:flex;align-items:flex-start;gap:14px}
+.feat-emoji{font-size:28px;flex-shrink:0;line-height:1}
+.feat-head h3{font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:2px}
+.feat-head p{font-size:13px;color:var(--t2);line-height:1.55}
+.feat-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-bottom:6px}
+.tag-new{background:#ECFDF5;color:#059669}
+.tag-improved{background:#EFF6FF;color:#2563EB}
+.tag-fixed{background:#FEF2F2;color:#DC2626}
+
+/* Small fix list */
+.fix-list{margin:0 0 24px;padding:0;list-style:none}
+.fix-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #F3F3F3;font-size:13px}
+.fix-item:last-child{border-bottom:none}
+.fix-item .dot{width:6px;height:6px;border-radius:50%;background:#DC2626;flex-shrink:0;margin-top:7px}
+.fix-item p{margin:0;color:var(--ink)}
+
+hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+
 /* CTA */
 .cta-box{text-align:center;margin:36px 0 0;padding:32px 24px;background:var(--surface);border-radius:12px}
 .cta-box p{font-size:14px;color:var(--t2);margin-bottom:16px}
-.cta-btn{display:inline-block;padding:14px 36px;background:var(--brand);color:#fff;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:all .2s}
-.cta-btn:hover{background:#16136E;transform:translateY(-1px)}
-
-/* Divider */
-hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+.cta-btn{display:inline-block;padding:14px 36px;background:var(--brand);color:#fff;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none}
 
 /* Footer */
 .footer{padding:24px 40px 32px;text-align:center;font-size:12px;color:var(--t3);border-top:1px solid var(--border)}
@@ -92,8 +84,8 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
 <div class="header">
   <div class="logo"><span class="cleo">cleo</span><span class="labs">LABS</span></div>
   <div class="badge">Product Update</div>
-  <h1>Cleo Insight — Ce qui change cette semaine</h1>
-  <p>Les nouveautés de la plateforme, résumées en 2 minutes.</p>
+  <h1>Ce qui change sur Cleo Insight</h1>
+  <p>Les nouveautés de mars 2026, résumées en 2 minutes.</p>
   <div class="date">Newsletter #2 — 25 mars 2026</div>
 </div>
 
@@ -102,144 +94,143 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
 
   <p class="intro">
     Bonjour 👋<br><br>
-    Cette semaine, grosse mise à jour côté <strong>produits</strong>. Vous pouvez maintenant voir l'exposition réglementaire de chaque produit en un coup d'œil — et plonger dans le détail en un clic. Voici tout ce qui a changé.
+    Ce mois-ci : <strong>5 nouvelles fonctionnalités</strong>, <strong>4 améliorations</strong>, et <strong>11 corrections</strong>. Le gros morceau ? La <strong>gestion des sources prioritaires</strong> et le <strong>détail des scores de conformité</strong>. Voici tout.
   </p>
 
-  <!-- Stats -->
   <div class="stats">
-    <div class="stat"><div class="n">7</div><div class="l">Nouvelles features</div></div>
-    <div class="stat"><div class="n">15+</div><div class="l">Bug fixes</div></div>
-    <div class="stat"><div class="n">5x</div><div class="l">Scan plus rapide</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">Nouveautés</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">Améliorations</div></div>
+    <div class="stat"><div class="n">11</div><div class="l">Corrections</div></div>
   </div>
 
-  <hr>
+  <!-- ═══ NOUVEAU ═══ -->
+  <div class="section-label">🆕 Nouveau</div>
 
-  <!-- FEATURE 1: Products page V2 -->
   <div class="feat">
     <div class="feat-head">
-      <div class="feat-emoji">📦</div>
+      <div class="feat-emoji">⭐</div>
       <div>
         <span class="feat-tag tag-new">Nouveau</span>
-        <h3>Page Produits entièrement repensée</h3>
-        <p>Votre catalogue organisé par catégorie, avec pour chaque produit son score de conformité et le nombre d'impacts réglementaires.</p>
+        <h3>Sources prioritaires pour vos scans</h3>
+        <p>Vous pouvez maintenant définir des <strong>sources préférées avec un ordre de priorité</strong>. Vos scans réglementaires puisent en premier dans les références les plus pertinentes pour votre organisation.</p>
       </div>
-    </div>
-    <div class="feat-visual">
-      <strong>Ce que vous voyez maintenant :</strong>
-      <ul class="feat-list">
-        <li><strong>Vue groupée par catégorie</strong> — dépliez pour voir chaque produit</li>
-        <li><strong>Barre de criticité</strong> — rouge proportionnel au nombre d'impacts</li>
-        <li><strong>Badge d'impacts critiques</strong> — le chiffre à surveiller en priorité</li>
-        <li><strong>Filtre "Avec impacts"</strong> — votre shortlist pour la revue hebdo</li>
-        <li><strong>Découverts par IA</strong> — Cleo détecte automatiquement vos produits</li>
-      </ul>
-      <img src="images/products.png" alt="Page Produits V2">
     </div>
   </div>
 
-  <!-- FEATURE 2: Product drill-down -->
   <div class="feat">
     <div class="feat-head">
-      <div class="feat-emoji">🔍</div>
+      <div class="feat-emoji">📊</div>
       <div>
         <span class="feat-tag tag-new">Nouveau</span>
-        <h3>Drill-down par produit</h3>
-        <p>Cliquez sur un produit pour voir toutes ses réglementations, ses signaux actifs, ses scores de conformité et ses deadlines — dans un panneau latéral.</p>
+        <h3>Explication détaillée des scores de conformité</h3>
+        <p>Chaque score affiche maintenant une <strong>explication claire de la sévérité et de la probabilité</strong> derrière la note. Vous comprenez les facteurs qui déterminent votre évaluation.</p>
       </div>
-    </div>
-    <div class="feat-visual">
-      Pour chaque produit, vous accédez à :
-      <ul class="feat-list">
-        <li>La liste des réglementations qui l'impactent</li>
-        <li>Les signaux actifs avec leur niveau de risque</li>
-        <li>Le score de conformité global</li>
-        <li>Les prochaines échéances spécifiques à ce produit</li>
-      </ul>
     </div>
   </div>
 
-  <!-- FEATURE 3: Persona-based summaries -->
   <div class="feat">
     <div class="feat-head">
-      <div class="feat-emoji">👤</div>
+      <div class="feat-emoji">📋</div>
+      <div>
+        <span class="feat-tag tag-new">Nouveau</span>
+        <h3>Obligations clés et produits dans l'enrichissement</h3>
+        <p>Les profils de réglementation incluent maintenant les <strong>obligations clés et les produits applicables</strong>. Évaluez rapidement l'impact d'une réglementation sur votre activité.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat">
+    <div class="feat-head">
+      <div class="feat-emoji">🔄</div>
+      <div>
+        <span class="feat-tag tag-new">Nouveau</span>
+        <h3>File d'attente automatique pour les scans multiples</h3>
+        <p>Lancez <strong>plusieurs scans en même temps</strong> — ils sont automatiquement mis en file d'attente avec retry en cas d'échec. Votre workflow n'est jamais bloqué.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat">
+    <div class="feat-head">
+      <div class="feat-emoji">🔓</div>
+      <div>
+        <span class="feat-tag tag-new">Nouveau</span>
+        <h3>Page Sources accessible au plan Gratuit</h3>
+        <p>Les utilisateurs du plan gratuit peuvent maintenant <strong>voir et configurer leurs sources</strong> d'intelligence réglementaire depuis les Paramètres.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ AMÉLIORÉ ═══ -->
+  <div class="section-label">✨ Amélioré</div>
+
+  <div class="feat">
+    <div class="feat-head">
+      <div class="feat-emoji">👥</div>
       <div>
         <span class="feat-tag tag-improved">Amélioré</span>
-        <h3>Résumés encore plus adaptés à votre rôle</h3>
-        <p>Les résumés et impacts des fiches signal sont maintenant plus précis grâce à un élargissement des personas compliance et RSE.</p>
-      </div>
-    </div>
-    <div class="feat-visual">
-      <strong>Concrètement :</strong> quand vous changez votre département ou rôle dans les paramètres, tous les impacts sont regénérés automatiquement avec le bon angle. DPO → données, Qualité → produit, Juriste → juridique.
-    </div>
-  </div>
-
-  <!-- FEATURE 4: Scan performance -->
-  <div class="feat">
-    <div class="feat-head">
-      <div class="feat-emoji">⚡</div>
-      <div>
-        <span class="feat-tag tag-perf">Performance</span>
-        <h3>Scans 5x plus rapides</h3>
-        <p>Concurrence des analyses augmentée de 5x. Vos "Actualiser" du lundi matin sont maintenant beaucoup plus rapides.</p>
-      </div>
-    </div>
-    <div class="feat-visual">
-      <ul class="feat-list">
-        <li>Concurrence Bedrock alignée sur un budget de 750 requêtes simultanées</li>
-        <li>Taille des batchs de scoring optimisée (taux d'erreur passé de 29% à ~0%)</li>
-        <li>Les enrichissements produit bloqués sont auto-relancés après 15 min</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- FEATURE 5: Credit estimation -->
-  <div class="feat">
-    <div class="feat-head">
-      <div class="feat-emoji">🪙</div>
-      <div>
-        <span class="feat-tag tag-new">Nouveau</span>
-        <h3>Estimation de crédits avant scan</h3>
-        <p>Avant de lancer un scan, vous voyez maintenant le nombre de crédits estimé vs vos crédits disponibles. Plus de mauvaises surprises.</p>
+        <h3>Jusqu'à 5 membres en plan Pro</h3>
+        <p>Le plan Pro supporte maintenant <strong>jusqu'à 5 membres d'équipe</strong>, chacun avec son profil et ses résumés personnalisés.</p>
       </div>
     </div>
   </div>
 
-  <!-- FEATURE 6: Onboarding fix -->
   <div class="feat">
     <div class="feat-head">
-      <div class="feat-emoji">🚀</div>
+      <div class="feat-emoji">📅</div>
       <div>
         <span class="feat-tag tag-improved">Amélioré</span>
-        <h3>Onboarding simplifié</h3>
-        <p>Le premier scan ne reste plus bloqué sur "Préparation". Les nouveaux utilisateurs peuvent maintenant lancer leur premier scan immédiatement après l'inscription.</p>
+        <h3>Historique de refresh étendu à 90 jours</h3>
+        <p>Le rafraîchissement automatique remonte maintenant jusqu'à <strong>90 jours</strong> (avant : 30). Aucune évolution réglementaire récente n'est manquée.</p>
       </div>
     </div>
   </div>
 
-  <!-- FEATURE 7: Lighter JS -->
   <div class="feat">
     <div class="feat-head">
-      <div class="feat-emoji">🪶</div>
+      <div class="feat-emoji">💡</div>
       <div>
-        <span class="feat-tag tag-perf">Performance</span>
-        <h3>Interface 130 Ko plus légère</h3>
-        <p>Optimisation du tracking analytics : ~130 Ko de JavaScript en moins. L'interface se charge plus vite, surtout sur mobile.</p>
+        <span class="feat-tag tag-improved">Amélioré</span>
+        <h3>Tooltips de score sans troncature</h3>
+        <p>Le tooltip du score affiche maintenant le <strong>texte complet de l'explication</strong>. Plus facile de lire le raisonnement derrière chaque note.</p>
       </div>
     </div>
   </div>
 
-  <hr>
-
-  <!-- Highlight -->
-  <div class="highlight">
-    <div class="num">832</div>
-    <div class="label">réglementations surveillées en continu</div>
+  <div class="feat">
+    <div class="feat-head">
+      <div class="feat-emoji">🔧</div>
+      <div>
+        <span class="feat-tag tag-improved">Amélioré</span>
+        <h3>Indicateur de progression du scan</h3>
+        <p>L'indicateur de chargement pendant la régénération d'un profil reflète maintenant la <strong>vraie progression</strong> de l'opération.</p>
+      </div>
+    </div>
   </div>
+
+  <!-- ═══ CORRIGÉ ═══ -->
+  <div class="section-label">🔧 Corrections</div>
+
+  <ul class="fix-list">
+    <li class="fix-item"><div class="dot"></div><p><strong>Boucle de reconnexion</strong> — les redirections répétées vers la page de connexion sont corrigées</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Scans bloqués ou dupliqués</strong> — les scans qui restaient bloqués en timeout sont maintenant gérés et les doublons éliminés</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Erreurs de traduction</strong> — les articles réglementaires longs ne causent plus d'erreur à l'enregistrement</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Timeout de traduction</strong> — étendu à 180s avec retry automatique</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Pipeline bloqué</strong> — un timeout worker ne marque plus le pipeline entier en échec</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Régénération de page</strong> — le polling utilise maintenant les bonnes métadonnées</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Concurrence Bedrock</strong> — ajustée pour rester dans les quotas TPM</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Insertion d'articles</strong> — la concurrence de traduction est réduite pour éviter les échecs</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Historique de refresh</strong> — le lookback passe de 30 à 90 jours</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>Tooltip ScoreBreakdown</strong> — élargi, plus de troncature</p></li>
+    <li class="fix-item"><div class="dot"></div><p><strong>PostHog signin loop</strong> — le tracking analytics ne cause plus de boucle de connexion</p></li>
+  </ul>
+
+  <hr>
 
   <!-- CTA -->
   <div class="cta-box">
     <p>Envie de voir tout ça en action ?</p>
-    <a href="https://onboarding.cleolabs.co" class="cta-btn">Voir le guide d'onboarding →</a>
+    <a href="http://onboarding.cleolabs.co" class="cta-btn">Découvrir le guide d'onboarding →</a>
   </div>
 
 </div>

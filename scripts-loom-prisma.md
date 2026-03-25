@@ -1,5 +1,6 @@
 # Scripts Loom — Démo Cleo Insight pour Decathlon
 > Tu lis à voix haute. [ACTION] = ce que tu fais à l'écran. L'écran montre un compte de démo.
+> 7 vidéos : Tableau de bord, Produits, Fiche signal, Échéancier, Pays, Réglementations & Autorités, Paramètres & Sources
 
 ---
 
@@ -67,11 +68,75 @@ Et tout en bas : "13 nouveaux articles, 9 à lire" et un bouton "Tout marquer co
 
 Dernier truc important : le bouton "Actualiser" en haut à droite. Quand vous cliquez dessus, Cleo rescanne toutes les sources officielles — journaux officiels, registres, publications d'agences — et met à jour vos signaux. C'est votre premier geste le lundi matin.
 
-Voilà pour le tableau de bord. On va maintenant cliquer sur un signal pour voir ce qu'il y a dedans.
+Voilà pour le tableau de bord. On va maintenant voir vos produits.
 
 ---
 
-## Vidéo 2 — La fiche signal complète (~5min)
+## Vidéo 2 — Le suivi réglementaire par produit (~3min)
+
+[ÉCRAN : Tableau de bord]
+
+On va voir la page Produits. C'est là que vous gérez votre catalogue et que vous voyez, produit par produit, combien de réglementations vous impactent.
+
+[ACTION : Clique sur "Produits" dans le menu]
+
+"Par produit". Là tout de suite en haut on voit : 13 produits dans 6 catégories. C'est votre catalogue.
+
+[ACTION : Pointe les boutons en haut à droite]
+
+Deux boutons pour alimenter votre catalogue. "Importer CSV" si vous avez une liste existante — vous la chargez d'un coup. Ou "+ Ajouter un produit" pour ajouter manuellement. Plus votre catalogue est précis, plus les signaux seront pertinents.
+
+[ACTION : Pointe la barre de recherche]
+
+La barre de recherche pour retrouver un produit rapidement.
+
+[ACTION : Pointe les filtres SOURCE]
+
+Les filtres. "Source" vous dit d'où viennent les produits : "Tous", "Découverts par IA" — ce sont des produits que Cleo a détectés automatiquement à partir de vos signaux — ou "Personnalisé" — ceux que vous avez ajoutés vous-même.
+
+[ACTION : Pointe les filtres IMPACTS]
+
+"Impacts" c'est le filtre le plus utile au quotidien. "Avec impacts" : ne montrer que les produits qui ont au moins un signal réglementaire actif. "Sans impacts" : ceux qui sont tranquilles pour le moment. Typiquement, vous commencez par "Avec impacts".
+
+[ACTION : Clique sur "Avec impacts"]
+
+Voilà. On ne voit plus que les produits concernés. C'est votre shortlist.
+
+[ACTION : Remet "Tous" et pointe les dropdowns]
+
+Vous pouvez aussi filtrer par catégorie — Papeterie, Rasoirs, Services — et par pays.
+
+[ACTION : Pointe la liste des produits]
+
+La liste. Chaque ligne c'est un produit ou une catégorie. Regardez la structure. Le nom du produit, et à droite trois indicateurs.
+
+[ACTION : Pointe la colonne "IMPACTS"]
+
+Le nombre d'impacts — c'est le total de signaux réglementaires qui concernent ce produit. Papeterie en a 69, les Briquets en ont 13.
+
+[ACTION : Pointe le badge rouge]
+
+Le badge rouge — c'est le nombre d'impacts critiques. Sur 69 impacts pour la Papeterie, 39 sont critiques. C'est ce chiffre-là qu'il faut surveiller.
+
+[ACTION : Pointe la barre rouge]
+
+Et la barre rouge, c'est un indicateur visuel proportionnel. Plus elle est longue, plus il y a d'impacts. En un coup d'œil vous voyez quels produits ont le plus de sujets à traiter. Papeterie, ça saute aux yeux.
+
+[ACTION : Clique sur la flèche ">" à côté de "Papeterie"]
+
+Les catégories se déplient. Papeterie contient 6 produits, et là vous voyez le détail : chaque produit avec ses propres impacts. Ça vous permet de savoir exactement quelle gamme est la plus exposée.
+
+[ACTION : Pointe "Services de personnalisation" avec 1 impact]
+
+À l'inverse, "Services de personnalisation — Design My BIC" n'a qu'un seul impact. C'est géré.
+
+En résumé, la page Produits c'est votre vue portfolio. Vous voyez d'un coup quels produits concentrent le plus de risques, vous dépliez les catégories pour le détail, et vous filtrez par "Avec impacts" pour votre revue hebdo. Combiné avec le tableau de bord et l'échéancier, vous avez une vision complète.
+
+On va maintenant cliquer sur un signal pour voir ce qu'il y a dedans.
+
+---
+
+## Vidéo 3 — La fiche signal complète (~5min)
 
 [ÉCRAN : Tableau de bord]
 
@@ -125,7 +190,7 @@ Voilà. En trois minutes de lecture, vous avez tout : ce qui s'est passé, pourq
 
 ---
 
-## Vidéo 3 — L'échéancier (~3min)
+## Vidéo 4 — L'échéancier (~3min)
 
 [ÉCRAN : Tableau de bord]
 
@@ -165,7 +230,7 @@ En résumé l'échéancier, c'est le truc que vous ouvrez le lundi matin. Actual
 
 ---
 
-## Vidéo 4 — Ajouter un pays (~3min)
+## Vidéo 5 — Ajouter un pays (~3min)
 
 [ÉCRAN : Tableau de bord]
 
@@ -205,7 +270,7 @@ Les filtres. "Région" — Europe, Amériques, APAC, Afrique-Moyen Orient. "Impa
 
 ---
 
-## Vidéo 5 — Réglementations et Autorités (~4min)
+## Vidéo 6 — Réglementations et Autorités (~4min)
 
 [ÉCRAN : Tableau de bord]
 
@@ -257,7 +322,7 @@ Et comme pour les réglementations, vous pouvez en ajouter avec "+ Ajouter une A
 
 ---
 
-## Vidéo 6 — Les paramètres et les sources (~4min)
+## Vidéo 7 — Les paramètres et les sources (~4min)
 
 [ÉCRAN : Tableau de bord]
 

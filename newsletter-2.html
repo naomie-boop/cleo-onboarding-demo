@@ -4,73 +4,128 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cleo Product Update #2</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-:root{--brand:#1E1B8C;--ink:#111;--t2:#6b6b6b;--t3:#a3a3a3;--bg:#fff;--surface:#F8F7FF;--border:#E5E5E5;--font:'Inter',system-ui,sans-serif}
+:root{
+  --c-blue:#0008CF;
+  --c-blue-hover:#0006A8;
+  --c-blue-light:rgba(0,8,207,0.06);
+  --c-ink:#1A1A1A;
+  --c-white:#FFFFFF;
+  --c-surface:#F9F8F6;
+  --c-card:#F0EFEC;
+  --c-border:rgba(0,0,0,0.08);
+  --c-text:rgba(0,0,0,0.87);
+  --c-text-2:rgba(0,0,0,0.62);
+  --c-text-3:rgba(0,0,0,0.45);
+  --c-text-on-dark:#FFFFFF;
+  --c-text-on-dark-2:rgba(255,255,255,0.6);
+  --c-risk:#946B2D;
+  --c-risk-bg:rgba(148,107,45,0.08);
+  --r-sm:8px;
+  --r-md:16px;
+  --r-lg:24px;
+  --r-pill:9999px;
+  --shadow-sm:0 2px 8px rgba(0,0,0,0.04);
+  --font:'Satoshi',-apple-system,BlinkMacSystemFont,sans-serif;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--font);background:#F3F2F8;color:var(--ink);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.7}
+body{font-family:var(--font);background:var(--c-card);color:var(--c-text);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.7}
 
-.wrap{max-width:640px;margin:0 auto;background:var(--bg)}
+.wrap{max-width:640px;margin:0 auto;background:var(--c-white)}
 
-/* Header */
-.header{background:var(--brand);padding:40px 40px 36px;text-align:center;position:relative;overflow:hidden}
-.header::after{content:'';position:absolute;top:-80px;right:-80px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.06)}
-.header::before{content:'';position:absolute;bottom:-60px;left:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,0.04)}
-.header .logo{display:inline-flex;align-items:baseline;gap:4px;margin-bottom:16px}
-.header .logo .cleo{font-family:Georgia,serif;font-style:italic;font-size:24px;color:#fff}
-.header .logo .labs{font-size:7px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,0.7);text-transform:uppercase}
-.header .badge{display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:99px;margin-bottom:16px}
-.header h1{font-size:28px;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:8px}
-.header p{color:rgba(255,255,255,0.75);font-size:14px}
-.header .date{color:rgba(255,255,255,0.5);font-size:12px;margin-top:12px}
+/* Header — gradient canvas blue */
+.header{
+  background:
+    radial-gradient(ellipse at 25% 50%,rgba(0,8,207,0.18) 0%,transparent 55%),
+    radial-gradient(ellipse at 75% 40%,rgba(0,8,207,0.08) 0%,transparent 50%),
+    var(--c-blue);
+  padding:48px 40px 40px;
+  text-align:center;
+  position:relative;
+}
+.header .logo{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px}
+.header .logo-icon{
+  width:36px;height:36px;
+  background:rgba(255,255,255,0.15);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+}
+.header .logo-text{font-size:18px;font-weight:700;color:var(--c-text-on-dark);letter-spacing:-0.01em}
+.header .badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.12);
+  color:var(--c-text-on-dark);
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 16px;border-radius:var(--r-pill);margin-bottom:20px;
+}
+.header h1{font-size:26px;font-weight:700;color:var(--c-text-on-dark);letter-spacing:-.03em;margin-bottom:8px;line-height:1.2}
+.header p{color:var(--c-text-on-dark-2);font-size:14px;line-height:1.6}
+.header .date{color:rgba(255,255,255,0.35);font-size:12px;margin-top:14px;font-weight:500}
 
 .body{padding:40px}
 
-.intro{font-size:15px;color:var(--t2);margin-bottom:36px;line-height:1.7}
-.intro strong{color:var(--ink)}
+.intro{font-size:15px;color:var(--c-text-2);margin-bottom:36px;line-height:1.7}
+.intro strong{color:var(--c-text)}
 
 /* Stats */
 .stats{display:flex;gap:12px;margin:32px 0}
-.stat{flex:1;text-align:center;background:var(--surface);border-radius:10px;padding:16px 12px}
-.stat .n{font-size:28px;font-weight:800;color:var(--brand)}
-.stat .l{font-size:11px;color:var(--t2);margin-top:2px}
+.stat{flex:1;text-align:center;background:var(--c-surface);border-radius:var(--r-md);padding:18px 12px}
+.stat .n{font-size:28px;font-weight:900;color:var(--c-blue);letter-spacing:-.02em}
+.stat .l{font-size:11px;font-weight:600;color:var(--c-text-3);margin-top:2px;letter-spacing:.04em;text-transform:uppercase}
 
 /* Section label */
-.section-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.section-label{
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--c-text-3);margin:40px 0 16px;padding-bottom:10px;
+  border-bottom:1px solid var(--c-border);
+}
 
 /* Feature card */
-.feat{margin-bottom:24px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.feat-head{padding:20px 24px 16px;display:flex;align-items:flex-start;gap:14px}
-.feat-emoji{font-size:28px;flex-shrink:0;line-height:1}
-.feat-head h3{font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:2px}
-.feat-head p{font-size:13px;color:var(--t2);line-height:1.55}
-.feat-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-bottom:6px}
-.tag-new{background:#ECFDF5;color:#059669}
-.tag-improved{background:#EFF6FF;color:#2563EB}
-.tag-fixed{background:#FEF2F2;color:#DC2626}
+.feat{margin-bottom:16px;border:1px solid var(--c-border);border-radius:var(--r-md);overflow:hidden;transition:box-shadow 150ms ease}
+.feat:hover{box-shadow:var(--shadow-sm)}
+.feat-head{padding:20px 24px;display:flex;align-items:flex-start;gap:14px}
+.feat-emoji{font-size:26px;flex-shrink:0;line-height:1}
+.feat-head h3{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px;color:var(--c-text)}
+.feat-head p{font-size:13px;color:var(--c-text-2);line-height:1.6}
+.feat-tag{
+  display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 8px;border-radius:6px;margin-bottom:6px;
+}
+.tag-new{background:var(--c-blue-light);color:var(--c-blue)}
+.tag-improved{background:rgba(0,0,0,0.04);color:var(--c-text)}
+.tag-fixed{background:var(--c-risk-bg);color:var(--c-risk)}
 
-/* Small fix list */
+/* Fix list */
 .fix-list{margin:0 0 24px;padding:0;list-style:none}
-.fix-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #F3F3F3;font-size:13px}
+.fix-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.04);font-size:13px}
 .fix-item:last-child{border-bottom:none}
-.fix-item .dot{width:6px;height:6px;border-radius:50%;background:#DC2626;flex-shrink:0;margin-top:7px}
-.fix-item p{margin:0;color:var(--ink)}
+.fix-item .dot{width:6px;height:6px;border-radius:50%;background:var(--c-ink);flex-shrink:0;margin-top:7px;opacity:.3}
+.fix-item p{margin:0;color:var(--c-text-2)}
+.fix-item strong{color:var(--c-text)}
 
-hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+hr{border:none;border-top:1px solid var(--c-border);margin:36px 0}
 
 /* CTA */
-.cta-box{text-align:center;margin:36px 0 0;padding:32px 24px;background:var(--surface);border-radius:12px}
-.cta-box p{font-size:14px;color:var(--t2);margin-bottom:16px}
-.cta-btn{display:inline-block;padding:14px 36px;background:var(--brand);color:#fff;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none}
+.cta-box{text-align:center;margin:40px 0 0;padding:36px 24px;background:var(--c-surface);border-radius:var(--r-md)}
+.cta-box p{font-size:14px;color:var(--c-text-2);margin-bottom:18px}
+.cta-btn{
+  display:inline-block;padding:14px 32px;
+  background:var(--c-ink);color:var(--c-white);
+  border-radius:var(--r-pill);font-size:15px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em;
+  transition:all 150ms ease;
+}
+.cta-btn:hover{background:#333}
 
 /* Footer */
-.footer{padding:24px 40px 32px;text-align:center;font-size:12px;color:var(--t3);border-top:1px solid var(--border)}
-.footer a{color:var(--brand);text-decoration:none}
-.footer .social{margin:12px 0;font-size:14px}
+.footer{padding:28px 40px 36px;text-align:center;font-size:12px;color:var(--c-text-3);border-top:1px solid var(--c-border)}
+.footer a{color:var(--c-blue);text-decoration:none;font-weight:500}
+.footer .social{margin:12px 0;font-size:13px}
 
 @media(max-width:640px){
   .body{padding:24px}
-  .header{padding:32px 24px}
+  .header{padding:36px 24px 32px}
   .header h1{font-size:22px}
   .stats{flex-direction:column}
 }
@@ -82,9 +137,18 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
 
 <!-- HEADER -->
 <div class="header">
-  <div class="logo"><span class="cleo">cleo</span><span class="labs">LABS</span></div>
+  <div class="logo">
+    <div class="logo-icon">
+      <svg width="20" height="20" viewBox="270 570 210 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M314.585 764.122C332.389 782.364 355.172 792.202 382.297 793.357C383.93 793.437 385.563 793.477 387.196 793.477C405.518 793.477 420.813 788.936 433.997 779.576C447.141 770.256 456.939 757.908 463.67 742.135C447.3 758.267 426.309 764.719 401.575 761.134C376.521 757.51 357.243 742.812 345.892 718.556C332.31 689.559 329.999 657.097 339.041 622.126C342.865 607.429 349.556 596.316 359.514 588.151C361.545 586.478 363.656 585.044 365.807 583.889C365.528 583.929 365.249 583.969 364.971 584.048C331.951 590.023 308.451 608.743 295.108 639.572C286.385 659.846 283.956 682.071 287.7 707.602C291.006 730.266 300.087 749.265 314.585 764.122Z" fill="white"/>
+        <path d="M411.69 598.23C417.705 607.033 422.086 617.189 425.113 629.338C426.308 634.157 427.144 639.056 427.981 643.756C428.14 644.712 428.339 645.708 428.499 646.704C428.618 646.624 428.738 646.504 428.857 646.425L460.921 621.65C458.849 618.902 456.898 616.273 454.747 613.923C437.58 594.964 417.027 584.409 393.607 582.457C402.609 586.161 408.185 593.132 411.69 598.23Z" fill="white"/>
+      </svg>
+    </div>
+    <span class="logo-text">cleo LABS</span>
+  </div>
+  <br>
   <div class="badge">Product Update</div>
-  <h1>Ce qui change sur Cleo Insight</h1>
+  <h1>Ce qui change sur Cleo Comply</h1>
   <p>Les nouveautés de mars 2026, résumées en 2 minutes.</p>
   <div class="date">Newsletter #2 — 25 mars 2026</div>
 </div>
@@ -230,7 +294,7 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
   <!-- CTA -->
   <div class="cta-box">
     <p>Envie de voir tout ça en action ?</p>
-    <a href="http://onboarding.cleolabs.co" class="cta-btn">Découvrir le guide d'onboarding →</a>
+    <a href="https://onboarding.cleolabs.co" class="cta-btn">Découvrir le guide d'onboarding →</a>
   </div>
 
 </div>
@@ -239,7 +303,7 @@ hr{border:none;border-top:1px solid var(--border);margin:32px 0}
 <div class="footer">
   <div class="social">
     <a href="https://www.linkedin.com/company/cleo-labs/">LinkedIn</a> · 
-    <a href="https://insight.cleolabs.co">Cleo Insight</a> · 
+    <a href="https://insight.cleolabs.co">Cleo Comply</a> · 
     <a href="mailto:hello@cleolabs.co">Contact</a>
   </div>
   <p>© 2026 Cleo Labs · Paris, France<br>

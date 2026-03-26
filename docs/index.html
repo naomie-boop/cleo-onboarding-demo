@@ -157,7 +157,8 @@ pre code{background:none;padding:0;color:inherit}
 /* SCREENSHOT */
 .screenshot{margin:20px -60px 28px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--c-border);box-shadow:var(--shadow-md)}
 .screenshot img{width:100%;display:block;cursor:zoom-in}
-.screenshot img.zoomed{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:contain;background:rgba(0,0,0,0.85);z-index:9999;border-radius:0;margin:0;cursor:zoom-out}
+.screenshot.has-zoomed{overflow:visible}
+.screenshot img.zoomed{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:contain;background:rgba(0,0,0,0.9);z-index:9999;border-radius:0;margin:0;padding:24px;cursor:zoom-out}
 .screenshot .cap{font-size:12px;color:var(--c-text-3);text-align:center;padding:10px;background:var(--c-surface)}
 
 /* TABLE */
@@ -458,28 +459,28 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <h3>KPI Cards — read these first</h3>
 <ul>
-  <li><strong>New signals (NOUVEAUX)</strong> — your to-do list for the day. Start here.</li>
-  <li><strong>Exposure (EXPOSITION)</strong> — your overall risk level. If it jumped, dig into the signal feed to find out why.</li>
-  <li><strong>Next deadline (ÉCHÉANCE)</strong> — days until your most urgent regulatory milestone. If it's under 30, open the <a href="#timeline">Timeline</a> now.</li>
-  <li><strong>Regulations (RÉGLEMENTATIONS)</strong> — total laws under watch. Reference number; you rarely need to act on this.</li>
+  <li><strong>New signals</strong> — your to-do list for the day. Start here.</li>
+  <li><strong>Exposure</strong> — your overall risk level. If it jumped, dig into the signal feed to find out why.</li>
+  <li><strong>Next deadline</strong> — days until your most urgent regulatory milestone. If it's under 30, open the <a href="#timeline">Timeline</a> now.</li>
+  <li><strong>Regulations</strong> — total laws under watch. Reference number; you rarely need to act on this.</li>
 </ul>
 
 <h3>Filter your feed</h3>
 <p>Use filters to cut the noise and focus on what matters right now:</p>
 <ul>
   <li><strong>Impact level</strong> — filter by Critique / Élevé / Modéré / Faible. In daily triage, start with Critique.</li>
-  <li><strong>Status</strong> — "Adopté" is your anticipation window: laws voted but not yet enforced. Use this to get ahead.</li>
+  <li><strong>Status</strong> — Adopted is your anticipation window: laws voted but not yet enforced. Use this to get ahead.</li>
   <li><strong>Dropdowns</strong> — slice by product, country, regulation, or category (Analyse / Sanction / Législation) to focus on a specific market or product line.</li>
 </ul>
 
 <h3>Signal Feed — act on each signal</h3>
-<p>Signals are grouped as Today (HIER), This Week (CETTE SEMAINE), and Older (PLUS ANCIEN). Each card shows the law, the country, the risk level, which of your products are affected, and two quick actions:</p>
+<p>Signals are grouped as Today, This Week, and Older. Each card shows the law, the country, the risk level, which of your products are affected, and two quick actions:</p>
 <ul>
   <li><strong>Bookmark (🔖)</strong> — save for your weekly review session</li>
-  <li><strong>Share signal (ENVOYER UN SIGNAL) (✈️)</strong> — forward to a colleague who owns this topic</li>
+  <li><strong>Share signal (✈️)</strong> — forward to a colleague who owns this topic</li>
 </ul>
 
-<h3>Refresh (ACTUALISER)</h3>
+<h3>Refresh</h3>
 <p>The purple Refresh button triggers a new scan on demand. Use it when you need fresh data before a meeting or after a regulatory news event. Each scan consumes credits from your plan.</p>
 </section>
 
@@ -497,9 +498,9 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <h3>Start here — 3 steps to process a signal</h3>
 <ol>
-  <li><strong>Read the AI summary</strong> — it's written for your role and starts with the business impact on your organization. Click "Lire la suite ▼" if you need the full picture.</li>
-  <li><strong>Check impacted products (PRODUITS IMPACTÉS)</strong> — these are your actual catalog items, not generic categories. If something important is missing, update your <a href="#products">Products</a> catalog.</li>
-  <li><strong>Open the action plan (VOTRE PLAN D'ACTION)</strong> — concrete tasks with deadlines and responsible parties, ready to assign. This is your output from the card.</li>
+  <li><strong>Read the AI summary</strong> — it's written for your role and starts with the business impact on your organization. Click "Read more ▼" if you need the full picture.</li>
+  <li><strong>Check impacted products</strong> — these are your actual catalog items, not generic categories. If something important is missing, update your <a href="#products">Products</a> catalog.</li>
+  <li><strong>Open the action plan</strong> — concrete tasks with deadlines and responsible parties, ready to assign. This is your output from the card.</li>
 </ol>
 
 <div class="callout callout-info">
@@ -515,22 +516,22 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 </details>
 
 <details>
-  <summary>📈 Impact for your role (IMPACT POUR VOTRE RÔLE)</summary>
+  <summary>📈 Impact for your role</summary>
   <div class="details-body">Role-specific analysis that goes beyond the summary. Useful when you need to brief your team or prepare a memo — the language is already calibrated for your function.</div>
 </details>
 
 <details>
-  <summary>📖 Regulatory context (CONTEXTE RÉGLEMENTAIRE)</summary>
+  <summary>📖 Regulatory context</summary>
   <div class="details-body">History, related regulations, enforcement trends. Read this when a signal seems unusual or when you want to understand the broader legislative direction.</div>
 </details>
 
 <details>
-  <summary>📈 Competitive exposure (EXPOSITION CONCURRENTIELLE)</summary>
+  <summary>📈 Competitive exposure</summary>
   <div class="details-body">Is this regulation hitting everyone in your industry equally, or does it create asymmetric risk? This section flags whether your competitors face the same constraints — or whether you have a window to gain ground.</div>
 </details>
 
 <h3>Source &amp; feedback</h3>
-<p>At the bottom: a direct link to the original source document (e.g. sec.gov). Always verify critical signals against the source before acting. The <strong>"Cette source était-elle pertinente ?"</strong> feedback (👍 / 👎) trains the AI to improve signal quality for your organization.</p>
+<p>At the bottom: a direct link to the original source document (e.g. sec.gov). Always verify critical signals against the source before acting. The <strong>"Was this source relevant?"</strong> feedback (👍 / 👎) trains the AI to improve signal quality for your organization.</p>
 </section>
 
 <hr class="divider">
@@ -557,16 +558,16 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <div class="screenshot">
   <img src="images/products.png" alt="Products page">
-  <div class="cap">Product catalog (PAR PRODUIT) organized by categories with impact indicators</div>
+  <div class="cap">Product catalog organized by categories with impact indicators</div>
 </div>
 
 <p>Products are organized in collapsible categories. Each entry shows country flags for monitored markets, regulation count, impact count, and a red badge for critical impacts.</p>
 
-<p>Filter by <strong>"Avec impacts"</strong> to see only products that need attention. That's your shortlist for the weekly compliance review.</p>
+<p>Filter by <strong>"With impacts"</strong> to see only products that need attention. That's your shortlist for the weekly compliance review.</p>
 
 <div class="callout callout-tip">
   <span class="ico">💡</span>
-  <div>Unanalyzed products show an <strong>Analyser</strong> button. Click it to trigger an AI scan on that specific product — useful when you add a new product line mid-cycle.</div>
+  <div>Unanalyzed products show an <strong>Analyze</strong> button. Click it to trigger an AI scan on that specific product — useful when you add a new product line mid-cycle.</div>
 </div>
 </section>
 
@@ -579,7 +580,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <div class="screenshot">
   <img src="images/countries.png" alt="Countries page">
-  <div class="cap">Country catalog (PAR PAYS) — world map with color-coded exposure and jurisdiction list</div>
+  <div class="cap">Country catalog — world map with color-coded exposure and jurisdiction list</div>
 </div>
 
 <p>The color-coded world map gives you an instant exposure read: red = critical, orange = high, grey = not monitored. Below it, each country entry shows the region, impact count, and an impact bar.</p>
@@ -600,16 +601,16 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <div class="screenshot">
   <img src="images/regulations.png" alt="Regulations page">
-  <div class="cap">Regulation library (PAR RÉGLEMENTATION) grouped by domain with risk levels and impact counts</div>
+  <div class="cap">Regulation library grouped by domain with risk levels and impact counts</div>
 </div>
 
 <p>Regulations are grouped by domain (Commerce &amp; Sanctions, Data Protection, Environment, Health &amp; Safety, etc.), each collapsible with a total count and impact count.</p>
 
-<p><strong>Filter by "Adopté"</strong> to surface regulations that have been voted but aren't enforced yet — this is your preparation window. Act before enforcement begins, not after.</p>
+<p><strong>Filter by Adopted</strong> to surface regulations that have been voted but aren't enforced yet — this is your preparation window. Act before enforcement begins, not after.</p>
 
 <div class="callout callout-warn">
   <span class="ico">⚠️</span>
-  <div>If a regulation you care about isn't in the library, add it via <strong>"+ Ajouter une réglementation"</strong>. Cleo automatically enriches it with authority, jurisdiction, status, and related obligations.</div>
+  <div>If a regulation you care about isn't in the library, add it via <strong>"+ Add a regulation"</strong>. Cleo automatically enriches it with authority, jurisdiction, status, and related obligations.</div>
 </div>
 </section>
 
@@ -622,10 +623,10 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <div class="screenshot">
   <img src="images/authorities.png" alt="Authorities page">
-  <div class="cap">Regulatory authorities (PAR AUTORITÉ) grouped by parent entity with risk levels</div>
+  <div class="cap">Regulatory authorities grouped by parent entity with risk levels</div>
 </div>
 
-<p>Use the <strong>Regroupé</strong> toggle to switch between grouped view (by parent entity — strategic overview) and detailed view (by sub-entity — useful when you need the exact authority for an audit or filing).</p>
+<p>Use the <strong>Grouped</strong> toggle to switch between grouped view (by parent entity — strategic overview) and detailed view (by sub-entity — useful when you need the exact authority for an audit or filing).</p>
 
 <p>Watch for authorities with rapidly increasing impact counts. A spike means they're ramping up enforcement in your sector — that's an early warning to review your compliance posture before a formal signal arrives.</p>
 </section>
@@ -639,10 +640,10 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <div class="screenshot">
   <img src="images/timeline.png" alt="Timeline view">
-  <div class="cap">Timeline (ÉCHÉANCIER) — upcoming regulatory deadlines with countdown</div>
+  <div class="cap">Timeline — upcoming regulatory deadlines with countdown</div>
 </div>
 
-<p>The timeline shows a vertical calendar of upcoming dates, grouped by month, anchored on an "AUJOURD'HUI" marker. Each event shows a countdown in days ("Xj restants"), the event title, and the associated regulation.</p>
+<p>The timeline shows a vertical calendar of upcoming dates, grouped by month, anchored on an "TODAY" marker. Each event shows a countdown in days ("X days remaining"), the event title, and the associated regulation.</p>
 
 <p><strong>Quick combo for executive reporting:</strong> Set Horizon to "90 jours" + Risk to "Critique". Screenshot the result. That's your one-slide executive summary.</p>
 
@@ -684,16 +685,16 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <h3>What to configure</h3>
 <ul>
-  <li><strong>Department (Département)</strong> — Legal, Compliance, Quality, Product, etc.</li>
-  <li><strong>Role (Rôle)</strong> — DPO, Quality Manager, Legal Counsel, etc.</li>
-  <li><strong>Language (Langue)</strong> — FR 🇫🇷 or EN 🇬🇧 — controls the language of all AI-generated content</li>
+  <li><strong>Department</strong> — Legal, Compliance, Quality, Product, etc.</li>
+  <li><strong>Role</strong> — DPO, Quality Manager, Legal Counsel, etc.</li>
+  <li><strong>Language</strong> — FR 🇫🇷 or EN 🇬🇧 — controls the language of all AI-generated content</li>
   <li><strong>Slack Member ID</strong> — optional, for direct Slack DMs on critical alerts</li>
 </ul>
 
 <h3>Display shortcuts</h3>
 <ul>
-  <li><strong>Hide laws without impact (Masquer les lois sans impact)</strong> — declutter your Regulations page to show only what affects your products</li>
-  <li><strong>Hide authorities without impact (Masquer les autorités sans impact)</strong> — same idea for your Authorities page</li>
+  <li><strong>Hide laws without impact</strong> — declutter your Regulations page to show only what affects your products</li>
+  <li><strong>Hide authorities without impact</strong> — same idea for your Authorities page</li>
 </ul>
 </section>
 
@@ -709,7 +710,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="cap">Scan settings — frequency, preferred day, and automatic scan toggle</div>
 </div>
 
-<p>Turn on <strong>Automatic scans (Scans automatiques)</strong> and pick a frequency: Daily (Quotidien) · Weekdays (Jours ouvrés) · Weekly (Hebdomadaire) · Bi-weekly (Bimensuel) · Monthly (Mensuel). Set a preferred day-of-week for scheduled scans to run.</p>
+<p>Turn on <strong>Automatic scans</strong> and pick a frequency: Daily · Weekdays · Weekly · Bi-weekly · Monthly. Set a preferred day-of-week for scheduled scans to run.</p>
 
 <div class="callout callout-info">
   <span class="ico">ℹ️</span>
@@ -723,7 +724,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   </div>
 </div>
 
-<p>Need fresh data right now? Hit <strong>Refresh (ACTUALISER)</strong> on the Dashboard.</p>
+<p>Need fresh data right now? Hit <strong>Refresh</strong> on the Dashboard.</p>
 </section>
 
 <hr class="divider">
@@ -738,7 +739,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="cap">Billing — current plan, credits remaining, and plan comparison</div>
 </div>
 
-<p>Your current plan and remaining credits (e.g. 3,254 / 5,000) are shown at the top. Click <strong>"Recharger les crédits"</strong> to top up anytime. Unused credits roll over on the Pro plan.</p>
+<p>Your current plan and remaining credits (e.g. 3,254 / 5,000) are shown at the top. Click <strong>"Top up credits"</strong> to top up anytime. Unused credits roll over on the Pro plan.</p>
 
 <table>
   <thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead>
@@ -777,7 +778,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 </div>
 
 <h3>Slack</h3>
-<p>Click <strong>"Ajouter à Slack"</strong> to authorize and select your channel. Once connected, configure which alert types route to Slack in <a href="#notifications">Notifications settings</a>. Add your <strong>Slack Member ID</strong> in <a href="#profile">Profile</a> to receive direct messages for Critical-level alerts.</p>
+<p>Click <strong>"Add to Slack"</strong> to authorize and select your channel. Once connected, configure which alert types route to Slack in <a href="#notifications">Notifications settings</a>. Add your <strong>Slack Member ID</strong> in <a href="#profile">Profile</a> to receive direct messages for Critical-level alerts.</p>
 
 <div class="callout callout-tip">
   <span class="ico">💡</span>
@@ -794,10 +795,10 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <div class="screenshot">
   <img src="images/team.png" alt="Team settings">
-  <div class="cap">Team members (MEMBRES DE L'ÉQUIPE) — invite and manage your team</div>
+  <div class="cap">Team members — invite and manage your team</div>
 </div>
 
-<p>Click <strong>Inviter</strong> and enter an email address. The invitee creates their own account and configures their own Profile — meaning they automatically receive summaries calibrated to their department and role, not yours.</p>
+<p>Click <strong>Invite</strong> and enter an email address. The invitee creates their own account and configures their own Profile — meaning they automatically receive summaries calibrated to their department and role, not yours.</p>
 
 <table>
   <thead><tr><th>Plan</th><th>Team Members</th></tr></thead>
@@ -824,12 +825,12 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <table>
   <thead><tr><th>Notification</th><th>When to enable</th></tr></thead>
   <tbody>
-    <tr><td><strong>Critical alert (Alerte RED détectée)</strong></td><td>Always — never miss a Critical-level signal</td></tr>
-    <tr><td><strong>Weekly digest (Résumé hebdomadaire)</strong></td><td>If you don't check the dashboard daily</td></tr>
-    <tr><td><strong>Upcoming deadline (Échéance imminente)</strong></td><td>Always — gives you lead time to prepare</td></tr>
-    <tr><td><strong>Overdue obligation (Obligation en retard)</strong></td><td>Always — this means you're already late</td></tr>
-    <tr><td><strong>Scan complete (Pipeline terminé)</strong></td><td>Optional — useful when you trigger manual scans</td></tr>
-    <tr><td><strong>New regulation detected (Nouvelle réglementation détectée)</strong></td><td>If you want to review every new addition to your scope</td></tr>
+    <tr><td><strong>Critical alert</strong></td><td>Always — never miss a Critical-level signal</td></tr>
+    <tr><td><strong>Weekly digest</strong></td><td>If you don't check the dashboard daily</td></tr>
+    <tr><td><strong>Upcoming deadline</strong></td><td>Always — gives you lead time to prepare</td></tr>
+    <tr><td><strong>Overdue obligation</strong></td><td>Always — this means you're already late</td></tr>
+    <tr><td><strong>Scan complete</strong></td><td>Optional — useful when you trigger manual scans</td></tr>
+    <tr><td><strong>New regulation detected</strong></td><td>If you want to review every new addition to your scope</td></tr>
   </tbody>
 </table>
 </section>
@@ -846,12 +847,12 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="cap">Source management (SOURCES) with quality scores and status controls</div>
 </div>
 
-<p>Each source shows its domain (e.g. federalregister.gov), a quality score badge, article count, impact count, and status: <span style="color:#16a34a"><strong>Autorisée</strong></span> (active) / <span style="color:#dc2626"><strong>Bloquée</strong></span> (blocked) / <span style="color:#2563eb"><strong>Préférée</strong></span> (prioritized).</p>
+<p>Each source shows its domain (e.g. federalregister.gov), a quality score badge, article count, impact count, and status: <span style="color:#16a34a"><strong>Active</strong></span> (active) / <span style="color:#dc2626"><strong>Blocked</strong></span> (blocked) / <span style="color:#2563eb"><strong>Preferred</strong></span> (prioritized).</p>
 
 <ul>
-  <li><strong>Block a source</strong> — click to set "Bloquée". Cleo stops using it in future analyses. Use this for sources that consistently produce irrelevant signals.</li>
-  <li><strong>Prefer a source</strong> — mark as "Préférée". These are weighted higher in every scan. Use for the most authoritative sources in your sector.</li>
-  <li><strong>Add a custom source</strong> — click <strong>"+ Ajouter une source"</strong> and enter the domain. Mark it Preferred and it'll be prioritized from the next scan onwards.</li>
+  <li><strong>Block a source</strong> — click to set "Blocked". Cleo stops using it in future analyses. Use this for sources that consistently produce irrelevant signals.</li>
+  <li><strong>Prefer a source</strong> — mark as "Preferred". These are weighted higher in every scan. Use for the most authoritative sources in your sector.</li>
+  <li><strong>Add a custom source</strong> — click <strong>"+ Add a source"</strong> and enter the domain. Mark it Preferred and it'll be prioritized from the next scan onwards.</li>
 </ul>
 
 <!-- GOOD TO KNOW -->
@@ -865,12 +866,12 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <details>
   <summary>🔔 Notification defaults</summary>
-  <div class="details-body">All notifications are <strong>OFF by default</strong>. Enable them in <a href="#notifications">Settings → Notifications</a>. At minimum, turn on <strong>Critical alerts (Alerte RED détectée)</strong> and <strong>Upcoming deadline (Échéance imminente)</strong> — these are the two you should never miss.</div>
+  <div class="details-body">All notifications are <strong>OFF by default</strong>. Enable them in <a href="#notifications">Settings → Notifications</a>. At minimum, turn on <strong>Critical alerts</strong> and <strong>Upcoming deadline</strong> — these are the two you should never miss.</div>
 </details>
 
 <details>
   <summary>🔒 Data &amp; privacy</summary>
-  <div class="details-body">Your data is hosted in the EU (AWS eu-west). Your data is never used to train AI models. Each organization's data is fully isolated. For the full privacy policy, visit Settings → Politique de confidentialité, or contact <a href="mailto:hello@cleolabs.co">hello@cleolabs.co</a>.</div>
+  <div class="details-body">Your data is hosted in the EU (AWS eu-west). Your data is never used to train AI models. Each organization's data is fully isolated. For the full privacy policy, visit Settings → Privacy Policy, or contact <a href="mailto:hello@cleolabs.co">hello@cleolabs.co</a>.</div>
 </details>
 
 <details>
@@ -946,9 +947,17 @@ document.querySelectorAll('section').forEach(s => observer.observe(s));
 // Click-to-zoom screenshots
 document.querySelectorAll('.screenshot img').forEach(img => {
   img.addEventListener('click', () => {
-    img.classList.toggle('zoomed');
-    document.body.style.overflow = img.classList.contains('zoomed') ? 'hidden' : '';
+    const isZoomed = img.classList.toggle('zoomed');
+    img.closest('.screenshot').classList.toggle('has-zoomed', isZoomed);
+    document.body.style.overflow = isZoomed ? 'hidden' : '';
   });
+});
+// Close zoom on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const z = document.querySelector('.screenshot img.zoomed');
+    if (z) { z.click(); }
+  }
 });
 </script>
 </body>

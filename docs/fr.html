@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Documentation FR</title>
+<title>Cleo Comply — Documentation FR</title>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -117,7 +117,7 @@ body{font-family:var(--font);background:var(--c-white);color:var(--c-text);-webk
 
 /* MAIN */
 .main{margin-left:var(--sidebar-w);min-height:100vh}
-.content{max-width:780px;margin:0 auto;padding:48px 48px 120px}
+.content{max-width:960px;margin:0 auto;padding:48px 48px 120px}
 
 /* HERO */
 .hero{margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--c-border)}
@@ -155,8 +155,9 @@ pre code{background:none;padding:0;color:inherit}
 
 
 /* SCREENSHOT */
-.screenshot{margin:20px 0 28px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--c-border);box-shadow:var(--shadow-md)}
-.screenshot img{width:100%;display:block}
+.screenshot{margin:20px -60px 28px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--c-border);box-shadow:var(--shadow-md)}
+.screenshot img{width:100%;display:block;cursor:zoom-in}
+.screenshot img.zoomed{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:contain;background:rgba(0,0,0,0.85);z-index:9999;border-radius:0;margin:0;cursor:zoom-out}
 .screenshot .cap{font-size:12px;color:var(--c-text-3);text-align:center;padding:10px;background:var(--c-surface)}
 
 /* TABLE */
@@ -251,6 +252,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   .main{margin-left:0}
   .content{padding:24px}
   .feat-grid{grid-template-columns:1fr}
+  .screenshot{margin-left:0;margin-right:0}
 }
 </style>
 </head>
@@ -940,6 +942,14 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
 }, { threshold: 0.08 });
 document.querySelectorAll('section').forEach(s => observer.observe(s));
+
+// Click-to-zoom screenshots
+document.querySelectorAll('.screenshot img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('zoomed');
+    document.body.style.overflow = img.classList.contains('zoomed') ? 'hidden' : '';
+  });
+});
 </script>
 </body>
 </html>

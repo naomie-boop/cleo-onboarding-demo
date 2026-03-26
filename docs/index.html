@@ -287,11 +287,14 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
     <div class="sb-section-title">Platform</div>
     <a class="sb-link" href="#dashboard"><span class="icon">📊</span> Dashboard</a>
     <a class="sb-link" href="#signal-card"><span class="icon">📋</span> Signal Card</a>
-    <a class="sb-link" href="#products"><span class="icon">📦</span> Products</a>
+    <a class="sb-link" href="#catalog"><span class="icon">🗂</span> Catalog</a>
+    <div class="sb-sub">
+      <a class="sb-link" href="#products"><span class="icon">📦</span> Products</a>
+      <a class="sb-link" href="#countries"><span class="icon">🌍</span> Countries</a>
+      <a class="sb-link" href="#regulations"><span class="icon">⚖️</span> Regulations</a>
+      <a class="sb-link" href="#authorities"><span class="icon">🏛</span> Authorities</a>
+    </div>
     <a class="sb-link" href="#timeline"><span class="icon">📅</span> Timeline</a>
-    <a class="sb-link" href="#countries"><span class="icon">🌍</span> Countries</a>
-    <a class="sb-link" href="#regulations"><span class="icon">⚖️</span> Regulations</a>
-    <a class="sb-link" href="#authorities"><span class="icon">🏛</span> Authorities</a>
     <a class="sb-link" href="#bookmarks"><span class="icon">🔖</span> Bookmarks</a>
   </div>
 
@@ -304,12 +307,6 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
     <a class="sb-link" href="#team"><span class="icon">👥</span> Team</a>
     <a class="sb-link" href="#notifications"><span class="icon">🔔</span> Notifications</a>
     <a class="sb-link" href="#sources"><span class="icon">🔍</span> Sources</a>
-  </div>
-
-  <div class="sb-section">
-    <div class="sb-section-title">Resources</div>
-    <a class="sb-link" href="#faq"><span class="icon">❓</span> FAQ</a>
-    <a class="sb-link" href="#changelog"><span class="icon">📝</span> Changelog</a>
   </div>
 </nav>
 
@@ -360,6 +357,12 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <span class="ico">ℹ️</span>
   <div><strong>Who is it for?</strong> Product compliance teams, DPOs, quality managers, legal departments, and regulatory affairs professionals who need to monitor international product regulations.</div>
 </div>
+
+<!-- READING PATH BANNER -->
+<div style="background:var(--c-blue);color:var(--c-white);border-radius:var(--r-md);padding:20px 24px;margin:32px 0 0">
+  <div style="font-size:16px;font-weight:800;margin-bottom:8px">📍 New to Cleo?</div>
+  <div style="font-size:14px;opacity:0.9;line-height:1.7">Read in order: <a href="#overview" style="color:white;font-weight:700;text-decoration:underline">Overview</a> → <a href="#quick-start" style="color:white;font-weight:700;text-decoration:underline">Quick Start</a> → <a href="#dashboard" style="color:white;font-weight:700;text-decoration:underline">Dashboard</a> → <a href="#signal-card" style="color:white;font-weight:700;text-decoration:underline">Signal Card</a>.<br>Everything else when you need it.</div>
+</div>
 </section>
 
 <hr class="divider">
@@ -367,26 +370,25 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ QUICK START ═══════════════════ -->
 <section id="quick-start">
 <h2>🚀 Quick Start</h2>
-<p>Cleo does the heavy lifting. You just enter your company domain — the AI handles the rest.</p>
+<p>Cleo does the heavy lifting. Enter your company domain — the AI handles the rest.</p>
 
-<!-- STEP FLOW -->
 <div class="step-flow">
 
   <div class="step" data-step="1">
     <div class="step-num">1</div>
     <div class="step-body">
-      <h3>Sign up & enter your domain</h3>
-      <p>Create your account at <a href="https://insight.cleolabs.co">insight.cleolabs.co</a>. Enter your <strong>company domain</strong> (e.g. electrolux.com). That's all Cleo needs to get started.</p>
+      <h3>Sign up &amp; enter your domain</h3>
+      <p>Create your account at <a href="https://insight.cleolabs.co">insight.cleolabs.co</a>. Enter your <strong>company domain</strong> (e.g. acme.com). That's all Cleo needs to get started.</p>
     </div>
   </div>
 
   <div class="step" data-step="2">
     <div class="step-num">2</div>
     <div class="step-body">
-      <h3>AI builds your regulatory profile</h3>
-      <p>Cleo's AI automatically analyzes your domain and generates your entire regulatory landscape:</p>
+      <h3>Wait 15–30 minutes while AI builds your profile</h3>
+      <p>Cleo scans your domain and automatically generates your full regulatory landscape:</p>
       <ul>
-        <li>🏭 <strong>Products</strong> — your product catalog, detected from public data</li>
+        <li>🏭 <strong>Products</strong> — your catalog, detected from public data</li>
         <li>🌍 <strong>Countries</strong> — your markets, identified from your footprint</li>
         <li>⚖️ <strong>Regulations</strong> — all applicable laws, cross-referenced</li>
         <li>🏛 <strong>Authorities</strong> — the regulatory bodies that matter to you</li>
@@ -394,7 +396,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
       </ul>
       <div class="callout callout-info" style="margin-top:12px">
         <span class="ico">⏳</span>
-        <div><strong>This takes 15–30 minutes.</strong> Go grab a coffee — the AI is scanning thousands of sources, cross-referencing regulations, and building your personalized intelligence feed.</div>
+        <div>The AI is scanning thousands of sources and cross-referencing regulations. Go grab a coffee — it takes 15–30 minutes.</div>
       </div>
     </div>
   </div>
@@ -402,26 +404,22 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="step" data-step="3">
     <div class="step-num">3</div>
     <div class="step-body">
-      <h3>Review & validate</h3>
-      <p>Once the scan completes, review what the AI generated. Go through each section and validate:</p>
+      <h3>Review &amp; correct</h3>
+      <p>Think of this as proofreading the AI's homework. It does 95% of the work. You just refine:</p>
       <ul>
-        <li>✅ <strong>Products</strong> — are these your real products? Add missing ones, remove irrelevant ones</li>
-        <li>✅ <strong>Countries</strong> — are these your real markets? Add or remove as needed</li>
-        <li>✅ <strong>Regulations</strong> — correct? Adjust priority levels</li>
-        <li>✅ <strong>Authorities</strong> — relevant to your sector?</li>
+        <li>✅ <strong>Products</strong> — add missing ones, remove irrelevant ones</li>
+        <li>✅ <strong>Countries</strong> — confirm your real markets</li>
+        <li>✅ <strong>Regulations</strong> — adjust priority levels</li>
+        <li>✅ <strong>Authorities</strong> — remove any not relevant to your sector</li>
       </ul>
-      <div class="callout callout-tip" style="margin-top:12px">
-        <span class="ico">💡</span>
-        <div><strong>Think of it as proofreading AI's homework.</strong> The AI does 95% of the work. You just refine and confirm.</div>
-      </div>
     </div>
   </div>
 
   <div class="step" data-step="4">
     <div class="step-num">✓</div>
     <div class="step-body">
-      <h3>You're set</h3>
-      <p>Your dashboard is now live. Every day, Cleo monitors your regulatory landscape and surfaces new signals. Configure your <a href="#scans">scan frequency</a> and <a href="#notifications">notifications</a> to stay ahead.</p>
+      <h3>You're live</h3>
+      <p>Your dashboard is now active. Cleo monitors your regulatory landscape daily and surfaces what needs action. Configure your <a href="#scans">scan frequency</a> and <a href="#notifications">notifications</a> to stay ahead.</p>
     </div>
   </div>
 
@@ -433,48 +431,38 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ DASHBOARD ═══════════════════ -->
 <section id="dashboard">
 <h2>📊 Dashboard</h2>
-<p>The dashboard is your daily cockpit. It shows your regulatory landscape at a glance and surfaces what needs your attention.</p>
+<p>Start here every morning. Four KPI cards tell you what changed overnight. Your signal feed tells you what to do about it.</p>
 
 <div class="screenshot">
   <img src="images/dashboard.png" alt="Cleo Comply Dashboard">
   <div class="cap">The dashboard with KPI cards, filters, and signal feed</div>
 </div>
 
-<h3>KPI Cards</h3>
-<p>Four key metrics at the top of the screen:</p>
+<h3>KPI Cards — read these first</h3>
 <ul>
-  <li><strong>NOUVEAUX</strong> — number of new regulatory signals since your last visit, with a sparkline bar chart</li>
-  <li><strong>EXPOSITION</strong> — your global risk level (Critique / Élevé / Modéré / Faible), with a colored dot indicator</li>
-  <li><strong>ÉCHÉANCE</strong> — days until your next regulatory deadline (e.g. "36j"), with the regulation name below</li>
-  <li><strong>RÉGLEMENTATIONS</strong> — total number of regulations being monitored for your organization</li>
+  <li><strong>New signals (NOUVEAUX)</strong> — your to-do list for the day. Start here.</li>
+  <li><strong>Exposure (EXPOSITION)</strong> — your overall risk level. If it jumped, dig into the signal feed to find out why.</li>
+  <li><strong>Next deadline (ÉCHÉANCE)</strong> — days until your most urgent regulatory milestone. If it's under 30, open the <a href="#timeline">Timeline</a> now.</li>
+  <li><strong>Regulations (RÉGLEMENTATIONS)</strong> — total laws under watch. Reference number; you rarely need to act on this.</li>
 </ul>
 
-<h3>Filters</h3>
-<p>Two rows of quick filters let you slice your signal feed, plus dropdown filters for finer control:</p>
+<h3>Filter your feed</h3>
+<p>Use filters to cut the noise and focus on what matters right now:</p>
 <ul>
-  <li><strong>IMPACT</strong> — Tous · Critique · Élevé · Modéré · Faible (pill buttons, selected = filled blue)</li>
-  <li><strong>STATUT</strong> — Tous · En vigueur · Adopté · Proposé (pill buttons)</li>
-  <li><strong>4 dropdown filters</strong> — "Tous les produits" · "Tous les pays" · "Toutes les lois" · "Toutes les catégories" (Analyse / Sanction / Législation)</li>
+  <li><strong>Impact level</strong> — filter by Critique / Élevé / Modéré / Faible. In daily triage, start with Critique.</li>
+  <li><strong>Status</strong> — "Adopté" is your anticipation window: laws voted but not yet enforced. Use this to get ahead.</li>
+  <li><strong>Dropdowns</strong> — slice by product, country, regulation, or category (Analyse / Sanction / Législation) to focus on a specific market or product line.</li>
 </ul>
 
-<div class="callout callout-tip">
-  <span class="ico">💡</span>
-  <div><strong>Pro tip:</strong> Use the "Adopté" status filter to see laws that have been voted but aren't in force yet. This is your anticipation window — get ahead before enforcement begins.</div>
-</div>
-
-<h3>Signal Feed</h3>
-<p>Below the filters, signals are grouped chronologically into three sections: <strong>HIER</strong> (yesterday), <strong>CETTE SEMAINE</strong> (this week), <strong>PLUS ANCIEN</strong> (older), each with a count badge. Each signal card shows:</p>
+<h3>Signal Feed — act on each signal</h3>
+<p>Signals are grouped as Today (HIER), This Week (CETTE SEMAINE), and Older (PLUS ANCIEN). Each card shows the law, the country, the risk level, which of your products are affected, and two quick actions:</p>
 <ul>
-  <li>A colored <strong>type badge</strong> — Législation / Sanction / Analyse</li>
-  <li>The <strong>law name</strong> and country flag</li>
-  <li>The <strong>age</strong> of the signal and a one-line title</li>
-  <li>Number of <strong>impacted products</strong> and <strong>risk level</strong></li>
-  <li>A <strong>bookmark icon</strong> (flag outline) — click to save the signal to your <a href="#bookmarks">Bookmarks</a> page</li>
-  <li>A <strong>share icon</strong> (paper plane) — "Envoyer un signal" to share with a colleague</li>
+  <li><strong>Bookmark (🔖)</strong> — save for your weekly review session</li>
+  <li><strong>Share signal (ENVOYER UN SIGNAL) (✈️)</strong> — forward to a colleague who owns this topic</li>
 </ul>
 
-<h3>Actualiser</h3>
-<p>The <strong>Actualiser</strong> button (top-right, purple) triggers a new scan. Cleo scans all official sources, processes new documents, and updates your signals. Each scan consumes credits from your plan allocation.</p>
+<h3>Refresh (ACTUALISER)</h3>
+<p>The purple Refresh button triggers a new scan on demand. Use it when you need fresh data before a meeting or after a regulatory news event. Each scan consumes credits from your plan.</p>
 </section>
 
 <hr class="divider">
@@ -482,45 +470,64 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ SIGNAL CARD ═══════════════════ -->
 <section id="signal-card">
 <h2>📋 Signal Card</h2>
-<p>Click any signal to open its full card. This is where all the intelligence concentrates — the analysis that would normally take hours is done for you.</p>
+<p>Click any signal to open its full card. This is where hours of regulatory research are done for you — read it, decide, act.</p>
 
 <div class="screenshot">
   <img src="images/signal-card.png" alt="Signal card detail view">
   <div class="cap">A signal card with AI summary, obligations, action plan, and competitive exposure</div>
 </div>
 
-<h3>Header</h3>
-<p>The signal <strong>type badge</strong> (LÉGISLATION / SANCTION / ANALYSE), the <strong>source law name</strong> (e.g. BC PIPA, OFAC Sanctions), country flag, full title. Below: the <strong>relevance score</strong> as a percentage (e.g. 90%) and the <strong>risk level</strong> badge (Critical / High / Medium / Low).</p>
-
-<h3>AI Summary</h3>
-<p>An AI-generated summary <strong>personalized to your role</strong>. It starts with the key business impact for your organization (e.g. "creating direct and immediate exposure for Electrolux Professional AB given its subsidiaries in the UK and Russia"). A <strong>"Lire la suite ▼"</strong> button expands the full summary. The content adapts based on your Department and Role in Profile settings.</p>
-
-<h3>Conséquences Clés</h3>
-<p>A bullet list of the key consequences, each prefixed with a ⚡ icon. Immediate, concrete, and specific to your business context. A link like "+3 autres obligations ci-dessous" indicates there are additional obligations in the Obligations accordion below.</p>
-
-<h3>Produits Impactés</h3>
-<p>Product tags showing which items from <em>your catalog</em> are affected. Not generic categories — your actual products, cross-referenced automatically.</p>
-
-<h3>4 Accordion Sections</h3>
-<p>The signal card contains four expandable sections, each with its own icon:</p>
-
+<h3>Start here — 3 steps to process a signal</h3>
 <ol>
-  <li><strong>⊕ VOTRE PLAN D'ACTION</strong> — Concrete actions with deadlines and responsible parties. Ready to assign to your team.</li>
-  <li><strong>📋 OBLIGATIONS (count)</strong> — Legal obligations extracted from the regulation, with article references and checkboxes for compliance tracking. The count in parentheses shows the total (e.g. "OBLIGATIONS (6)").</li>
-  <li><strong>📈 IMPACT POUR VOTRE RÔLE</strong> — Role-specific impact analysis that adapts based on the Department and Role set in your Profile.</li>
-  <li><strong>📖 CONTEXTE RÉGLEMENTAIRE</strong> — Broader regulatory context: history, related regulations, enforcement trends.</li>
+  <li><strong>Read the AI summary</strong> — it's written for your role and starts with the business impact on your organization. Click "Lire la suite ▼" if you need the full picture.</li>
+  <li><strong>Check impacted products (PRODUITS IMPACTÉS)</strong> — these are your actual catalog items, not generic categories. If something important is missing, update your <a href="#products">Products</a> catalog.</li>
+  <li><strong>Open the action plan (VOTRE PLAN D'ACTION)</strong> — concrete tasks with deadlines and responsible parties, ready to assign. This is your output from the card.</li>
 </ol>
-
-<h3>Exposition Concurrentielle</h3>
-<p>Below the accordions, a fixed (always visible) section titled <strong>EXPOSITION CONCURRENTIELLE</strong> with a 📈 icon. It analyzes whether the regulatory exposure is <strong>symmetrical</strong> (same for all players in your industry) or <strong>asymmetrical</strong> (may advantage or disadvantage specific competitors based on their geography or supply chain).</p>
 
 <div class="callout callout-info">
   <span class="ico">ℹ️</span>
-  <div>The summary and role-impact section adapt based on the <strong>Department</strong> and <strong>Role</strong> configured in your <a href="#profile">Profile settings</a>. Changing your role changes all summaries.</div>
+  <div>The summary and action plan adapt based on the <strong>Department</strong> and <strong>Role</strong> configured in your <a href="#profile">Profile</a>. A DPO sees data protection angles; a Quality Manager sees safety angles. Same signal, different lens.</div>
 </div>
 
-<h3>Source &amp; Feedback</h3>
-<p>At the bottom of the signal card: a <strong>"Source: sec.gov"</strong> link (clickable, opens the original source document), plus a feedback prompt: <strong>"Cette source était-elle pertinente ?"</strong> with 👍 <strong>Oui</strong> / 👎 <strong>Non</strong> buttons. Your feedback improves future signal quality.</p>
+<h3>Go deeper — when you need more detail</h3>
+
+<details>
+  <summary>⊕ Obligations — the full legal checklist</summary>
+  <div class="details-body">Legal obligations extracted from the regulation, with article references and checkboxes. The count (e.g. "OBLIGATIONS (6)") tells you how much work is ahead. Use this for your compliance tracking — tick off each obligation as your team handles it.</div>
+</details>
+
+<details>
+  <summary>📈 Impact for your role (IMPACT POUR VOTRE RÔLE)</summary>
+  <div class="details-body">Role-specific analysis that goes beyond the summary. Useful when you need to brief your team or prepare a memo — the language is already calibrated for your function.</div>
+</details>
+
+<details>
+  <summary>📖 Regulatory context (CONTEXTE RÉGLEMENTAIRE)</summary>
+  <div class="details-body">History, related regulations, enforcement trends. Read this when a signal seems unusual or when you want to understand the broader legislative direction.</div>
+</details>
+
+<details>
+  <summary>📈 Competitive exposure (EXPOSITION CONCURRENTIELLE)</summary>
+  <div class="details-body">Is this regulation hitting everyone in your industry equally, or does it create asymmetric risk? This section flags whether your competitors face the same constraints — or whether you have a window to gain ground.</div>
+</details>
+
+<h3>Source &amp; feedback</h3>
+<p>At the bottom: a direct link to the original source document (e.g. sec.gov). Always verify critical signals against the source before acting. The <strong>"Cette source était-elle pertinente ?"</strong> feedback (👍 / 👎) trains the AI to improve signal quality for your organization.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ CATALOG ═══════════════════ -->
+<section id="catalog">
+<h2>🗂 Catalog</h2>
+<p>The catalog is your regulatory perimeter. It defines what Cleo monitors and how signals get matched to your business.</p>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div><strong>All catalog pages work the same way:</strong> filters at the top, manual add or CSV import, AI badge for auto-detected items. The sections below only explain what's specific to each page.</div>
+</div>
+
+<p>The catalog has four pages: <strong>Products</strong>, <strong>Countries</strong>, <strong>Regulations</strong>, and <strong>Authorities</strong>. The quality of your catalog directly determines the relevance of your signals — keep it accurate.</p>
 </section>
 
 <hr class="divider">
@@ -528,74 +535,20 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ PRODUCTS ═══════════════════ -->
 <section id="products">
 <h2>📦 Products</h2>
-<p>The Products page — titled <strong>Par produit</strong> — is your portfolio view. Add your catalog and see, at a glance, which products concentrate the most regulatory risk.</p>
+<p>Define your product portfolio. Cleo cross-references every regulation against this list to tell you which products are exposed.</p>
 
 <div class="screenshot">
   <img src="images/products.png" alt="Products page">
-  <div class="cap">Product catalog organized by categories with impact indicators</div>
+  <div class="cap">Product catalog (PAR PRODUIT) organized by categories with impact indicators</div>
 </div>
 
-<h3>Adding Products</h3>
-<ul>
-  <li><strong>Manual</strong> — click "+ Ajouter un produit", enter name, category, and markets</li>
-  <li><strong>CSV Import</strong> — bulk upload your entire catalog</li>
-  <li><strong>AI-discovered</strong> — Cleo automatically detects products mentioned in signals and suggests them (shown with an AI badge)</li>
-</ul>
+<p>Products are organized in collapsible categories. Each entry shows country flags for monitored markets, regulation count, impact count, and a red badge for critical impacts. Products with the AI badge were auto-discovered from public data — validate them during onboarding.</p>
 
-<h3>Filters &amp; Sorting</h3>
-<ul>
-  <li><strong>Sort by</strong> — Impacts / Échéance / Nom</li>
-  <li><strong>Source</strong> — Tous / Découverts par IA / Personnalisé</li>
-  <li><strong>Impacts</strong> — Tous / Avec impacts / Sans impacts</li>
-  <li><strong>Category</strong> and <strong>Country</strong> dropdowns</li>
-</ul>
-
-<h3>Product Entries</h3>
-<p>Products are organized in collapsible categories. Each product shows:</p>
-<ul>
-  <li>Product <strong>name</strong> and <strong>AI badge</strong> (if auto-discovered)</li>
-  <li><strong>Country flags</strong> for each monitored market</li>
-  <li><strong>Regulation count</strong> and <strong>impact count</strong></li>
-  <li>A <strong>red impact badge</strong> for critical impacts</li>
-  <li>Actions: <strong>Analyser</strong> button (for unanalyzed products), edit, delete</li>
-</ul>
+<p>Filter by <strong>"Avec impacts"</strong> to see only products that need attention. That's your shortlist for the weekly compliance review.</p>
 
 <div class="callout callout-tip">
   <span class="ico">💡</span>
-  <div><strong>Weekly review:</strong> Filter by "Avec impacts" to see only products that need attention. This is your shortlist for the weekly compliance review.</div>
-</div>
-</section>
-
-<hr class="divider">
-
-<!-- ═══════════════════ TIMELINE ═══════════════════ -->
-<section id="timeline">
-<h2>📅 Timeline</h2>
-<p>Your regulatory calendar — titled <strong>Échéancier</strong>. A vertical timeline showing every upcoming enforcement date, deadline, and regulatory milestone.</p>
-
-<div class="screenshot">
-  <img src="images/timeline.png" alt="Timeline view">
-  <div class="cap">Échéancier showing upcoming regulatory deadlines with countdown</div>
-</div>
-
-<h3>Reading the Timeline</h3>
-<ul>
-  <li>An <strong>"AUJOURD'HUI"</strong> marker with the current date shows your position</li>
-  <li>Events are grouped by <strong>month</strong></li>
-  <li>Each event shows a <strong>color-coded date badge</strong>, an <strong>"Xj restants"</strong> countdown, the event title, and the associated regulation name</li>
-</ul>
-
-<h3>Filters</h3>
-<ul>
-  <li><strong>Horizon</strong> — 30 jours / 90 jours / 6 mois / Tous</li>
-  <li><strong>Risque</strong> — Tous / Critique / Élevé / Modéré / Faible</li>
-  <li><strong>Dropdowns</strong> — filter by regulation, product, country</li>
-  <li><strong>Search bar</strong> — find a specific deadline by keyword</li>
-</ul>
-
-<div class="callout callout-tip">
-  <span class="ico">💡</span>
-  <div><strong>Quarterly meeting combo:</strong> Set Horizon to 90 jours + Risque to Critique. Screenshot the result. That's your one-slide executive summary.</div>
+  <div>Unanalyzed products show an <strong>Analyser</strong> button. Click it to trigger an AI scan on that specific product — useful when you add a new product line mid-cycle.</div>
 </div>
 </section>
 
@@ -604,34 +557,19 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ COUNTRIES ═══════════════════ -->
 <section id="countries">
 <h2>🌍 Countries</h2>
-<p>Tell Cleo where you sell — titled <strong>Par pays</strong> — and it monitors local regulations automatically.</p>
+<p>Tell Cleo where you sell. Each country you add is immediately monitored for local regulations and cross-referenced with your product catalog.</p>
 
 <div class="screenshot">
   <img src="images/countries.png" alt="Countries page">
-  <div class="cap">World map with color-coded exposure and jurisdiction list</div>
+  <div class="cap">Country catalog (PAR PAYS) — world map with color-coded exposure and jurisdiction list</div>
 </div>
 
-<h3>World Map</h3>
-<p>A color-coded exposure map: red = critical, orange = high, and grey = not monitored. Below the map: legend showing <strong>X SURVEILLÉES · X CRITIQUES</strong> with color dots.</p>
+<p>The color-coded world map gives you an instant exposure read: red = critical, orange = high, grey = not monitored. Below it, each country entry shows the region, impact count, and an impact bar.</p>
 
-<h3>Adding Markets</h3>
+<p><strong>Two entries worth special attention:</strong></p>
 <ul>
-  <li>Click <strong>"+ Ajouter un pays"</strong> — select from the list, monitoring starts immediately</li>
-  <li><strong>CSV Import</strong> for bulk additions</li>
-</ul>
-
-<h3>Filters</h3>
-<ul>
-  <li><strong>Region</strong> — Toutes / Europe / Amériques / APAC / Afrique-ME</li>
-  <li><strong>Impacts</strong> — Tous / Avec impacts / Sans impacts</li>
-  <li><strong>Product</strong> dropdown</li>
-</ul>
-
-<h3>Country Entries</h3>
-<p>Each entry shows: flag, country name, AI badge, sub-country count for unions (e.g. EU → 5 pays), region, impact count, critical badge, and an impact bar. Some entries expand into sub-regions:</p>
-<ul>
-  <li><strong>European Union</strong> expands into individual member states — each with its own transposition specifics</li>
-  <li><strong>United States</strong> expands by state — critical because state-level regulations (like California Prop 65) can be stricter than federal</li>
+  <li><strong>European Union</strong> expands into individual member states — each with its own transposition specifics. Don't assume EU coverage means identical rules everywhere.</li>
+  <li><strong>United States</strong> expands by state — critical because state-level rules (e.g. California Prop 65) are often stricter than federal.</li>
 </ul>
 </section>
 
@@ -640,39 +578,21 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ REGULATIONS ═══════════════════ -->
 <section id="regulations">
 <h2>⚖️ Regulations</h2>
-<p>996 regulations already in the database — titled <strong>Par réglementation</strong> — automatically enriched by AI.</p>
+<p>996 regulations already in the database, grouped by domain. Review this list to make sure Cleo is watching everything that matters for your sector.</p>
 
 <div class="screenshot">
   <img src="images/regulations.png" alt="Regulations page">
-  <div class="cap">Regulation library grouped by domain with risk levels and impact counts</div>
+  <div class="cap">Regulation library (PAR RÉGLEMENTATION) grouped by domain with risk levels and impact counts</div>
 </div>
 
-<h3>Filters</h3>
-<ul>
-  <li><strong>Risque</strong> — Tous / Critique / Élevé / Modéré / Faible</li>
-  <li><strong>Statut</strong> — Tous / En vigueur / Adopté / Proposé</li>
-  <li><strong>Dropdowns</strong> — domain, region, compliance status, product</li>
-  <li><strong>Import CSV</strong> and <strong>+ Ajouter une réglementation</strong> buttons</li>
-</ul>
+<p>Regulations are grouped by domain (Commerce &amp; Sanctions, Data Protection, Environment, Health &amp; Safety, etc.), each collapsible with a total count and impact count.</p>
 
-<h3>Domain Grouping</h3>
-<p>Regulations are grouped by domain, each collapsible with a total regulation count and impact count:</p>
-<ul>
-  <li>Commerce &amp; Sanctions</li>
-  <li>Droit du travail</li>
-  <li>Protection des données</li>
-  <li>Environnement &amp; Durabilité</li>
-  <li>Santé &amp; Sécurité</li>
-  <li>And more...</li>
-</ul>
+<p><strong>Filter by "Adopté"</strong> to surface regulations that have been voted but aren't enforced yet — this is your preparation window. Act before enforcement begins, not after.</p>
 
 <div class="callout callout-warn">
   <span class="ico">⚠️</span>
-  <div><strong>Important:</strong> The "Adopté" status filter shows regulations that have been voted but aren't enforced yet. This is your window to prepare before enforcement begins.</div>
+  <div>If a regulation you care about isn't in the library, add it via <strong>"+ Ajouter une réglementation"</strong>. Cleo automatically enriches it with authority, jurisdiction, status, and related obligations.</div>
 </div>
-
-<h3>Adding Regulations</h3>
-<p>Click "+ Ajouter une réglementation" to add any regulation not already in the library. Cleo will automatically enrich it with authority, jurisdiction, status, and related obligations.</p>
 </section>
 
 <hr class="divider">
@@ -680,30 +600,38 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ AUTHORITIES ═══════════════════ -->
 <section id="authorities">
 <h2>🏛 Authorities</h2>
-<p>550+ regulatory authority groups monitored — titled <strong>Par Autorité</strong>. Track their activity and spot enforcement trends.</p>
+<p>550+ regulatory authority groups monitored. Track their enforcement activity to spot patterns before they hit your inbox as signals.</p>
 
 <div class="screenshot">
   <img src="images/authorities.png" alt="Authorities page">
-  <div class="cap">Regulatory authorities grouped by parent entity with risk levels</div>
+  <div class="cap">Regulatory authorities (PAR AUTORITÉ) grouped by parent entity with risk levels</div>
 </div>
 
-<h3>View Toggle</h3>
-<p>The <strong>Regroupé</strong> button toggles between grouped view (by parent entity — strategic overview) and detailed view (by sub-entity — useful for audits).</p>
+<p>Use the <strong>Regroupé</strong> toggle to switch between grouped view (by parent entity — strategic overview) and detailed view (by sub-entity — useful when you need the exact authority for an audit or filing).</p>
 
-<h3>Filters</h3>
-<ul>
-  <li><strong>Region</strong> — Toutes / Europe / Amériques / APAC / Afrique-ME</li>
-  <li><strong>Risque</strong> — Toutes / Critique / Élevé / Modéré / Faible</li>
-  <li><strong>Impacts</strong> — Tous / Avec impacts / Sans impacts</li>
-  <li><strong>Product</strong> and <strong>Regulation</strong> dropdowns</li>
-  <li><strong>Import CSV</strong> and <strong>+ Ajouter une Autorité</strong> buttons</li>
-</ul>
+<p>Watch for authorities with rapidly increasing impact counts. A spike means they're ramping up enforcement in your sector — that's an early warning to review your compliance posture before a formal signal arrives.</p>
+</section>
 
-<h3>Authority Entries</h3>
-<p>Each entry shows: icon, authority name + sub-entities count, AI badge, country, regulation count, risk badge, impact count, and an impact bar.</p>
+<hr class="divider">
 
-<h3>Activity Trends</h3>
-<p>Watch for authorities with rapidly increasing impact counts — a spike means they're ramping up enforcement. That's an early warning signal for your sector.</p>
+<!-- ═══════════════════ TIMELINE ═══════════════════ -->
+<section id="timeline">
+<h2>📅 Timeline</h2>
+<p>See every upcoming enforcement deadline on one page. Use it to plan ahead, not to react.</p>
+
+<div class="screenshot">
+  <img src="images/timeline.png" alt="Timeline view">
+  <div class="cap">Timeline (ÉCHÉANCIER) — upcoming regulatory deadlines with countdown</div>
+</div>
+
+<p>The timeline shows a vertical calendar of upcoming dates, grouped by month, anchored on an "AUJOURD'HUI" marker. Each event shows a countdown in days ("Xj restants"), the event title, and the associated regulation.</p>
+
+<p><strong>Quick combo for executive reporting:</strong> Set Horizon to "90 jours" + Risk to "Critique". Screenshot the result. That's your one-slide executive summary.</p>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div>Run this filter before every quarterly review. No prep needed — the Timeline does the work.</div>
+</div>
 </section>
 
 <hr class="divider">
@@ -711,23 +639,14 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ BOOKMARKS ═══════════════════ -->
 <section id="bookmarks">
 <h2>🔖 Bookmarks</h2>
-<p>Save any signal for later review. Bookmarks are your personal reading list inside Cleo Comply.</p>
+<p>Build your weekly review list as you go. Bookmark signals throughout the week, then process them in one focused session.</p>
 
 <div class="screenshot">
   <img src="images/bookmarks.png" alt="Bookmarks page">
   <div class="cap">Bookmarks — your saved signals for later review</div>
 </div>
 
-<h3>Saving a Signal</h3>
-<p>From the dashboard or any signal card, click the <strong>bookmark icon</strong> (🔖) on a signal. It is instantly saved to your Bookmarks page. The icon turns filled to confirm the save.</p>
-
-<h3>Empty State</h3>
-<p>When no signals are saved yet, the page shows: a bookmark icon, <em>"Aucun signet"</em>, and the instruction <em>"Appuyez sur l'icône signet sur n'importe quel signal pour le retrouver ici."</em></p>
-
-<div class="callout callout-tip">
-  <span class="ico">💡</span>
-  <div>Use Bookmarks to build your weekly review list. Bookmark signals throughout the week, then review them all at once in a dedicated session.</div>
-</div>
+<p>From the dashboard or any signal card, click the <strong>🔖</strong> icon on a signal. It's immediately saved here. The icon turns filled to confirm. To clear your list, remove bookmarks after you've acted on each signal.</p>
 </section>
 
 <hr class="divider">
@@ -735,37 +654,26 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ PROFILE ═══════════════════ -->
 <section id="profile">
 <h2>👤 Profile</h2>
-<p>Your profile is the #1 setting to configure correctly. It determines how every signal summary and impact analysis is written for you.</p>
+<p>Set your role correctly before anything else — it determines how every signal summary is written for you. Same regulatory event, completely different output depending on your function.</p>
 
 <div class="screenshot">
   <img src="images/profile.png" alt="Profile settings">
   <div class="cap">Profile settings — personalize your regulatory intelligence</div>
 </div>
 
-<h3>Profile Fields</h3>
+<h3>What to configure</h3>
 <ul>
-  <li><strong>Nom complet</strong> — your full name</li>
-  <li><strong>Email</strong> — your login email</li>
-  <li><strong>Département</strong> — dropdown (Legal, Compliance, Quality, Product, etc.)</li>
-  <li><strong>Rôle</strong> — dropdown (DPO, Quality Manager, Legal Counsel, etc.)</li>
-  <li><strong>Entreprise</strong> — your organization name</li>
-  <li><strong>Slack Member ID</strong> — optional, for direct Slack notifications</li>
-  <li><strong>Langue</strong> — dropdown with flags (FR 🇫🇷 / EN 🇬🇧)</li>
+  <li><strong>Department (Département)</strong> — Legal, Compliance, Quality, Product, etc.</li>
+  <li><strong>Role (Rôle)</strong> — DPO, Quality Manager, Legal Counsel, etc.</li>
+  <li><strong>Language (Langue)</strong> — FR 🇫🇷 or EN 🇬🇧 — controls the language of all AI-generated content</li>
+  <li><strong>Slack Member ID</strong> — optional, for direct Slack DMs on critical alerts</li>
 </ul>
 
-<h3>Display Toggles</h3>
+<h3>Display shortcuts</h3>
 <ul>
-  <li><strong>Masquer les lois sans impact</strong> — hide regulations with no impact on your products</li>
-  <li><strong>Masquer les autorités sans impact</strong> — hide authorities with no impact on your products</li>
+  <li><strong>Hide laws without impact (Masquer les lois sans impact)</strong> — declutter your Regulations page to show only what affects your products</li>
+  <li><strong>Hide authorities without impact (Masquer les autorités sans impact)</strong> — same idea for your Authorities page</li>
 </ul>
-
-<h3>Actions</h3>
-<p><strong>Annuler</strong> / <strong>Enregistrer</strong> buttons to save or discard changes. A <strong>Se déconnecter</strong> button to log out.</p>
-
-<div class="callout callout-info">
-  <span class="ico">ℹ️</span>
-  <div>Changing your Department and Role immediately changes how all signal summaries are generated. The same regulatory event produces different summaries for different roles.</div>
-</div>
 </section>
 
 <hr class="divider">
@@ -773,46 +681,28 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ SCANS ═══════════════════ -->
 <section id="scans">
 <h2>⚡ Scans</h2>
-<p>Configure automatic regulatory scans. Titled: <strong>Scans — Configurer les scans réglementaires automatiques</strong>.</p>
+<p>Control how often Cleo checks for new regulatory activity. Set it once and forget it — or override per regulation when the stakes are higher.</p>
 
 <div class="screenshot">
   <img src="images/scans.png" alt="Scans settings">
   <div class="cap">Scan settings — frequency, preferred day, and automatic scan toggle</div>
 </div>
 
-<h3>Scans automatiques</h3>
-<p>A toggle — <strong>"Scans automatiques — Rechercher automatiquement de nouveaux signaux réglementaires"</strong> — controls whether scans run on a schedule.</p>
-
-<h3>Fréquence des scans</h3>
-<p>When automatic scans are enabled, select one of five frequencies:</p>
-<ul>
-  <li><strong>Quotidien</strong> — Tous les jours</li>
-  <li><strong>Jours ouvrés</strong> — Lun – Ven</li>
-  <li><strong>Hebdomadaire</strong> — Tous les 7 jours</li>
-  <li><strong>Bimensuel</strong> — Tous les 14 jours</li>
-  <li><strong>Mensuel</strong> — Tous les 30 jours</li>
-</ul>
-
-<h3>Jour préféré</h3>
-<p>A day-of-week selector (Dim / Lun / Mar / Mer / Jeu / Ven / Sam) — the preferred day for your scheduled scan to run.</p>
-
-<h3>Regulation-Specific Frequency</h3>
-<p>You can override the global frequency for individual regulations from the <strong>Regulations page</strong> — set specific regulations to weekly scanning or exclude them from automatic scans entirely.</p>
+<p>Turn on <strong>Automatic scans (Scans automatiques)</strong> and pick a frequency: Daily (Quotidien) · Weekdays (Jours ouvrés) · Weekly (Hebdomadaire) · Bi-weekly (Bimensuel) · Monthly (Mensuel). Set a preferred day-of-week for scheduled scans to run.</p>
 
 <div class="callout callout-info">
   <span class="ico">ℹ️</span>
   <div>
-    <p><strong>How automatic scans work:</strong></p>
+    <p><strong>How scans work:</strong></p>
     <ul style="margin:8px 0 0 16px">
-      <li>Scans check the <strong>last 30 days</strong> of regulatory news for all your monitored regulations.</li>
-      <li>You can modify the frequency per regulation on the <strong>Regulations page</strong>.</li>
-      <li>Regulations with compliance deadlines within 30 days are <strong>automatically scanned weekly</strong>, regardless of this setting.</li>
+      <li>Each scan checks the <strong>last 30 days</strong> of regulatory news for all your monitored regulations.</li>
+      <li>You can override the frequency per regulation on the <a href="#regulations">Regulations page</a>.</li>
+      <li>Regulations with compliance deadlines within 30 days are <strong>automatically scanned weekly</strong> regardless of this setting.</li>
     </ul>
   </div>
 </div>
 
-<h3>Manual Scan</h3>
-<p>At any time, hit the <strong>Actualiser</strong> button on the Dashboard to trigger an on-demand scan. Each scan (automatic or manual) consumes credits.</p>
+<p>Need fresh data right now? Hit <strong>Refresh (ACTUALISER)</strong> on the Dashboard. Every scan — automatic or manual — consumes credits from your plan.</p>
 </section>
 
 <hr class="divider">
@@ -820,40 +710,37 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ BILLING ═══════════════════ -->
 <section id="billing">
 <h2>💳 Billing</h2>
-<p>Manage your plan and credit usage.</p>
+<p>Track your credit usage and manage your plan. Credits are consumed by scans — check your balance before running bulk analyses.</p>
 
 <div class="screenshot">
   <img src="images/billing.png" alt="Billing page">
   <div class="cap">Billing — current plan, credits remaining, and plan comparison</div>
 </div>
 
-<h3>Current Plan &amp; Credits</h3>
-<p>Two cards at the top: your <strong>current plan</strong> and your <strong>credits remaining</strong> (e.g. 3,254 / 5,000). A <strong>"Recharger les crédits"</strong> button lets you buy additional credits. An expandable <strong>promo code</strong> field is also available.</p>
+<p>Your current plan and remaining credits (e.g. 3,254 / 5,000) are shown at the top. Click <strong>"Recharger les crédits"</strong> to top up anytime. Unused credits roll over on the Pro plan.</p>
 
-<h3>Plans</h3>
 <table>
   <thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead>
   <tbody>
     <tr>
       <td><strong>Gratuit</strong></td>
       <td>€0/mois</td>
-      <td>Crédits à la consommation · Veille réglementaire de base · 1 membre d'équipe · Support par email</td>
+      <td>Pay-as-you-go credits · Basic monitoring · 1 team member · Email support</td>
     </tr>
     <tr>
-      <td><strong>Pro</strong> ⭐ Recommandé</td>
+      <td><strong>Pro</strong> ⭐</td>
       <td>€249/mois</td>
-      <td>5,000 crédits/mois · Veille réglementaire avancée · Réglementations suivies illimitées · 5 membres d'équipe · Support prioritaire · Report des crédits</td>
+      <td>5,000 credits/month · Advanced monitoring · Unlimited tracked regulations · 5 team members · Priority support · Credit rollover</td>
     </tr>
     <tr>
       <td><strong>Enterprise</strong></td>
-      <td>Sur mesure</td>
-      <td>Allocation de crédits personnalisée · Tout illimité · Support dédié · SSO &amp; SCIM · Intégrations personnalisées · Garantie SLA</td>
+      <td>Custom</td>
+      <td>Custom credit allocation · Unlimited everything · Dedicated support · SSO &amp; SCIM · Custom integrations · SLA guarantee</td>
     </tr>
   </tbody>
 </table>
 
-<h3>Usage History</h3>
-<p>A table showing your credit consumption history with: date, scan name, organization, steps completed, and credits consumed.</p>
+<p>The usage history table shows date, scan name, steps completed, and credits consumed — useful for auditing your scan activity.</p>
 </section>
 
 <hr class="divider">
@@ -861,7 +748,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ INTEGRATIONS ═══════════════════ -->
 <section id="integrations">
 <h2>🔗 Integrations</h2>
-<p>Connect Cleo Comply to the tools your team already uses.</p>
+<p>Connect Cleo to the tools your team already uses.</p>
 
 <div class="screenshot">
   <img src="images/integrations.png" alt="Integrations page">
@@ -869,17 +756,11 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 </div>
 
 <h3>Slack</h3>
-<p>Send compliance notifications directly to a Slack channel.</p>
-<ul>
-  <li>Status: <strong>Non connecté</strong> by default</li>
-  <li>Click <strong>"Ajouter à Slack"</strong> to authorize and select your channel</li>
-  <li>Once connected, configure which notification types route to Slack in <a href="#notifications">Notifications settings</a></li>
-  <li>Add your <strong>Slack Member ID</strong> in Profile settings to receive direct messages for critical alerts</li>
-</ul>
+<p>Click <strong>"Ajouter à Slack"</strong> to authorize and select your channel. Once connected, configure which alert types route to Slack in <a href="#notifications">Notifications settings</a>. Add your <strong>Slack Member ID</strong> in <a href="#profile">Profile</a> to receive direct messages for Critical-level alerts.</p>
 
 <div class="callout callout-tip">
   <span class="ico">💡</span>
-  <div>Create a dedicated <code>#regulatory-alerts</code> Slack channel for your compliance team. Route Critical and Deadline alerts there to ensure nothing gets missed.</div>
+  <div>Create a dedicated <code>#regulatory-alerts</code> channel for your compliance team. Route Critical and Deadline alerts there — nothing gets missed.</div>
 </div>
 </section>
 
@@ -888,20 +769,15 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ TEAM ═══════════════════ -->
 <section id="team">
 <h2>👥 Team</h2>
-<p>Invite team members to collaborate on regulatory intelligence — titled <strong>Membres de l'équipe</strong>.</p>
+<p>Invite colleagues so everyone works from the same regulatory picture — with summaries tailored to their own role.</p>
 
 <div class="screenshot">
   <img src="images/team.png" alt="Team settings">
-  <div class="cap">Team management — invite members and assign roles</div>
+  <div class="cap">Team members (MEMBRES DE L'ÉQUIPE) — invite and manage your team</div>
 </div>
 
-<h3>Inviting Members</h3>
-<p>Click the <strong>Inviter</strong> button and enter the email address. The invitee receives an email to create their account. The total member count is displayed next to the section title.</p>
+<p>Click <strong>Inviter</strong> and enter an email address. The invitee creates their own account and configures their own Profile — meaning they automatically receive summaries calibrated to their department and role, not yours.</p>
 
-<h3>Member Cards</h3>
-<p>Each team member is shown as a card with: avatar, name, <strong>(vous)</strong> tag for the current user, email, join date, role label, and an <strong>Admin</strong> badge for admins.</p>
-
-<h3>Plans &amp; Seat Limits</h3>
 <table>
   <thead><tr><th>Plan</th><th>Team Members</th></tr></thead>
   <tbody>
@@ -910,8 +786,6 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
     <tr><td>Enterprise</td><td>Unlimited</td></tr>
   </tbody>
 </table>
-
-<p>Each team member gets their own profile with department and role settings, meaning they receive personalized summaries adapted to their function.</p>
 </section>
 
 <hr class="divider">
@@ -919,24 +793,22 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ NOTIFICATIONS ═══════════════════ -->
 <section id="notifications">
 <h2>🔔 Notifications</h2>
-<p>Configure which events trigger email alerts.</p>
+<p>Choose what triggers an email. Turn on what you'll actually act on — noise kills attention.</p>
 
 <div class="screenshot">
   <img src="images/notifications.png" alt="Notifications settings">
   <div class="cap">Notification settings — email toggles per event type</div>
 </div>
 
-<h3>Notification Types</h3>
-<p>A table with each notification type and an Email toggle (on/off):</p>
 <table>
-  <thead><tr><th>#</th><th>Notification type</th><th>Description</th></tr></thead>
+  <thead><tr><th>Notification</th><th>When to enable</th></tr></thead>
   <tbody>
-    <tr><td>1</td><td><strong>Alerte RED détectée</strong></td><td>Immediate alert when a Critical-level signal is detected</td></tr>
-    <tr><td>2</td><td><strong>Résumé hebdomadaire</strong></td><td>Weekly digest of regulatory activity across your portfolio</td></tr>
-    <tr><td>3</td><td><strong>Échéance imminente</strong></td><td>Advance notice before an upcoming enforcement deadline</td></tr>
-    <tr><td>4</td><td><strong>Obligation en retard</strong></td><td>Alert when a compliance obligation is overdue</td></tr>
-    <tr><td>5</td><td><strong>Pipeline terminé</strong></td><td>Confirmation when a scan pipeline completes</td></tr>
-    <tr><td>6</td><td><strong>Nouvelle réglementation détectée</strong></td><td>Alert when a new regulation is added to your monitoring scope</td></tr>
+    <tr><td><strong>Critical alert (Alerte RED détectée)</strong></td><td>Always — never miss a Critical-level signal</td></tr>
+    <tr><td><strong>Weekly digest (Résumé hebdomadaire)</strong></td><td>If you don't check the dashboard daily</td></tr>
+    <tr><td><strong>Upcoming deadline (Échéance imminente)</strong></td><td>Always — gives you lead time to prepare</td></tr>
+    <tr><td><strong>Overdue obligation (Obligation en retard)</strong></td><td>Always — this means you're already late</td></tr>
+    <tr><td><strong>Scan complete (Pipeline terminé)</strong></td><td>Optional — useful when you trigger manual scans</td></tr>
+    <tr><td><strong>New regulation detected (Nouvelle réglementation détectée)</strong></td><td>If you want to review every new addition to your scope</td></tr>
   </tbody>
 </table>
 </section>
@@ -946,132 +818,20 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ SOURCES ═══════════════════ -->
 <section id="sources">
 <h2>🔍 Sources</h2>
-<p>Control where Cleo gets its intelligence — titled <strong>Sources — Sources contribuant à votre veille réglementaire</strong>.</p>
+<p>Control where Cleo gets its intelligence. Blocking noisy sources and prioritizing authoritative ones directly improves signal quality.</p>
 
 <div class="screenshot">
   <img src="images/sources.png" alt="Sources settings">
-  <div class="cap">Source management with quality scores and status controls</div>
+  <div class="cap">Source management (SOURCES) with quality scores and status controls</div>
 </div>
 
-<h3>Overview Stats</h3>
-<p>At the top: <strong>X sources avec impact business</strong> · <strong>X bloquées</strong>. A search bar and <strong>"+ Ajouter une source"</strong> button.</p>
+<p>Each source shows its domain (e.g. federalregister.gov), a quality score badge, article count, impact count, and status: <span style="color:#16a34a"><strong>Autorisée</strong></span> (active) / <span style="color:#dc2626"><strong>Bloquée</strong></span> (blocked) / <span style="color:#2563eb"><strong>Préférée</strong></span> (prioritized).</p>
 
-<h3>Source Table</h3>
-<p>Each source shows:</p>
 <ul>
-  <li><strong>Domain</strong> — e.g., federalregister.gov, eur-lex.europa.eu</li>
-  <li><strong>Quality score</strong> — colored badge (reliability rating)</li>
-  <li><strong>Article count / Impact count</strong> — how many articles and how many led to signals</li>
-  <li><strong>Status</strong> — <span style="color:#16a34a">Autorisée</span> (green) / <span style="color:#dc2626">Bloquée</span> (red) / <span style="color:#2563eb">Préférée</span> (blue)</li>
+  <li><strong>Block a source</strong> — click to set "Bloquée". Cleo stops using it in future analyses. Use this for sources that consistently produce irrelevant signals.</li>
+  <li><strong>Prefer a source</strong> — mark as "Préférée". These are weighted higher in every scan. Use for the most authoritative sources in your sector.</li>
+  <li><strong>Add a custom source</strong> — click <strong>"+ Ajouter une source"</strong> and enter the domain. Mark it Preferred and it'll be prioritized from the next scan onwards.</li>
 </ul>
-
-<h3>Managing Sources</h3>
-<ul>
-  <li><strong>Block</strong> a source — click to set status to "Bloquée". Cleo stops using it in future analyses.</li>
-  <li><strong>Prefer</strong> a source — mark as "Préférée". These are prioritized and weighted higher in every scan.</li>
-  <li><strong>Add</strong> a custom source — click "+ Ajouter une source" and enter the domain.</li>
-</ul>
-
-<div class="callout callout-tip">
-  <span class="ico">💡</span>
-  <div>Add industry-specific official sources that Cleo may not have discovered yet. Mark them as Preferred and they'll be prioritized in all future scans.</div>
-</div>
-</section>
-
-<hr class="divider">
-
-<!-- ═══════════════════ FAQ ═══════════════════ -->
-<section id="faq">
-<h2>❓ FAQ</h2>
-
-<details>
-  <summary>How do automatic scans work?</summary>
-  <div class="details-body">Based on the frequency setting in <a href="#scans">Scans settings</a>, Cleo automatically checks the last 30 days of regulatory news. You can override the frequency per individual regulation on the Regulations page. Regulations with deadlines within 30 days are scanned weekly regardless of your global setting.</div>
-</details>
-
-<details>
-  <summary>What are credits?</summary>
-  <div class="details-body">Each scan (manual or automatic) consumes credits. The Pro plan includes 5,000 credits/month. Credits roll over — unused credits carry to the next month. You can buy additional credits anytime from the Billing page.</div>
-</details>
-
-<details>
-  <summary>What's the difference between signal types?</summary>
-  <div class="details-body">
-    <ul>
-      <li><strong>Législation</strong> — a new law or regulation has been published or updated</li>
-      <li><strong>Sanction</strong> — an enforcement action, fine, or penalty has been issued by an authority</li>
-      <li><strong>Analyse</strong> — an analysis of the impact of an existing regulation on your sector or products</li>
-    </ul>
-  </div>
-</details>
-
-<details>
-  <summary>How does role-based personalization work?</summary>
-  <div class="details-body">Based on the <strong>Department</strong> and <strong>Role</strong> set in your Profile. When a regulatory event is processed, Cleo generates a summary tailored to your function. A DPO sees data protection angles; a Quality Manager sees safety angles; a Legal Counsel sees liability angles — same event, different perspective.</div>
-</details>
-
-<details>
-  <summary>Can I share signals with my team?</summary>
-  <div class="details-body">Yes. Use the <strong>"Envoyer un signal"</strong> button on any signal card in the dashboard. It generates a shareable link or sends the signal directly to a colleague.</div>
-</details>
-
-<details>
-  <summary>What does the AI badge mean?</summary>
-  <div class="details-body">The <strong>AI badge</strong> on a product, country, or authority means it was automatically discovered and enriched by Cleo's AI analysis — you didn't add it manually. You can always edit or delete AI-enriched entries.</div>
-</details>
-
-<details>
-  <summary>Can I add regulations that aren't in the library?</summary>
-  <div class="details-body">Yes. Click "+ Ajouter une réglementation" on the Regulations page. Cleo will automatically enrich it with authority, jurisdiction, status, and related obligations.</div>
-</details>
-
-<details>
-  <summary>What happens when I add a new country?</summary>
-  <div class="details-body">Cleo immediately starts monitoring local regulations for that market and cross-references them with your product catalog. New signals will appear on your next scan.</div>
-</details>
-
-</section>
-
-<hr class="divider">
-
-<!-- ═══════════════════ CHANGELOG ═══════════════════ -->
-<section id="changelog">
-<h2>📝 Changelog</h2>
-<p>Latest updates to Cleo Comply.</p>
-
-<h3>March 2026</h3>
-<h4>New Features</h4>
-<ul>
-  <li><strong>Bookmarks</strong> — save any signal from the dashboard with the bookmark icon; access all saved signals in the new Bookmarks section</li>
-  <li><strong>Integrations page</strong> — dedicated page for connecting third-party tools (Slack available now)</li>
-  <li><strong>Competitive exposure</strong> — new accordion section on signal cards analyzing symmetrical vs. asymmetrical risk</li>
-  <li><strong>Authorities page</strong> — 550+ regulatory authority groups with Regroupé toggle, risk badges, and impact bars</li>
-  <li><strong>Priority sources</strong> — define preferred sources with priority ordering for your scans</li>
-  <li><strong>Score breakdown</strong> — detailed severity and probability explanation behind each compliance score</li>
-  <li><strong>Key obligations &amp; products in enrichment</strong> — regulation profiles now include key obligations and applicable products</li>
-  <li><strong>Scan queue</strong> — launch multiple scans simultaneously with automatic queuing and retry</li>
-  <li><strong>Sources page for Free plan</strong> — free plan users can now view and configure their regulatory intelligence sources</li>
-</ul>
-<h4>Improvements</h4>
-<ul>
-  <li>Platform now covers 106 countries with 25,000+ regulations in knowledge base</li>
-  <li>Pro plan now supports up to 5 team members</li>
-  <li>Scan settings are now frequency-based (Quotidien / Jours ouvrés / Hebdomadaire / Bimensuel / Mensuel)</li>
-  <li>Profile: added Masquer les lois/autorités sans impact toggles and Slack Member ID field</li>
-  <li>Score tooltip now shows full explanation text</li>
-  <li>Scan progress indicator reflects real operation progress</li>
-</ul>
-<h4>Bug Fixes</h4>
-<ul>
-  <li>Fixed authentication redirect loop</li>
-  <li>Fixed stuck/duplicate scans</li>
-  <li>Fixed translation errors on long regulatory articles</li>
-  <li>Extended translation timeout to 180s with automatic retry</li>
-  <li>Fixed pipeline failure on worker timeout</li>
-  <li>Fixed page regeneration polling metadata</li>
-  <li>Adjusted Bedrock concurrency to stay within TPM quotas</li>
-</ul>
-</section>
 
 <!-- FOOTER NAV -->
 <div class="footer-nav">
@@ -1084,6 +844,8 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
     <span class="title">Contact support</span>
   </a>
 </div>
+
+</section>
 
 </div>
 </div>

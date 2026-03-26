@@ -196,6 +196,56 @@ tr:hover td{background:rgba(0,0,0,0.01)}
 .footer-nav a .label{font-size:11px;color:var(--c-text-3);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
 .footer-nav a .title{font-size:14px;color:var(--c-ink);font-weight:600}
 
+/* STEP FLOW */
+.step-flow{margin:24px 0}
+.step{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--c-border);opacity:0;transform:translateY(20px);animation:fadeUp .5s var(--ease-luxury) forwards}
+.step:nth-child(1){animation-delay:.1s}
+.step:nth-child(2){animation-delay:.25s}
+.step:nth-child(3){animation-delay:.4s}
+.step:nth-child(4){animation-delay:.55s}
+.step:last-child{border-bottom:none}
+.step-num{width:40px;height:40px;border-radius:50%;background:var(--c-blue);color:var(--c-white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0;margin-top:2px}
+.step[data-step="4"] .step-num{background:var(--c-mint)}
+.step-body{flex:1}
+.step-body h3{margin:0 0 8px;font-size:16px}
+.step-body p{margin-bottom:8px}
+.step-body ul{margin:8px 0 0 4px;list-style:none;padding:0}
+.step-body ul li{padding:6px 0;font-size:14px}
+
+/* ANIMATIONS */
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* Scroll reveal for all sections */
+section{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease-luxury),transform .6s var(--ease-luxury)}
+section.visible{opacity:1;transform:translateY(0)}
+
+/* INTERACTIVE DETAILS/DROPDOWNS */
+details{margin:12px 0;border:1px solid var(--c-border);border-radius:var(--r-md);overflow:hidden;transition:box-shadow var(--dur-fast) var(--ease-apple)}
+details:hover{box-shadow:var(--shadow-sm)}
+details[open]{box-shadow:var(--shadow-sm)}
+details summary{padding:14px 20px;font-weight:600;font-size:14px;cursor:pointer;color:var(--c-ink);display:flex;align-items:center;gap:10px;list-style:none;background:var(--c-surface);transition:background var(--dur-fast) var(--ease-apple)}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:'▸';font-size:12px;color:var(--c-text-3);transition:transform var(--dur-fast) var(--ease-snappy);display:inline-block}
+details[open] summary::before{transform:rotate(90deg)}
+details summary:hover{background:var(--c-card)}
+details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var(--ease-apple)}
+
+/* Screenshot hover zoom */
+.screenshot{transition:box-shadow .3s var(--ease-apple)}
+.screenshot:hover{box-shadow:var(--shadow-lg)}
+.screenshot img{transition:transform .4s var(--ease-luxury)}
+.screenshot:hover img{transform:scale(1.01)}
+
+/* Feat card hover lift */
+.feat-card{transition:box-shadow var(--dur-fast) var(--ease-apple),transform var(--dur-fast) var(--ease-apple)}
+.feat-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+
+/* Stats counter animation */
+.stat-num{display:inline-block}
+.stat-num.animate{animation:countPop .4s var(--ease-luxury)}
+@keyframes countPop{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
+
 @media(max-width:900px){
   .sidebar{display:none}
   .main{margin-left:0}
@@ -231,7 +281,6 @@ tr:hover td{background:rgba(0,0,0,0.01)}
     <div class="sb-section-title">Getting Started</div>
     <a class="sb-link active" href="#overview"><span class="icon">📖</span> Overview</a>
     <a class="sb-link" href="#quick-start"><span class="icon">🚀</span> Quick Start</a>
-    <a class="sb-link" href="#concepts"><span class="icon">💡</span> Key Concepts</a>
   </div>
 
   <div class="sb-section">
@@ -318,50 +367,65 @@ tr:hover td{background:rgba(0,0,0,0.01)}
 <!-- ═══════════════════ QUICK START ═══════════════════ -->
 <section id="quick-start">
 <h2>🚀 Quick Start</h2>
-<p>Get up and running in under 5 minutes.</p>
+<p>Cleo does the heavy lifting. You just enter your company domain — the AI handles the rest.</p>
 
-<h3>1. Create your account</h3>
-<p>Sign up at <a href="https://insight.cleolabs.co">insight.cleolabs.co</a>. You'll be asked for your organization name, department, and role. These settings personalize your experience.</p>
+<!-- STEP FLOW -->
+<div class="step-flow">
 
-<h3>2. Add your products</h3>
-<p>Navigate to <strong>Products</strong> and add your product catalog. You can add products manually or import a CSV. Organize them in categories (e.g., Stationery, Electronics, Textiles).</p>
+  <div class="step" data-step="1">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>Sign up & enter your domain</h3>
+      <p>Create your account at <a href="https://insight.cleolabs.co">insight.cleolabs.co</a>. Enter your <strong>company domain</strong> (e.g. electrolux.com). That's all Cleo needs to get started.</p>
+    </div>
+  </div>
 
-<div class="callout callout-tip">
-  <span class="ico">💡</span>
-  <div><strong>Tip:</strong> The more specific your product catalog, the more relevant your regulatory signals will be. "BIC Lighters" is better than just "Lighters".</div>
+  <div class="step" data-step="2">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h3>AI builds your regulatory profile</h3>
+      <p>Cleo's AI automatically analyzes your domain and generates your entire regulatory landscape:</p>
+      <ul>
+        <li>🏭 <strong>Products</strong> — your product catalog, detected from public data</li>
+        <li>🌍 <strong>Countries</strong> — your markets, identified from your footprint</li>
+        <li>⚖️ <strong>Regulations</strong> — all applicable laws, cross-referenced</li>
+        <li>🏛 <strong>Authorities</strong> — the regulatory bodies that matter to you</li>
+        <li>📊 <strong>Signals</strong> — your first set of regulatory intelligence</li>
+      </ul>
+      <div class="callout callout-info" style="margin-top:12px">
+        <span class="ico">⏳</span>
+        <div><strong>This takes 15–30 minutes.</strong> Go grab a coffee — the AI is scanning thousands of sources, cross-referencing regulations, and building your personalized intelligence feed.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" data-step="3">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h3>Review & validate</h3>
+      <p>Once the scan completes, review what the AI generated. Go through each section and validate:</p>
+      <ul>
+        <li>✅ <strong>Products</strong> — are these your real products? Add missing ones, remove irrelevant ones</li>
+        <li>✅ <strong>Countries</strong> — are these your real markets? Add or remove as needed</li>
+        <li>✅ <strong>Regulations</strong> — correct? Adjust priority levels</li>
+        <li>✅ <strong>Authorities</strong> — relevant to your sector?</li>
+      </ul>
+      <div class="callout callout-tip" style="margin-top:12px">
+        <span class="ico">💡</span>
+        <div><strong>Think of it as proofreading AI's homework.</strong> The AI does 95% of the work. You just refine and confirm.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" data-step="4">
+    <div class="step-num">✓</div>
+    <div class="step-body">
+      <h3>You're set</h3>
+      <p>Your dashboard is now live. Every day, Cleo monitors your regulatory landscape and surfaces new signals. Configure your <a href="#scans">scan frequency</a> and <a href="#notifications">notifications</a> to stay ahead.</p>
+    </div>
+  </div>
+
 </div>
-
-<h3>3. Add your markets</h3>
-<p>Go to <strong>Countries</strong> and add every market where you sell. Cleo will start monitoring local regulations immediately.</p>
-
-<h3>4. Run your first scan</h3>
-<p>Hit the <strong>Refresh</strong> button on the dashboard. Cleo will scan all official sources, analyze the results, and cross-reference them with your products and markets. Each refresh consumes scan credits.</p>
-
-<h3>5. Review your dashboard</h3>
-<p>Your dashboard now shows your regulatory landscape: new signals, exposure level, upcoming deadlines, and impacted products. Start with the <strong>Critical</strong> filter.</p>
-</section>
-
-<hr class="divider">
-
-<!-- ═══════════════════ KEY CONCEPTS ═══════════════════ -->
-<section id="concepts">
-<h2>💡 Key Concepts</h2>
-
-<table>
-  <thead><tr><th>Concept</th><th>Definition</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Signal</strong></td><td>A regulatory event that impacts your organization — a new law, a sanction, a policy update, a deadline change.</td></tr>
-    <tr><td><strong>Exposure</strong></td><td>Your overall risk level based on all active signals across all products and markets. Ranges from Low to Critical.</td></tr>
-    <tr><td><strong>Impact</strong></td><td>The severity of a signal for your specific products. Critical → High → Medium → Low.</td></tr>
-    <tr><td><strong>Score</strong></td><td>A relevance percentage on each signal — how directly it affects your organization, based on your profile.</td></tr>
-    <tr><td><strong>Scan</strong></td><td>An AI-powered sweep of official sources that detects new regulatory events and updates existing ones. Consumes credits.</td></tr>
-    <tr><td><strong>Source</strong></td><td>An official publication (government register, agency website) that Cleo monitors for regulatory changes.</td></tr>
-    <tr><td><strong>Obligation</strong></td><td>A specific legal requirement extracted from a regulation, with article references and compliance status.</td></tr>
-    <tr><td><strong>Deadline</strong></td><td>An upcoming enforcement date for a regulation — shown in the Timeline with a countdown.</td></tr>
-    <tr><td><strong>Signal type</strong></td><td><strong>Législation</strong> = new law/regulation · <strong>Sanction</strong> = enforcement action or fine · <strong>Analyse</strong> = analysis of existing regulation impact.</td></tr>
-    <tr><td><strong>AI badge</strong></td><td>Indicates the product, country, or authority was automatically enriched by AI analysis.</td></tr>
-  </tbody>
-</table>
 </section>
 
 <hr class="divider">
@@ -920,33 +984,52 @@ tr:hover td{background:rgba(0,0,0,0.01)}
 <section id="faq">
 <h2>❓ FAQ</h2>
 
-<h3>How do automatic scans work?</h3>
-<p>Based on the frequency setting in <a href="#scans">Scans settings</a>, Cleo automatically checks the last 30 days of regulatory news. You can override the frequency per individual regulation on the Regulations page. Regulations with deadlines within 30 days are scanned weekly regardless of your global setting.</p>
+<details>
+  <summary>How do automatic scans work?</summary>
+  <div class="details-body">Based on the frequency setting in <a href="#scans">Scans settings</a>, Cleo automatically checks the last 30 days of regulatory news. You can override the frequency per individual regulation on the Regulations page. Regulations with deadlines within 30 days are scanned weekly regardless of your global setting.</div>
+</details>
 
-<h3>What are credits?</h3>
-<p>Each scan (manual or automatic) consumes credits. The Pro plan includes 5,000 credits/month. Credits roll over — unused credits carry to the next month. You can buy additional credits anytime from the Billing page.</p>
+<details>
+  <summary>What are credits?</summary>
+  <div class="details-body">Each scan (manual or automatic) consumes credits. The Pro plan includes 5,000 credits/month. Credits roll over — unused credits carry to the next month. You can buy additional credits anytime from the Billing page.</div>
+</details>
 
-<h3>What's the difference between signal types?</h3>
-<ul>
-  <li><strong>Législation</strong> — a new law or regulation has been published or updated</li>
-  <li><strong>Sanction</strong> — an enforcement action, fine, or penalty has been issued by an authority</li>
-  <li><strong>Analyse</strong> — an analysis of the impact of an existing regulation on your sector or products</li>
-</ul>
+<details>
+  <summary>What's the difference between signal types?</summary>
+  <div class="details-body">
+    <ul>
+      <li><strong>Législation</strong> — a new law or regulation has been published or updated</li>
+      <li><strong>Sanction</strong> — an enforcement action, fine, or penalty has been issued by an authority</li>
+      <li><strong>Analyse</strong> — an analysis of the impact of an existing regulation on your sector or products</li>
+    </ul>
+  </div>
+</details>
 
-<h3>How does role-based personalization work?</h3>
-<p>Based on the <strong>Department</strong> and <strong>Role</strong> set in your Profile. When a regulatory event is processed, Cleo generates a summary tailored to your function. A DPO sees data protection angles; a Quality Manager sees safety angles; a Legal Counsel sees liability angles — same event, different perspective.</p>
+<details>
+  <summary>How does role-based personalization work?</summary>
+  <div class="details-body">Based on the <strong>Department</strong> and <strong>Role</strong> set in your Profile. When a regulatory event is processed, Cleo generates a summary tailored to your function. A DPO sees data protection angles; a Quality Manager sees safety angles; a Legal Counsel sees liability angles — same event, different perspective.</div>
+</details>
 
-<h3>Can I share signals with my team?</h3>
-<p>Yes. Use the <strong>"Envoyer un signal"</strong> button on any signal card in the dashboard. It generates a shareable link or sends the signal directly to a colleague.</p>
+<details>
+  <summary>Can I share signals with my team?</summary>
+  <div class="details-body">Yes. Use the <strong>"Envoyer un signal"</strong> button on any signal card in the dashboard. It generates a shareable link or sends the signal directly to a colleague.</div>
+</details>
 
-<h3>What does the AI badge mean?</h3>
-<p>The <strong>AI badge</strong> on a product, country, or authority means it was automatically discovered and enriched by Cleo's AI analysis — you didn't add it manually. You can always edit or delete AI-enriched entries.</p>
+<details>
+  <summary>What does the AI badge mean?</summary>
+  <div class="details-body">The <strong>AI badge</strong> on a product, country, or authority means it was automatically discovered and enriched by Cleo's AI analysis — you didn't add it manually. You can always edit or delete AI-enriched entries.</div>
+</details>
 
-<h3>Can I add regulations that aren't in the library?</h3>
-<p>Yes. Click "+ Ajouter une réglementation" on the Regulations page. Cleo will automatically enrich it with authority, jurisdiction, status, and related obligations.</p>
+<details>
+  <summary>Can I add regulations that aren't in the library?</summary>
+  <div class="details-body">Yes. Click "+ Ajouter une réglementation" on the Regulations page. Cleo will automatically enrich it with authority, jurisdiction, status, and related obligations.</div>
+</details>
 
-<h3>What happens when I add a new country?</h3>
-<p>Cleo immediately starts monitoring local regulations for that market and cross-references them with your product catalog. New signals will appear on your next scan.</p>
+<details>
+  <summary>What happens when I add a new country?</summary>
+  <div class="details-body">Cleo immediately starts monitoring local regulations for that market and cross-references them with your product catalog. New signals will appear on your next scan.</div>
+</details>
+
 </section>
 
 <hr class="divider">
@@ -1029,6 +1112,12 @@ function filterNav() {
     l.style.display = text.includes(q) || q === '' ? 'flex' : 'none';
   });
 }
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.08 });
+document.querySelectorAll('section').forEach(s => observer.observe(s));
 </script>
 </body>
 </html>

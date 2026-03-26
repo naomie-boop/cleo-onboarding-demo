@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleo Comply — Documentation</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0008CF;
+  --blue-light:rgba(0,8,207,0.06);
+  --blue-hover:#0006A8;
+  --ink:#1A1A1A;
+  --surface:#F9F8F6;
+  --card:#F0EFEC;
+  --border:rgba(0,0,0,0.08);
+  --text:rgba(0,0,0,0.87);
+  --text-2:rgba(0,0,0,0.55);
+  --text-3:rgba(0,0,0,0.35);
+  --white:#FFFFFF;
+  --mint:#6EC9A0;
+  --coral:#F07060;
+  --amber:#946B2D;
+  --amber-bg:rgba(148,107,45,0.06);
+  --mint-bg:rgba(110,201,160,0.08);
+  --coral-bg:rgba(240,112,96,0.06);
+  --r-sm:8px;
+  --r-md:16px;
+  --r-lg:24px;
+  --sidebar-w:280px;
+  --font:'Satoshi',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:32px}
+body{font-family:var(--font);background:var(--white);color:var(--text);-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.75}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);
+  background:var(--surface);border-right:1px solid var(--border);
+  overflow-y:auto;padding:28px 0;z-index:100;
+  scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.1) transparent;
+}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.1);border-radius:4px}
+.sb-logo{padding:0 24px 24px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.sb-logo svg{flex-shrink:0}
+.sb-logo span{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.sb-logo .badge{font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--text-3);background:var(--card);padding:2px 6px;border-radius:4px;text-transform:uppercase;margin-left:2px}
+.sb-section{padding:0 12px;margin-bottom:4px}
+.sb-section-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);padding:12px 12px 6px}
+.sb-link{
+  display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:var(--r-sm);
+  font-size:13px;font-weight:500;color:var(--text-2);text-decoration:none;
+  transition:all 120ms ease;cursor:pointer;
+}
+.sb-link:hover{background:var(--card);color:var(--ink)}
+.sb-link.active{background:var(--blue-light);color:var(--blue);font-weight:600}
+.sb-link .icon{font-size:15px;width:20px;text-align:center;flex-shrink:0}
+.sb-sub{padding-left:20px}
+.sb-sub .sb-link{font-size:12.5px;padding:5px 12px}
+
+/* MAIN */
+.main{margin-left:var(--sidebar-w);min-height:100vh}
+.content{max-width:780px;margin:0 auto;padding:48px 48px 120px}
+
+/* HERO */
+.hero{margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+.hero h1{font-size:32px;font-weight:900;letter-spacing:-.03em;margin-bottom:8px;color:var(--ink)}
+.hero p{font-size:16px;color:var(--text-2);line-height:1.7}
+.hero .breadcrumb{font-size:12px;color:var(--text-3);margin-bottom:12px;font-weight:500}
+.hero .breadcrumb a{color:var(--blue);text-decoration:none}
+
+/* TYPOGRAPHY */
+h2{font-size:22px;font-weight:800;letter-spacing:-.02em;margin:48px 0 16px;color:var(--ink);padding-top:8px}
+h3{font-size:17px;font-weight:700;letter-spacing:-.01em;margin:32px 0 12px;color:var(--ink)}
+h4{font-size:14px;font-weight:700;margin:20px 0 8px;color:var(--ink)}
+p{margin-bottom:16px}
+strong{font-weight:600;color:var(--ink)}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+ul,ol{margin:0 0 16px 20px}
+li{margin-bottom:6px}
+li::marker{color:var(--text-3)}
+
+/* CODE */
+code{font-family:'SF Mono',Menlo,monospace;font-size:13px;background:var(--card);padding:2px 6px;border-radius:4px;color:var(--ink)}
+pre{background:var(--ink);color:#e0e0e0;padding:20px 24px;border-radius:var(--r-md);overflow-x:auto;margin:16px 0 24px;font-size:13px;line-height:1.6}
+pre code{background:none;padding:0;color:inherit}
+
+/* CALLOUTS */
+.callout{padding:16px 20px;border-radius:var(--r-md);margin:16px 0 24px;font-size:14px;line-height:1.65;display:flex;gap:12px;align-items:flex-start}
+.callout .ico{font-size:18px;flex-shrink:0;margin-top:1px}
+.callout p{margin:0}
+.callout-info{background:var(--blue-light);border-left:3px solid var(--blue)}
+.callout-tip{background:var(--mint-bg);border-left:3px solid var(--mint)}
+.callout-warn{background:var(--amber-bg);border-left:3px solid var(--amber)}
+.callout-danger{background:var(--coral-bg);border-left:3px solid var(--coral)}
+
+/* SCREENSHOT */
+.screenshot{margin:20px 0 28px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.screenshot img{width:100%;display:block}
+.screenshot .cap{font-size:12px;color:var(--text-3);text-align:center;padding:10px;background:var(--surface)}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:14px}
+th{text-align:left;font-weight:700;padding:10px 16px;border-bottom:2px solid var(--border);color:var(--ink);font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:hover td{background:rgba(0,0,0,0.01)}
+
+/* FEATURE GRID */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 24px}
+.feat-card{padding:16px 20px;border:1px solid var(--border);border-radius:var(--r-md);transition:box-shadow 120ms}
+.feat-card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.05)}
+.feat-card .emoji{font-size:22px;margin-bottom:8px}
+.feat-card h4{margin:0 0 4px;font-size:14px}
+.feat-card p{margin:0;font-size:13px;color:var(--text-2)}
+
+/* DIVIDER */
+.divider{border:none;border-top:1px solid var(--border);margin:48px 0}
+
+/* SEARCH */
+.search-box{padding:0 12px 12px}
+.search-box input{
+  width:100%;padding:8px 12px 8px 32px;border:1px solid var(--border);border-radius:var(--r-sm);
+  font-family:var(--font);font-size:13px;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") 10px center no-repeat;
+  outline:none;transition:border-color 120ms;
+}
+.search-box input:focus{border-color:var(--blue)}
+
+/* FOOTER NAV */
+.footer-nav{display:flex;justify-content:space-between;padding-top:32px;margin-top:48px;border-top:1px solid var(--border)}
+.footer-nav a{display:flex;flex-direction:column;text-decoration:none;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r-md);transition:border-color 120ms;max-width:48%}
+.footer-nav a:hover{border-color:var(--blue)}
+.footer-nav a .label{font-size:11px;color:var(--text-3);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.footer-nav a .title{font-size:14px;color:var(--ink);font-weight:600}
+
+@media(max-width:900px){
+  .sidebar{display:none}
+  .main{margin-left:0}
+  .content{padding:24px}
+  .feat-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sb-logo">
+    <svg width="28" height="28" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="240" height="240" rx="52" fill="#0008CF"/>
+      <path d="M74 158c10 12 24 18 41 18 12 0 22-3 30-10s14-15 18-26c-10 10-23 13-38 11-16-2-28-12-35-27-9-19-10-40-4-63 3-10 7-16 14-21l4-2c-22 4-37 16-46 36-6 13-7 27-5 44 2 15 8 28 17 38z" fill="white"/>
+      <path d="M139 78c4 6 7 12 9 20l2 9c0-1 1-1 1-1l21-16c-1-2-2-3-3-5-11-12-24-19-39-20 6 2 9 7 11 11z" fill="white"/>
+    </svg>
+    <span>Cleo Comply</span>
+    <span class="badge">Docs</span>
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search docs..." id="searchInput" onkeyup="filterNav()">
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-section-title">Getting Started</div>
+    <a class="sb-link active" href="#overview"><span class="icon">📖</span> Overview</a>
+    <a class="sb-link" href="#quick-start"><span class="icon">🚀</span> Quick Start</a>
+    <a class="sb-link" href="#concepts"><span class="icon">💡</span> Key Concepts</a>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-section-title">Platform</div>
+    <a class="sb-link" href="#dashboard"><span class="icon">📊</span> Dashboard</a>
+    <a class="sb-link" href="#signal-card"><span class="icon">📋</span> Signal Card</a>
+    <a class="sb-link" href="#products"><span class="icon">📦</span> Products</a>
+    <a class="sb-link" href="#timeline"><span class="icon">📅</span> Timeline</a>
+    <a class="sb-link" href="#countries"><span class="icon">🌍</span> Countries</a>
+    <a class="sb-link" href="#regulations"><span class="icon">⚖️</span> Regulations</a>
+    <a class="sb-link" href="#authorities"><span class="icon">🏛</span> Authorities</a>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-section-title">Settings</div>
+    <a class="sb-link" href="#profile"><span class="icon">👤</span> Profile</a>
+    <a class="sb-link" href="#sources"><span class="icon">🔍</span> Sources</a>
+    <a class="sb-link" href="#team"><span class="icon">👥</span> Team</a>
+    <a class="sb-link" href="#scans"><span class="icon">⚡</span> Scans & Credits</a>
+    <a class="sb-link" href="#notifications"><span class="icon">🔔</span> Notifications</a>
+    <a class="sb-link" href="#billing"><span class="icon">💳</span> Billing & Plans</a>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-section-title">Resources</div>
+    <a class="sb-link" href="#faq"><span class="icon">❓</span> FAQ</a>
+    <a class="sb-link" href="#changelog"><span class="icon">📝</span> Changelog</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+<div class="content">
+
+<!-- ═══════════════════ OVERVIEW ═══════════════════ -->
+<section id="overview">
+<div class="hero">
+  <div class="breadcrumb">Getting Started</div>
+  <h1>What is Cleo Comply?</h1>
+  <p>Cleo Comply is an AI-powered regulatory intelligence platform. It monitors 800+ regulations across 100+ countries, cross-references them with your products and markets, and tells you exactly what to do — in plain language, adapted to your role.</p>
+</div>
+
+<div class="feat-grid">
+  <div class="feat-card">
+    <div class="emoji">📊</div>
+    <h4>Real-time monitoring</h4>
+    <p>Automated scans of official sources — federal registers, agency publications, official journals.</p>
+  </div>
+  <div class="feat-card">
+    <div class="emoji">🎯</div>
+    <h4>Product × regulation matching</h4>
+    <p>Every signal is cross-referenced with your specific products and markets.</p>
+  </div>
+  <div class="feat-card">
+    <div class="emoji">👤</div>
+    <h4>Role-based intelligence</h4>
+    <p>Summaries and action plans adapt to your role — DPO, quality manager, legal counsel.</p>
+  </div>
+  <div class="feat-card">
+    <div class="emoji">⚡</div>
+    <h4>Actionable output</h4>
+    <p>Legal obligations, action plans, deadlines, and responsible parties — ready to act on.</p>
+  </div>
+</div>
+
+<div class="callout callout-info">
+  <span class="ico">ℹ️</span>
+  <div><strong>Who is it for?</strong> Product compliance teams, DPOs, quality managers, legal departments, and regulatory affairs professionals who need to monitor international product regulations.</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ QUICK START ═══════════════════ -->
+<section id="quick-start">
+<h2>🚀 Quick Start</h2>
+<p>Get up and running in under 5 minutes.</p>
+
+<h3>1. Create your account</h3>
+<p>Sign up at <a href="https://insight.cleolabs.co">insight.cleolabs.co</a>. You'll be asked for your organization name, department, and role. These settings personalize your experience.</p>
+
+<h3>2. Add your products</h3>
+<p>Navigate to <strong>Products</strong> and add your product catalog. You can add products manually or import a CSV. Organize them in categories (e.g., Stationery, Electronics, Textiles).</p>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div><strong>Tip:</strong> The more specific your product catalog, the more relevant your regulatory signals will be. "BIC Lighters" is better than just "Lighters".</div>
+</div>
+
+<h3>3. Add your markets</h3>
+<p>Go to <strong>Countries</strong> and add every market where you sell. Cleo will start monitoring local regulations immediately.</p>
+
+<h3>4. Run your first scan</h3>
+<p>Hit the <strong>Refresh</strong> button on the dashboard. Cleo will scan all official sources, analyze the results, and cross-reference them with your products and markets.</p>
+
+<h3>5. Review your dashboard</h3>
+<p>Your dashboard now shows your regulatory landscape: new signals, exposure level, upcoming deadlines, and impacted products. Start with the <strong>Critical</strong> filter.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ KEY CONCEPTS ═══════════════════ -->
+<section id="concepts">
+<h2>💡 Key Concepts</h2>
+
+<table>
+  <thead><tr><th>Concept</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Signal</strong></td><td>A regulatory event that impacts your organization — a new law, a sanction, a policy update, a deadline change.</td></tr>
+    <tr><td><strong>Exposure</strong></td><td>Your overall risk level based on all active signals across all products and markets. Ranges from Low to Critical.</td></tr>
+    <tr><td><strong>Impact</strong></td><td>The severity of a signal for your specific products. Critical → High → Medium → Low.</td></tr>
+    <tr><td><strong>Score</strong></td><td>A relevance percentage on each signal — how directly it affects your organization, based on your profile.</td></tr>
+    <tr><td><strong>Scan</strong></td><td>An AI-powered sweep of official sources that detects new regulatory events and updates existing ones.</td></tr>
+    <tr><td><strong>Source</strong></td><td>An official publication (government register, agency website) that Cleo monitors for regulatory changes.</td></tr>
+    <tr><td><strong>Obligation</strong></td><td>A specific legal requirement extracted from a regulation, with article references and compliance status.</td></tr>
+    <tr><td><strong>Deadline</strong></td><td>An upcoming enforcement date for a regulation — shown in the Timeline with a countdown.</td></tr>
+  </tbody>
+</table>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ DASHBOARD ═══════════════════ -->
+<section id="dashboard">
+<h2>📊 Dashboard</h2>
+<p>The dashboard is your daily cockpit. It shows your regulatory landscape at a glance and surfaces what needs your attention.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/dashboard.jpg" alt="Cleo Comply Dashboard">
+  <div class="cap">The dashboard with KPIs, filters, and signal feed</div>
+</div>
+
+<h3>KPI Cards</h3>
+<p>Four key metrics at the top:</p>
+<ul>
+  <li><strong>New</strong> — number of new regulatory signals since your last visit, with a trend sparkline</li>
+  <li><strong>Exposure</strong> — your global risk level (Low / Medium / High / Critical)</li>
+  <li><strong>Deadline</strong> — days until your next regulatory deadline, with the regulation name</li>
+  <li><strong>Regulations</strong> — total number of regulations being monitored for your organization</li>
+</ul>
+
+<h3>Filters</h3>
+<p>Two rows of filters let you slice your signal feed:</p>
+<ul>
+  <li><strong>Impact</strong> — All, Critical, High, Medium, Low</li>
+  <li><strong>Status</strong> — All, In force, Adopted, Proposed</li>
+  <li><strong>Dropdowns</strong> — filter by product, country, law, category</li>
+</ul>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div><strong>Pro tip:</strong> Use the "Adopted" status filter to see laws that have been voted but aren't in force yet. This is your anticipation window — get ahead before enforcement begins.</div>
+</div>
+
+<h3>Signal Feed</h3>
+<p>Below the filters, a chronological feed of regulatory signals. Each card shows:</p>
+<ul>
+  <li>A colored <strong>badge</strong> — Sanction (red), Recommendation (green), Analysis (grey)</li>
+  <li>The <strong>regulation name</strong> and country flag</li>
+  <li>A one-line <strong>summary</strong> of the event</li>
+  <li>Number of <strong>impacted products</strong> and <strong>risk level</strong></li>
+  <li>A <strong>bookmark icon</strong> to save for later</li>
+</ul>
+
+<h3>Quick Timeline</h3>
+<p>On the right sidebar, your next 5 regulatory deadlines with countdown badges. Click "View all" to open the full Timeline.</p>
+
+<h3>Refresh</h3>
+<p>The <strong>Refresh</strong> button in the top-right triggers a new scan. Cleo scans all official sources, processes new documents, and updates your signals. Each refresh consumes scan credits.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ SIGNAL CARD ═══════════════════ -->
+<section id="signal-card">
+<h2>📋 Signal Card</h2>
+<p>Click any signal to open its full card. This is where all the intelligence concentrates — the analysis that would normally take hours is done for you.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/signal-card.jpg" alt="Signal card detail view">
+  <div class="cap">A signal card with summary, obligations, and action plan</div>
+</div>
+
+<h3>Header</h3>
+<p>The signal type badge, regulation name, country flag, <strong>relevance score</strong> (percentage), and <strong>risk level</strong>. In two seconds you know if it's urgent.</p>
+
+<h3>Role-based Summary</h3>
+<p>This summary is <strong>personalized to your role</strong>. A DPO sees a data protection angle. A product quality manager sees a safety and compliance angle. A legal counsel sees a liability angle. Same event, different perspective — based on your Profile settings.</p>
+
+<div class="callout callout-info">
+  <span class="ico">ℹ️</span>
+  <div>The summary adapts based on the <strong>Department</strong> and <strong>Role</strong> configured in your <a href="#profile">Profile settings</a>. Changing your role changes all summaries.</div>
+</div>
+
+<h3>Impact Analysis</h3>
+<p>Different from the summary: while the summary explains <em>what happened in the world</em>, the impact analysis explains <em>why it matters for your company</em>. It connects the regulatory event to your specific business context.</p>
+
+<h3>Impacted Products</h3>
+<p>On the right panel, the specific products from <em>your catalog</em> that are affected. Not generic categories — your actual products, cross-referenced automatically.</p>
+
+<h3>Obligations</h3>
+<p>Extracted legal obligations with:</p>
+<ul>
+  <li>The exact <strong>legal article reference</strong> (section, paragraph)</li>
+  <li>A <strong>plain-language description</strong> of what's required</li>
+  <li><strong>Responsible party</strong> assignment</li>
+  <li>A <strong>checkbox</strong> for compliance tracking</li>
+</ul>
+
+<h3>Action Plan</h3>
+<p>Concrete actions with urgency indicators, deadlines, responsible parties, legal references, and impacted products. Ready to copy into an email or a project management tool.</p>
+
+<h3>Source & Feedback</h3>
+<p>A direct link to the original source document, plus a thumbs up/down feedback button. Your feedback improves future signal relevance.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ PRODUCTS ═══════════════════ -->
+<section id="products">
+<h2>📦 Products</h2>
+<p>The Products page is your portfolio view. Add your catalog and see, at a glance, which products concentrate the most regulatory risk.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/products.png" alt="Products page">
+  <div class="cap">Product catalog organized by categories with impact indicators</div>
+</div>
+
+<h3>Adding Products</h3>
+<ul>
+  <li><strong>Manual</strong> — click "+ Add a product", enter name, category, and markets</li>
+  <li><strong>CSV Import</strong> — bulk upload your entire catalog</li>
+  <li><strong>AI-discovered</strong> — Cleo automatically detects products mentioned in signals and suggests them</li>
+</ul>
+
+<h3>Categories</h3>
+<p>Products are organized in collapsible categories. Each category shows the total impact count and critical impact count. Expand to see individual products.</p>
+
+<h3>Impact Indicators</h3>
+<ul>
+  <li><strong>Impact count</strong> — total regulatory signals affecting the product</li>
+  <li><strong>Red badge</strong> — number of critical impacts</li>
+  <li><strong>Red bar</strong> — proportional visual indicator; longer bar = more risk</li>
+</ul>
+
+<h3>Filters</h3>
+<ul>
+  <li><strong>Sort by</strong> — Coverage, Impacts, Deadline, Name</li>
+  <li><strong>Source</strong> — All, AI-discovered, Custom</li>
+  <li><strong>Impacts</strong> — All, With impacts, Without impacts</li>
+  <li><strong>Category</strong> and <strong>Country</strong> dropdowns</li>
+</ul>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div><strong>Weekly review:</strong> Filter by "With impacts" to see only products that need attention. This is your shortlist for the weekly compliance review.</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ TIMELINE ═══════════════════ -->
+<section id="timeline">
+<h2>📅 Timeline</h2>
+<p>Your regulatory calendar. A vertical timeline showing every upcoming enforcement date, deadline, and regulatory milestone.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/timeline.png" alt="Timeline view">
+  <div class="cap">Timeline showing upcoming regulatory deadlines with countdown</div>
+</div>
+
+<h3>Reading the Timeline</h3>
+<ul>
+  <li>The <strong>"Today" marker</strong> shows your current position</li>
+  <li>Events are grouped by <strong>month</strong></li>
+  <li>Each event shows the <strong>exact date</strong>, a <strong>"X days remaining" countdown</strong> (color-coded by urgency), the event title, and the associated regulation</li>
+</ul>
+
+<h3>Horizon Filter</h3>
+<p>Control your time window: <strong>30 days</strong>, <strong>90 days</strong>, <strong>6 months</strong>, or <strong>All</strong>.</p>
+
+<h3>Risk Filter</h3>
+<p>Combine with the risk filter — Critical, High, Medium, Low — to focus on what matters.</p>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div><strong>Quarterly meeting combo:</strong> Set Horizon to 90 days + Risk to Critical. Screenshot the result. That's your one-slide executive summary.</div>
+</div>
+
+<h3>Additional Filters</h3>
+<p>Refine by regulation, product, country, or use the search bar to find a specific deadline.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ COUNTRIES ═══════════════════ -->
+<section id="countries">
+<h2>🌍 Countries</h2>
+<p>Tell Cleo where you sell, and it monitors local regulations automatically.</p>
+
+<h3>World Map</h3>
+<p>A color-coded exposure map: red = critical exposure, orange = high, grey = not monitored. Below the map: total monitored countries and critical impact count.</p>
+
+<h3>Adding Markets</h3>
+<ul>
+  <li>Click <strong>"+ Add a country"</strong> — select from the list, monitoring starts immediately</li>
+  <li><strong>CSV Import</strong> for bulk additions</li>
+</ul>
+
+<h3>Regional Breakdown</h3>
+<p>Some entries expand into sub-regions:</p>
+<ul>
+  <li><strong>European Union</strong> expands into individual member states — each with its own transposition specifics</li>
+  <li><strong>United States</strong> expands by state — critical because state-level regulations (like California Prop 65) can be stricter than federal</li>
+</ul>
+
+<h3>Filters</h3>
+<p>Region (Europe, Americas, APAC, Africa-Middle East), Impacts (With/Without), and Product dropdown.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ REGULATIONS ═══════════════════ -->
+<section id="regulations">
+<h2>⚖️ Regulations</h2>
+<p>800+ regulations already in the database, automatically enriched by AI.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/regulations.jpg" alt="Regulations page">
+  <div class="cap">Regulation library with risk levels and impact counts</div>
+</div>
+
+<h3>Regulation Entries</h3>
+<p>For each regulation:</p>
+<ul>
+  <li><strong>Name</strong> and <strong>AI badge</strong> (confirming automatic enrichment)</li>
+  <li><strong>Jurisdiction</strong> — country or region</li>
+  <li><strong>Authority</strong> — the enforcing body</li>
+  <li><strong>Risk level</strong> — Critical, High, Moderate, Low</li>
+  <li><strong>Impact count</strong> — how many of your products are affected</li>
+  <li><strong>Priority</strong> — Standard or Enhanced surveillance</li>
+</ul>
+
+<h3>Surveillance Priority</h3>
+<p>Set key regulations to <strong>Enhanced</strong> surveillance. These are scanned more frequently and their signals are prioritized in your feed.</p>
+
+<div class="callout callout-warn">
+  <span class="ico">⚠️</span>
+  <div><strong>Important:</strong> The "Adopted" status filter shows regulations that have been voted but aren't enforced yet. This is your window to prepare before enforcement begins.</div>
+</div>
+
+<h3>Adding Regulations</h3>
+<p>Click "+ Add a regulation" to add any regulation not already in the library. Cleo will automatically enrich it with authority, jurisdiction, status, and related obligations.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ AUTHORITIES ═══════════════════ -->
+<section id="authorities">
+<h2>🏛 Authorities</h2>
+<p>457+ regulatory bodies monitored. Track their activity and spot enforcement trends.</p>
+
+<h3>Authority Entries</h3>
+<p>For each authority: name, number of managed regulations, country, risk level, impact count, and an activity bar.</p>
+
+<h3>Grouped vs Detailed</h3>
+<p>Toggle between <strong>Grouped view</strong> (by parent entity — strategic overview) and <strong>Detailed view</strong> (by sub-entity — useful for audits).</p>
+
+<h3>Activity Trends</h3>
+<p>Watch for authorities with rapidly increasing impact counts — a spike means they're ramping up enforcement. That's an early warning signal for your sector.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ PROFILE ═══════════════════ -->
+<section id="profile">
+<h2>👤 Profile</h2>
+<p>Your profile is the #1 setting to configure correctly. It determines how every signal summary and impact analysis is written.</p>
+
+<h3>Department & Role</h3>
+<p>Select your department (Legal, Compliance, Quality, Product, etc.) and your specific role (DPO, Quality Manager, Legal Counsel, etc.). All role-based summaries and action plans in signal cards are generated based on these settings.</p>
+
+<div class="callout callout-info">
+  <span class="ico">ℹ️</span>
+  <div>Changing your role immediately changes how all signal summaries are generated. The same regulatory event produces different summaries for different roles.</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ SOURCES ═══════════════════ -->
+<section id="sources">
+<h2>🔍 Sources</h2>
+<p>Control where Cleo gets its intelligence. Each source has a quality score and can be managed individually.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/sources.jpg" alt="Sources settings">
+  <div class="cap">Source management with quality scores and priority settings</div>
+</div>
+
+<h3>Discovered Sources</h3>
+<p>Cleo automatically discovers relevant sources — government registers, agency publications, official journals. For each source:</p>
+<ul>
+  <li><strong>Domain</strong> — e.g., federalregister.gov, eur-lex.europa.eu</li>
+  <li><strong>Quality score</strong> — reliability rating out of 10</li>
+  <li><strong>Article count</strong> — how many articles it has contributed</li>
+  <li><strong>Status</strong> — Authorized (green) or Blocked</li>
+</ul>
+
+<h3>Blocking Sources</h3>
+<p>Click on any source to change its status to "Blocked". Cleo will stop using it in future analyses.</p>
+
+<h3>Preferred Sources</h3>
+<p>Add trusted domains as preferred sources. These are prioritized in every scan — their articles are processed first and weighted higher in analysis.</p>
+
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div>Add industry-specific official sources that Cleo may not have discovered yet. They'll be prioritized in all future scans.</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ TEAM ═══════════════════ -->
+<section id="team">
+<h2>👥 Team</h2>
+<p>Invite team members to collaborate on regulatory intelligence.</p>
+
+<div class="screenshot">
+  <img src="../images/hd/team.png" alt="Team settings">
+  <div class="cap">Team management — invite members and assign roles</div>
+</div>
+
+<h3>Plans</h3>
+<table>
+  <thead><tr><th>Plan</th><th>Team Members</th><th>Features</th></tr></thead>
+  <tbody>
+    <tr><td>Free</td><td>1</td><td>Basic monitoring, Sources page</td></tr>
+    <tr><td>Pro</td><td>Up to 5</td><td>Enhanced scanning, team management, integrations</td></tr>
+    <tr><td>Enterprise</td><td>Unlimited</td><td>Custom onboarding, API access, dedicated support</td></tr>
+  </tbody>
+</table>
+
+<p>Each team member gets their own profile with department and role settings, meaning they receive personalized summaries adapted to their function.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ SCANS ═══════════════════ -->
+<section id="scans">
+<h2>⚡ Scans & Credits</h2>
+<p>Every time you refresh your dashboard, Cleo runs a scan that consumes credits.</p>
+
+<h3>How Credits Work</h3>
+<ul>
+  <li>Each <strong>Refresh</strong> consumes credits based on the scope of the scan</li>
+  <li>Pro plan includes <strong>5,000 credits/month</strong></li>
+  <li>Purchased credits <strong>don't expire</strong></li>
+  <li>Credit usage history is visible in the Scans settings page</li>
+</ul>
+
+<h3>Scan Queue</h3>
+<p>You can launch multiple scans simultaneously — they're automatically queued with retry on failure. Your workflow is never blocked.</p>
+
+<h3>Refresh History</h3>
+<p>Automatic refresh looks back up to <strong>90 days</strong>, so no recent regulatory change is missed.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ NOTIFICATIONS ═══════════════════ -->
+<section id="notifications">
+<h2>🔔 Notifications</h2>
+<p>Configure how and when Cleo alerts you.</p>
+
+<h3>Alert Types</h3>
+<ul>
+  <li><strong>Critical alerts</strong> — immediate notification for Critical-level signals</li>
+  <li><strong>Weekly digest</strong> — a summary of the week's regulatory activity</li>
+  <li><strong>Deadline reminders</strong> — advance notice before upcoming enforcement dates</li>
+</ul>
+
+<h3>Integrations</h3>
+<p>Connect <strong>Slack</strong> to receive alerts directly in a channel. Configure which alert types go where.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ BILLING ═══════════════════ -->
+<section id="billing">
+<h2>💳 Billing & Plans</h2>
+
+<table>
+  <thead><tr><th>Feature</th><th>Free</th><th>Pro</th><th>Enterprise</th></tr></thead>
+  <tbody>
+    <tr><td>Regulations monitored</td><td>832+</td><td>832+</td><td>832+</td></tr>
+    <tr><td>Products</td><td>Limited</td><td>Unlimited</td><td>Unlimited</td></tr>
+    <tr><td>Team members</td><td>1</td><td>Up to 5</td><td>Unlimited</td></tr>
+    <tr><td>Scan credits</td><td>500/mo</td><td>5,000/mo</td><td>Custom</td></tr>
+    <tr><td>Sources management</td><td>View only</td><td>Full control</td><td>Full control</td></tr>
+    <tr><td>Integrations</td><td>—</td><td>Slack</td><td>Slack, API, Custom</td></tr>
+    <tr><td>Priority support</td><td>—</td><td>Email</td><td>Dedicated CSM</td></tr>
+  </tbody>
+</table>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section id="faq">
+<h2>❓ FAQ</h2>
+
+<h3>How often are sources scanned?</h3>
+<p>Sources are scanned when you click <strong>Refresh</strong>. The platform checks official publications, government registers, and agency websites. Enhanced surveillance regulations are scanned more frequently.</p>
+
+<h3>Can I add regulations that aren't in the library?</h3>
+<p>Yes. Click "+ Add a regulation" on the Regulations page. Cleo will automatically enrich it with authority, jurisdiction, status, and related obligations.</p>
+
+<h3>How are role-based summaries generated?</h3>
+<p>Summaries are AI-generated based on your <strong>Department</strong> and <strong>Role</strong> in your Profile settings. The same regulatory event produces different summaries for a DPO vs. a Quality Manager vs. a Legal Counsel.</p>
+
+<h3>What happens when I add a new country?</h3>
+<p>Cleo immediately starts monitoring local regulations for that market and cross-references them with your product catalog. New signals will appear on your next refresh.</p>
+
+<h3>Do purchased credits expire?</h3>
+<p>No. Credits purchased beyond your monthly allocation never expire.</p>
+
+<h3>Can I export data?</h3>
+<p>Products and countries support CSV import. Signal cards can be shared or bookmarked for later reference.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══════════════════ CHANGELOG ═══════════════════ -->
+<section id="changelog">
+<h2>📝 Changelog</h2>
+<p>Latest updates to Cleo Comply.</p>
+
+<h3>March 2026</h3>
+<h4>New Features</h4>
+<ul>
+  <li><strong>Priority sources</strong> — define preferred sources with priority ordering for your scans</li>
+  <li><strong>Score breakdown</strong> — detailed severity and probability explanation behind each compliance score</li>
+  <li><strong>Key obligations & products in enrichment</strong> — regulation profiles now include key obligations and applicable products</li>
+  <li><strong>Scan queue</strong> — launch multiple scans simultaneously with automatic queuing and retry</li>
+  <li><strong>Sources page for Free plan</strong> — free plan users can now view and configure their regulatory intelligence sources</li>
+</ul>
+<h4>Improvements</h4>
+<ul>
+  <li>Pro plan now supports up to 5 team members</li>
+  <li>Refresh history extended to 90 days (was 30)</li>
+  <li>Score tooltip now shows full explanation text</li>
+  <li>Scan progress indicator reflects real operation progress</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+  <li>Fixed authentication redirect loop</li>
+  <li>Fixed stuck/duplicate scans</li>
+  <li>Fixed translation errors on long regulatory articles</li>
+  <li>Extended translation timeout to 180s with automatic retry</li>
+  <li>Fixed pipeline failure on worker timeout</li>
+  <li>Fixed page regeneration polling metadata</li>
+  <li>Adjusted Bedrock concurrency to stay within TPM quotas</li>
+</ul>
+</section>
+
+<!-- FOOTER NAV -->
+<div class="footer-nav">
+  <a href="https://insight.cleolabs.co" style="margin-right:auto">
+    <span class="label">Open app</span>
+    <span class="title">Go to Cleo Comply →</span>
+  </a>
+  <a href="mailto:hello@cleolabs.co">
+    <span class="label">Need help?</span>
+    <span class="title">Contact support</span>
+  </a>
+</div>
+
+</div>
+</div>
+
+<script>
+// Active link tracking
+const links = document.querySelectorAll('.sb-link[href^="#"]');
+const sections = document.querySelectorAll('section[id]');
+
+function setActive() {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  links.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+}
+window.addEventListener('scroll', setActive);
+
+// Simple search
+function filterNav() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  links.forEach(l => {
+    const text = l.textContent.toLowerCase();
+    l.style.display = text.includes(q) || q === '' ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

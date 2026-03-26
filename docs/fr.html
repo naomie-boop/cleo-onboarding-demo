@@ -320,6 +320,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="breadcrumb">Getting Started</div>
   <h1>What is Cleo Comply?</h1>
   <p>Cleo Comply is an AI-powered regulatory intelligence platform. It monitors thousands of regulations across 106+ countries, cross-references them with your products and markets, and tells you exactly what to do — in plain language, adapted to your role.</p>
+  <p style="font-size:13px;color:var(--c-text-3);margin-top:-8px;margin-bottom:0">Screenshots in this documentation use a demo account with sample data.</p>
 </div>
 
 <div class="feat-grid">
@@ -360,10 +361,16 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <!-- READING PATH BANNER -->
 <div style="background:var(--c-blue);color:var(--c-white);border-radius:var(--r-md);padding:20px 24px;margin:32px 0 0">
-  <div style="font-size:16px;font-weight:800;margin-bottom:8px">📍 New to Cleo?</div>
-  <div style="font-size:14px;opacity:0.9;line-height:1.7">Read in order: <a href="#overview" style="color:white;font-weight:700;text-decoration:underline">Overview</a> → <a href="#quick-start" style="color:white;font-weight:700;text-decoration:underline">Quick Start</a> → <a href="#dashboard" style="color:white;font-weight:700;text-decoration:underline">Dashboard</a> → <a href="#signal-card" style="color:white;font-weight:700;text-decoration:underline">Signal Card</a>.<br>Everything else when you need it.</div>
+  <div style="font-size:16px;font-weight:800;margin-bottom:12px">📍 Your reading path</div>
+  <div style="font-size:14px;opacity:0.9;line-height:2.1">
+    <div><span style="opacity:0.65;font-weight:600">Day 1:</span> <a href="#overview" style="color:white;font-weight:700;text-decoration:underline">Overview</a> → <a href="#quick-start" style="color:white;font-weight:700;text-decoration:underline">Quick Start</a> → <a href="#profile" style="color:white;font-weight:700;text-decoration:underline">Profile</a> → <a href="#dashboard" style="color:white;font-weight:700;text-decoration:underline">Dashboard</a></div>
+    <div><span style="opacity:0.65;font-weight:600">First week:</span> <a href="#signal-card" style="color:white;font-weight:700;text-decoration:underline">Signal Card</a> → <a href="#products" style="color:white;font-weight:700;text-decoration:underline">Products</a> → <a href="#countries" style="color:white;font-weight:700;text-decoration:underline">Countries</a> → <a href="#regulations" style="color:white;font-weight:700;text-decoration:underline">Regulations</a></div>
+    <div><span style="opacity:0.65;font-weight:600">When you need it:</span> Scans, Notifications, Sources, Integrations, Billing, Team</div>
+  </div>
 </div>
 </section>
+
+<p style="font-size:12px;color:var(--c-text-3);text-align:center;margin:16px 0 0">Throughout this doc: ℹ️ = how it works · 💡 = what smart teams do · ⚠️ = do this or face consequences</p>
 
 <hr class="divider">
 
@@ -404,6 +411,14 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="step" data-step="3">
     <div class="step-num">3</div>
     <div class="step-body">
+      <h3>Configure your Profile</h3>
+      <p>While the scan runs, set your <strong>Department</strong> and <strong>Role</strong> in <a href="#profile">Settings → Profile</a>. This is critical — it determines how every summary and action plan is written. A misconfigured profile means generic summaries that miss what matters for your function.</p>
+    </div>
+  </div>
+
+  <div class="step" data-step="4">
+    <div class="step-num" style="background:var(--c-blue)">4</div>
+    <div class="step-body">
       <h3>Review &amp; correct</h3>
       <p>Think of this as proofreading the AI's homework. It does 95% of the work. You just refine:</p>
       <ul>
@@ -412,11 +427,12 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
         <li>✅ <strong>Regulations</strong> — adjust priority levels</li>
         <li>✅ <strong>Authorities</strong> — remove any not relevant to your sector</li>
       </ul>
+      <p style="margin-top:8px;font-size:14px;color:var(--c-text-2)">For example: if Cleo detected "Industrial Refrigeration Equipment" but you only manufacture washing machines, remove it. If a key market like Brazil is missing, add it.</p>
     </div>
   </div>
 
-  <div class="step" data-step="4">
-    <div class="step-num">✓</div>
+  <div class="step" data-step="5" style="animation-delay:.7s">
+    <div class="step-num" style="background:var(--c-mint)">✓</div>
     <div class="step-body">
       <h3>You're live</h3>
       <p>Your dashboard is now active. Cleo monitors your regulatory landscape daily and surfaces what needs action. Configure your <a href="#scans">scan frequency</a> and <a href="#notifications">notifications</a> to stay ahead.</p>
@@ -542,7 +558,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <div class="cap">Product catalog (PAR PRODUIT) organized by categories with impact indicators</div>
 </div>
 
-<p>Products are organized in collapsible categories. Each entry shows country flags for monitored markets, regulation count, impact count, and a red badge for critical impacts. Products with the AI badge were auto-discovered from public data — validate them during onboarding.</p>
+<p>Products are organized in collapsible categories. Each entry shows country flags for monitored markets, regulation count, impact count, and a red badge for critical impacts.</p>
 
 <p>Filter by <strong>"Avec impacts"</strong> to see only products that need attention. That's your shortlist for the weekly compliance review.</p>
 
@@ -639,14 +655,17 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ BOOKMARKS ═══════════════════ -->
 <section id="bookmarks">
 <h2>🔖 Bookmarks</h2>
-<p>Build your weekly review list as you go. Bookmark signals throughout the week, then process them in one focused session.</p>
+<p>From the dashboard or any signal card, click the <strong>🔖</strong> icon to save a signal. It's immediately added here — the icon turns filled to confirm. Remove bookmarks once you've acted on each signal.</p>
 
 <div class="screenshot">
   <img src="images/bookmarks.png" alt="Bookmarks page">
   <div class="cap">Bookmarks — your saved signals for later review</div>
 </div>
 
-<p>From the dashboard or any signal card, click the <strong>🔖</strong> icon on a signal. It's immediately saved here. The icon turns filled to confirm. To clear your list, remove bookmarks after you've acted on each signal.</p>
+<div class="callout callout-tip">
+  <span class="ico">💡</span>
+  <div>Bookmark signals during the week, then process them all in one focused Friday session.</div>
+</div>
 </section>
 
 <hr class="divider">
@@ -702,7 +721,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   </div>
 </div>
 
-<p>Need fresh data right now? Hit <strong>Refresh (ACTUALISER)</strong> on the Dashboard. Every scan — automatic or manual — consumes credits from your plan.</p>
+<p>Need fresh data right now? Hit <strong>Refresh (ACTUALISER)</strong> on the Dashboard.</p>
 </section>
 
 <hr class="divider">
@@ -748,7 +767,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 <!-- ═══════════════════ INTEGRATIONS ═══════════════════ -->
 <section id="integrations">
 <h2>🔗 Integrations</h2>
-<p>Connect Cleo to the tools your team already uses.</p>
+<p>Slack is currently the only available integration. More are coming. Connect it to get compliance alerts where your team already works.</p>
 
 <div class="screenshot">
   <img src="images/integrations.png" alt="Integrations page">
@@ -832,6 +851,47 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <li><strong>Prefer a source</strong> — mark as "Préférée". These are weighted higher in every scan. Use for the most authoritative sources in your sector.</li>
   <li><strong>Add a custom source</strong> — click <strong>"+ Ajouter une source"</strong> and enter the domain. Mark it Preferred and it'll be prioritized from the next scan onwards.</li>
 </ul>
+
+<!-- GOOD TO KNOW -->
+<section id="good-to-know" style="opacity:1;transform:none">
+<h2>📌 Good to know</h2>
+
+<details open>
+  <summary>💳 What happens at zero credits?</summary>
+  <div class="details-body">Your automatic scans pause until credits are renewed or purchased. Your existing data, signals, and dashboard remain fully accessible. No data is lost. Buy additional credits anytime from the <a href="#billing">Billing page</a>.</div>
+</details>
+
+<details>
+  <summary>🔔 Notification defaults</summary>
+  <div class="details-body">All notifications are <strong>OFF by default</strong>. Enable them in <a href="#notifications">Settings → Notifications</a>. At minimum, turn on <strong>Critical alerts (Alerte RED détectée)</strong> and <strong>Upcoming deadline (Échéance imminente)</strong> — these are the two you should never miss.</div>
+</details>
+
+<details>
+  <summary>🔒 Data &amp; privacy</summary>
+  <div class="details-body">Your data is hosted in the EU (AWS eu-west). Your data is never used to train AI models. Each organization's data is fully isolated. For the full privacy policy, visit Settings → Politique de confidentialité, or contact <a href="mailto:hello@cleolabs.co">hello@cleolabs.co</a>.</div>
+</details>
+
+<details>
+  <summary>📤 Export</summary>
+  <div class="details-body">You can export products, countries, and regulations via CSV. Signal cards can be shared via the Send button or bookmarked for reference. Full export of signal history is available on Enterprise plans.</div>
+</details>
+
+<details>
+  <summary>🗑 Account deletion</summary>
+  <div class="details-body">To delete your account and all associated data, contact support at <a href="mailto:hello@cleolabs.co">hello@cleolabs.co</a>. Deletion is processed within 30 days per GDPR requirements.</div>
+</details>
+
+<details>
+  <summary>⏱ Support response times</summary>
+  <div class="details-body">
+    <ul style="margin:0 0 0 16px">
+      <li><strong>Gratuit:</strong> email support, best-effort response.</li>
+      <li><strong>Pro:</strong> priority email support, response within 24h on business days.</li>
+      <li><strong>Enterprise:</strong> dedicated Customer Success Manager, SLA-backed response times.</li>
+    </ul>
+  </div>
+</details>
+</section>
 
 <!-- FOOTER NAV -->
 <div class="footer-nav">

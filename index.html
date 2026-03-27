@@ -83,10 +83,12 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 .cta{width:100%;padding:12px;border-radius:10px;background:var(--brand);color:#fff;font-size:15px;font-weight:600;border:none;cursor:pointer;font-family:var(--font);transition:all .2s}
 .cta:hover{background:#16136E;transform:translateY(-1px);box-shadow:0 4px 12px rgba(30,27,140,.25)}
 
-/* Format toggle */
-.format-toggle{display:flex;gap:4px;padding:4px;background:#f1f0f0;border-radius:10px;margin-bottom:24px;width:fit-content;margin-left:auto;margin-right:auto}
-.format-toggle a{display:flex;align-items:center;gap:6px;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;color:var(--t2);transition:all .2s}
-.format-toggle a.active{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(30,27,140,.2)}
+/* Top navbar */
+.topnav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.topnav-logo img{height:20px}
+.format-toggle{display:flex;gap:4px;padding:3px;background:#f1f0f0;border-radius:8px}
+.format-toggle a{display:flex;align-items:center;gap:5px;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;color:var(--t2);transition:all .2s}
+.format-toggle a.active{background:var(--brand);color:#fff;box-shadow:0 2px 6px rgba(30,27,140,.2)}
 .format-toggle a:not(.active):hover{background:rgba(0,0,0,.05);color:var(--ink)}
 
 /* Doc link */
@@ -112,12 +114,18 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 </head>
 <body>
 
-<div class="layout">
+<nav class="topnav">
+  <a href="/" class="topnav-logo"><img src="images/cleolabs-blue.svg" alt="Cleo Labs"></a>
+  <div class="format-toggle">
+    <a href="#" class="active">🎬 Tutoriels vidéo</a>
+    <a href="docs/">📄 Documentation écrite</a>
+  </div>
+</nav>
+
+<div class="layout" style="padding-top:52px">
 
 <!-- ── LEFT ── -->
 <div class="left">
-  <div class="logo"><img src="images/cleo-icon.svg" alt="Cleo"><div class="wordmark"><span class="cleo">cleo</span><span class="labs">LABS</span></div></div>
-
   <ul class="stepper" id="stepper">
     <li class="active" data-s="0"><div class="ic">📊</div><div class="tx"><strong>Le tableau de bord</strong><span>Vos KPIs et signaux quotidiens</span></div></li>
     <li data-s="1"><div class="ic">📦</div><div class="tx"><strong>Les produits</strong><span>Votre catalogue surveillé</span></div></li>
@@ -128,22 +136,14 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <li data-s="6"><div class="ic">⚙️</div><div class="tx"><strong>Paramètres & Sources</strong><span>Profil, crédits, sources</span></div></li>
   </ul>
 
-  <div class="left-bottom" style="flex-direction:column;gap:12px">
-    <div style="display:flex;justify-content:space-between;width:100%">
-      <a href="https://insight.cleolabs.co">← Ouvrir Cleo Insight</a>
-      <a href="mailto:support@cleolabs.co">Aide</a>
-    </div>
-    <a href="docs/" style="display:flex;align-items:center;gap:6px;justify-content:center;padding:8px 16px;background:var(--brand-light);border-radius:8px;color:var(--brand);font-weight:600;font-size:13px;text-decoration:none;transition:opacity .15s;width:100%">📄 Voir la documentation écrite</a>
+  <div class="left-bottom">
+    <a href="https://insight.cleolabs.co">← Ouvrir Cleo Insight</a>
+    <a href="mailto:support@cleolabs.co">Aide</a>
   </div>
 </div>
 
 <!-- ── RIGHT ── -->
 <div class="right">
-
-  <div class="format-toggle">
-    <a href="#" class="active">🎬 Tutoriels vidéo</a>
-    <a href="docs/">📄 Documentation écrite</a>
-  </div>
 
   <!-- Step 0: Tableau de bord -->
   <div class="block active" data-b="0">

@@ -259,19 +259,29 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 .video-link{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--c-blue);background:var(--c-blue-light);border-radius:6px;text-decoration:none;transition:all .15s;margin-bottom:12px}
 .video-link:hover{background:var(--c-blue-medium)}
 
-/* Format toggle */
-.format-toggle{display:flex;gap:4px;padding:4px;background:var(--c-card);border-radius:10px;margin-bottom:24px;width:fit-content}
-.format-toggle a{display:flex;align-items:center;gap:6px;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;color:var(--c-text-2);transition:all .2s}
-.format-toggle a.active{background:var(--c-blue);color:#fff;box-shadow:0 2px 8px rgba(0,8,207,.2)}
+/* Top navbar */
+.topnav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--c-border)}
+.topnav-logo img{height:20px}
+.format-toggle{display:flex;gap:4px;padding:3px;background:var(--c-card);border-radius:8px}
+.format-toggle a{display:flex;align-items:center;gap:5px;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;color:var(--c-text-2);transition:all .2s}
+.format-toggle a.active{background:var(--c-blue);color:#fff;box-shadow:0 2px 6px rgba(0,8,207,.2)}
 .format-toggle a:not(.active):hover{background:var(--c-border-hover);color:var(--c-ink)}
 </style>
 </head>
 <body>
 
+<nav class="topnav">
+  <a href="../" class="topnav-logo"><img src="images/cleolabs-blue.svg" alt="Cleo Labs"></a>
+  <div class="format-toggle">
+    <a href="../">🎬 Tutoriels vidéo</a>
+    <a href="#" class="active">📄 Documentation écrite</a>
+  </div>
+</nav>
+
 <!-- SIDEBAR -->
-<nav class="sidebar">
+<nav class="sidebar" style="top:48px">
   <div class="sb-logo">
-    <img src="images/logo-cleolabs.svg" alt="Cleo Labs" style="height:40px;width:auto">
+    <img src="images/cleolabs-blue.svg" alt="Cleo Labs" style="height:28px;width:auto">
     <span class="badge">Docs</span>
   </div>
 
@@ -313,21 +323,11 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
     <a class="sb-link" href="#sources"><span class="icon">🔍</span> Sources</a>
   </div>
 
-  <div class="sb-section" style="margin-top:auto;padding-top:16px;border-top:1px solid var(--c-border)">
-    <a class="sb-link" href="../" style="background:var(--c-blue-light);border-radius:8px;font-weight:600">
-      <span class="icon">🎬</span> Tutoriels vidéo
-    </a>
-  </div>
 </nav>
 
 <!-- MAIN CONTENT -->
-<div class="main">
+<div class="main" style="padding-top:48px">
 <div class="content">
-
-<div class="format-toggle">
-  <a href="../">🎬 Tutoriels vidéo</a>
-  <a href="#" class="active">📄 Documentation écrite</a>
-</div>
 
 <!-- ═══════════════════ OVERVIEW ═══════════════════ -->
 <section id="overview">

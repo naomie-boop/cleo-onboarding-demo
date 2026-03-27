@@ -563,6 +563,11 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <span class="ico">💡</span>
   <div>Unanalyzed products show an <strong>Analyze</strong> button. Click it to trigger an AI scan on that specific product — useful when you add a new product line mid-cycle.</div>
 </div>
+
+<div class="screenshot">
+  <img src="images/analyze-button.png" alt="Analyze button on an unanalyzed product">
+  <div class="cap">The Analyze button appears on products that haven't been scanned yet</div>
+</div>
 </section>
 
 <hr class="divider">
@@ -584,6 +589,11 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <li><strong>European Union</strong> expands into individual member states — each with its own transposition specifics. Don't assume EU coverage means identical rules everywhere.</li>
   <li><strong>United States</strong> expands by state — critical because state-level rules (e.g. California Prop 65) are often stricter than federal.</li>
 </ul>
+
+<div class="screenshot">
+  <img src="images/us-states-map.png" alt="US state-by-state view">
+  <div class="cap">United States — state-by-state regulatory exposure map (12 states monitored)</div>
+</div>
 </section>
 
 <hr class="divider">
@@ -606,6 +616,34 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
   <span class="ico">⚠️</span>
   <div>If a regulation you care about isn't in the library, add it via <strong>"+ Add a regulation"</strong>. Cleo automatically enriches it with authority, jurisdiction, status, and related obligations.</div>
 </div>
+
+<h3>Inside a regulation file</h3>
+<p>Click any regulation to open its detail view. Here's what you'll find:</p>
+
+<div class="screenshot">
+  <img src="images/regulation-detail.png" alt="Regulation detail — UK GDPR">
+  <div class="cap">Regulation detail view — UK GDPR example</div>
+</div>
+
+<p><strong>Top right — quick actions</strong></p>
+<ul>
+  <li><strong>Scanner</strong> — run a compliance analysis of your products against this regulation</li>
+  <li><strong>To modify</strong> — manually edit the file (description, tags, obligations...)</li>
+  <li><strong>Delete</strong> — remove the file from your repository</li>
+</ul>
+
+<p><strong>The status badge</strong></p>
+<p>The "in progress" label shows where this regulation stands in your tracking workflow. You can follow its evolution over time.</p>
+
+<p><strong>The three tabs — the heart of the file</strong></p>
+<ul>
+  <li><strong>Overview</strong> (default) — a summary view: description, supervising authority (here the ICO), and the <strong>Key Bonds</strong> = the key obligations extracted from the text (10 in total)</li>
+  <li><strong>Signals</strong> — recently detected signals on this regulation (new guidelines, enforcement actions, consultations...)</li>
+  <li><strong>Affected Products</strong> — the products in your portfolio exposed to this regulation</li>
+</ul>
+
+<p><strong>Key Bonds</strong></p>
+<p>This is the core value of the file: concrete, actionable obligations automatically extracted from the regulatory text — ready to be audited or assigned to your team.</p>
 </section>
 
 <hr class="divider">
@@ -679,7 +717,7 @@ details .details-body{padding:16px 20px;font-size:14px;animation:fadeIn .25s var
 
 <h3>What to configure</h3>
 <ul>
-  <li><strong>Department</strong> — Legal, Compliance, Quality, Product, etc.</li>
+  <li><strong>Department</strong> — Legal, Compliance, Quality, Product, etc. <em>This is critical: your department and role directly impact the entire platform — every summary, action plan, and risk assessment is tailored to your function.</em></li>
   <li><strong>Role</strong> — DPO, Quality Manager, Legal Counsel, etc.</li>
   <li><strong>Language</strong> — FR 🇫🇷 or EN 🇬🇧 — controls the language of all AI-generated content</li>
   <li><strong>Slack Member ID</strong> — optional, for direct Slack DMs on critical alerts</li>

@@ -89,6 +89,12 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
 .format-toggle a.active{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(30,27,140,.2)}
 .format-toggle a:not(.active):hover{background:rgba(0,0,0,.05);color:var(--ink)}
 
+/* Doc link */
+.doc-link{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;font-size:12.5px;color:var(--brand);text-decoration:none;border:1px solid var(--brand-light);border-radius:8px;margin-bottom:12px;transition:all .2s;font-weight:500}
+.doc-link:hover{background:var(--brand-light);border-color:var(--brand)}
+.doc-link .arrow{font-size:14px;transition:transform .2s}
+.doc-link:hover .arrow{transform:translateX(3px)}
+
 /* Progress dots */
 .dots{position:absolute;bottom:36px;right:48px;display:flex;gap:6px}
 .dots .dot{width:24px;height:5px;border-radius:99px;background:var(--border);transition:all .3s}
@@ -146,6 +152,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Le tableau de bord regroupe tout : KPIs, filtres par impact et statut, fil de signaux en temps réel.</p>
     <div class="vid"><video controls preload="metadata" poster="images/dashboard-viewport-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video1.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div>Cliquez <strong>"Actualiser"</strong> chaque lundi matin et filtrez par <strong>"Adopté"</strong> pour anticiper.</div></div>
+    <a href="docs/#dashboard" class="doc-link">📄 Lire la doc détaillée — Tableau de bord <span class="arrow">→</span></a>
     <button class="cta" onclick="goTo(1)">Suivant →</button>
   </div>
 
@@ -156,6 +163,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Retrouvez votre catalogue organisé par catégorie, avec pour chaque produit le nombre d'impacts réglementaires et leur criticité. Ajoutez vos produits manuellement ou par import CSV.</p>
     <div class="vid"><video controls preload="metadata" poster="images/products.png"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video-products.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div>Filtrez par <strong>"Avec impacts"</strong> pour voir uniquement les produits concernés. La barre rouge indique la criticité relative — plus elle est longue, plus il y a d'impacts à traiter.</div></div>
+    <a href="docs/#products" class="doc-link">📄 Lire la doc détaillée — Produits <span class="arrow">→</span></a>
     <button class="cta" onclick="goTo(2)">Suivant →</button>
   </div>
 
@@ -166,6 +174,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Résumé adapté à votre rôle, impact sur vos produits, obligations légales, plan d'action prêt à l'emploi.</p>
     <div class="vid"><video controls preload="metadata" poster="images/signal-open-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video2.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div>Les résumés changent selon votre rôle : DPO → angle données, juriste → angle conformité produit.</div></div>
+    <a href="docs/#signal-card" class="doc-link">📄 Lire la doc détaillée — Fiche signal <span class="arrow">→</span></a>
     <button class="cta" onclick="goTo(3)">Suivant →</button>
   </div>
 
@@ -176,6 +185,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Toutes vos dates réglementaires sur une timeline. Filtrez par horizon et criticité.</p>
     <div class="vid"><video controls preload="metadata" poster="images/timeline.png"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video3.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div><strong>90 jours + Critique</strong> → capture d'écran → slide direction. Trimestrielle en 10 sec.</div></div>
+    <a href="docs/#timeline" class="doc-link">📄 Lire la doc détaillée — Échéancier <span class="arrow">→</span></a>
     <button class="cta" onclick="goTo(4)">Suivant →</button>
   </div>
 
@@ -186,6 +196,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Ajoutez vos pays. L'UE et les US se déplient état par état. Cleo croise chaque loi locale avec vos produits.</p>
     <div class="vid"><video controls preload="metadata" poster="images/countries-crop.png"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video4.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div><strong>Europe + Avec impacts</strong> = brief conformité européen en un clic.</div></div>
+    <a href="docs/#countries" class="doc-link">📄 Lire la doc détaillée — Pays <span class="arrow">→</span></a>
     <button class="cta" onclick="goTo(5)">Suivant →</button>
   </div>
 
@@ -196,6 +207,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Passez vos lois critiques en "Renforcée". Filtrez par "Adopté" pour anticiper.</p>
     <div class="vid"><video controls preload="metadata" poster="images/laws-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video5.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div>Impacts d'une autorité qui montent vite = renforcement des contrôles en cours.</div></div>
+    <a href="docs/#regulations" class="doc-link">📄 Lire la doc détaillée — Réglementations <span class="arrow">→</span></a>
     <button class="cta" onclick="goTo(6)">Suivant →</button>
   </div>
 
@@ -206,6 +218,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);-webkit-font-
     <p class="sub">Configurez votre profil, contrôlez vos sources, ajoutez vos favoris. Plus vous votez, plus Cleo s'affine.</p>
     <div class="vid"><video controls preload="metadata" poster="images/settings-sources-crop.jpg"><source src="https://github.com/naomie-boop/cleo-onboarding-demo/releases/download/v1.0/video6.mp4" type="video/mp4"></video></div>
     <div class="tip"><i>💡</i><div>Département + Rôle dans votre profil = résumés personnalisés pour chaque signal.</div></div>
+    <a href="docs/#profile" class="doc-link">📄 Lire la doc détaillée — Paramètres <span class="arrow">→</span></a>
     <button class="cta" onclick="window.open('https://insight.cleolabs.co','_blank')">Commencer sur Cleo Insight →</button>
   </div>
 
@@ -252,10 +265,13 @@ function goTo(n){
   if(nv){nv.currentTime=0;nv.play().catch(()=>{})}
 }
 
-// Autoplay first video on load
+// Hash routing for deep links from docs
+const hashMap={dashboard:0,products:1,'signal-card':2,timeline:3,countries:4,regulations:5,settings:6,profile:6};
+
 window.addEventListener('DOMContentLoaded',()=>{
-  const v=blocks[0].querySelector('video');
-  if(v)v.play().catch(()=>{});
+  const h=window.location.hash.replace('#','');
+  if(h&&hashMap[h]!==undefined){goTo(hashMap[h])}
+  else{const v=blocks[0].querySelector('video');if(v)v.play().catch(()=>{})}
 });
 
 document.querySelectorAll('#stepper li').forEach(li=>{
